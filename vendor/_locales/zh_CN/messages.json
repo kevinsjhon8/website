@@ -1,0 +1,1493 @@
+{
+  "bgBusy": {
+    "message": "已有截图任务在进行中，请等它完成后再试"
+  },
+  "bgCanvasChunkFailed": {
+    "message": "Canvas 后端处理第 $BATCH$ 批分屏失败",
+    "placeholders": {
+      "batch": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "bgCanvasFailed": {
+    "message": "Canvas 后端处理失败"
+  },
+  "bgCanvasInitFailed": {
+    "message": "Canvas 后端初始化失败"
+  },
+  "bgCanvasReadyTimeout": {
+    "message": "Canvas 后端启动超时，请重试（$DETAIL$）",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "等待 Canvas 后端就绪超时"
+      }
+    }
+  },
+  "bgCaptureFailed": {
+    "message": "截图失败：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "页面无响应"
+      }
+    }
+  },
+  "bgCaptureProgress": {
+    "message": "正在截取第 $CURRENT$/$TOTAL$ 屏",
+    "placeholders": {
+      "current": {
+        "content": "$1",
+        "example": "3"
+      },
+      "total": {
+        "content": "$2",
+        "example": "40"
+      }
+    }
+  },
+  "bgCaptureRetry": {
+    "message": "正在截取第 $CURRENT$/$TOTAL$ 屏（重试 $ATTEMPT$）",
+    "placeholders": {
+      "current": {
+        "content": "$1",
+        "example": "3"
+      },
+      "total": {
+        "content": "$2",
+        "example": "40"
+      },
+      "attempt": {
+        "content": "$3",
+        "example": "2"
+      }
+    }
+  },
+  "bgCapturing": {
+    "message": "正在截取画面…"
+  },
+  "bgClipboardFailed": {
+    "message": "复制到剪贴板失败：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "剪贴板不可用"
+      }
+    }
+  },
+  "bgCompleteNoEditor": {
+    "message": "截图完成"
+  },
+  "bgElementFailed": {
+    "message": "截取元素失败：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "元素过大"
+      }
+    }
+  },
+  "bgFileAccess": {
+    "message": "本地文件截图需要授权：请在扩展管理页勾选「允许访问文件网址」后重试。"
+  },
+  "bgHidingFixed": {
+    "message": "正在隐藏固定元素…"
+  },
+  "bgInternalPage": {
+    "message": "浏览器内部页面无法截图"
+  },
+  "bgNoActiveTab": {
+    "message": "没有活动的标签页可以截图"
+  },
+  "bgNoFocusedDocument": {
+    "message": "没有可写入的焦点窗口（关掉其他弹窗后重试）"
+  },
+  "bgNoScrollAdvance": {
+    "message": "第 $ROW$ 行没有继续推进，提前结束",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "bgNoSegments": {
+    "message": "没有可拼接的有效分屏"
+  },
+  "bgNotScrollable": {
+    "message": "页面不可滚动，无需整页截图"
+  },
+  "bgOpeningEditor": {
+    "message": "正在打开编辑器…"
+  },
+  "bgPageInfoFailed": {
+    "message": "获取页面信息失败"
+  },
+  "bgPaymentUnconfigured": {
+    "message": "支付尚未配置：请先在 utils/payment-config.ts 填入 Waffo 收银台链接"
+  },
+  "bgPortalNeedsBackend": {
+    "message": "管理订阅需要后端支持：请先配置 payment-config.ts 的 backendUrl"
+  },
+  "bgPortalUnavailable": {
+    "message": "打不开订阅管理页面，请稍后重试"
+  },
+  "bgPreparePage": {
+    "message": "正在准备页面…"
+  },
+  "bgProRequired": {
+    "message": "这是 Pro 功能（当前未解锁）"
+  },
+  "bgQuotaExhausted": {
+    "message": "今日免费额度已用完（$COUNT$ 次）。升级 Pro 可无限截图。",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "50"
+      }
+    }
+  },
+  "bgRestoreNeedsBackend": {
+    "message": "恢复购买需要后端支持：请先配置 payment-config.ts 的 backendUrl"
+  },
+  "bgShotExpired": {
+    "message": "截图数据已失效（后台被回收且备份过期），请重新截图"
+  },
+  "bgStitching": {
+    "message": "正在拼接分屏…"
+  },
+  "bgStorePage": {
+    "message": "应用商店页面无法截图"
+  },
+  "bgTabTimeout": {
+    "message": "等待「$STEP$」超时，请重试",
+    "placeholders": {
+      "step": {
+        "content": "$1",
+        "example": "psp-prepare"
+      }
+    }
+  },
+  "bgTruncated": {
+    "message": "页面过长，仅截取前 $ROWS$ 行",
+    "placeholders": {
+      "rows": {
+        "content": "$1",
+        "example": "40"
+      }
+    }
+  },
+  "bgUnknownOperation": {
+    "message": "未知操作"
+  },
+  "commandCaptureFull": {
+    "message": "整页截图"
+  },
+  "commandCaptureVisible": {
+    "message": "可视区域截图"
+  },
+  "contentPickHint": {
+    "message": "移动鼠标高亮元素，单击确认，Esc 取消"
+  },
+  "contentRegionHint": {
+    "message": "拖拽选择截图区域，Esc 取消"
+  },
+  "contentRegionTooSmall": {
+    "message": "区域太小"
+  },
+  "contentUnknownMessage": {
+    "message": "未知消息：$TYPE$",
+    "placeholders": {
+      "type": {
+        "content": "$1",
+        "example": "psp-unknown"
+      }
+    }
+  },
+  "contextMenuElement": {
+    "message": "截取该元素（Page Screenshot Pro）"
+  },
+  "editorClearAnnotations": {
+    "message": "🗑 清除标注"
+  },
+  "editorClearConfirm": {
+    "message": "确定清除全部标注吗？"
+  },
+  "editorClipboardDenied": {
+    "message": "复制失败：浏览器拒绝了剪贴板写入"
+  },
+  "editorClose": {
+    "message": "关闭"
+  },
+  "editorColor": {
+    "message": "颜色"
+  },
+  "editorCopied": {
+    "message": "已复制到剪贴板"
+  },
+  "editorCopy": {
+    "message": "📋 复制到剪贴板"
+  },
+  "editorCopyFailed": {
+    "message": "复制失败"
+  },
+  "editorCopyFailedDetail": {
+    "message": "复制失败：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "剪贴板错误"
+      }
+    }
+  },
+  "editorCopyText": {
+    "message": "复制文字"
+  },
+  "editorCropDone": {
+    "message": "已裁剪（标注已随图平移，可按撤销恢复）"
+  },
+  "editorDecodeFailed": {
+    "message": "截图解码失败，请重新截图"
+  },
+  "editorDeletedAnnotation": {
+    "message": "已删除标注"
+  },
+  "editorDownloadJpg": {
+    "message": "⬇ 下载 JPG"
+  },
+  "editorDownloadJpgTitle": {
+    "message": "体积约为 PNG 的 1/5，适合长图分享"
+  },
+  "editorDownloadPng": {
+    "message": "⬇ 下载 PNG"
+  },
+  "editorExportFailed": {
+    "message": "导出失败"
+  },
+  "editorExportPdf": {
+    "message": "📕 导出 PDF"
+  },
+  "editorJpgDownloadStarted": {
+    "message": "JPG 已开始下载"
+  },
+  "editorLicenseCheckFailed": {
+    "message": "授权检查失败"
+  },
+  "editorLineWidth": {
+    "message": "线宽"
+  },
+  "editorLoadFailed": {
+    "message": "截图加载失败"
+  },
+  "editorLoadFailedDetail": {
+    "message": "加载失败：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "存储错误"
+      }
+    }
+  },
+  "editorLoading": {
+    "message": "正在加载截图…"
+  },
+  "editorMissingShotId": {
+    "message": "缺少截图 ID，请从插件弹窗重新截图"
+  },
+  "editorNothingToRedo": {
+    "message": "没有可重做的操作"
+  },
+  "editorNothingToUndo": {
+    "message": "没有可撤销的操作"
+  },
+  "editorOcr": {
+    "message": "🔍 OCR 识别（实验功能）"
+  },
+  "editorOcrFailed": {
+    "message": "识别失败：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "识别错误"
+      }
+    }
+  },
+  "editorOcrNoText": {
+    "message": "（未识别出文字）"
+  },
+  "editorOcrPreparing": {
+    "message": "准备识别…"
+  },
+  "editorOcrResult": {
+    "message": "OCR 识别结果"
+  },
+  "editorPdfDownloadStarted": {
+    "message": "PDF 已开始下载"
+  },
+  "editorPdfExportFailed": {
+    "message": "PDF 导出失败：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "导出错误"
+      }
+    }
+  },
+  "editorPngDownloadStarted": {
+    "message": "PNG 已开始下载"
+  },
+  "editorProOcrTitle": {
+    "message": "Pro：识别图中文字"
+  },
+  "editorProPdfTitle": {
+    "message": "Pro：导出 PDF"
+  },
+  "editorProRequired": {
+    "message": "这是 Pro 功能（当前未解锁）"
+  },
+  "editorRedo": {
+    "message": "↪ 重做"
+  },
+  "editorRedoTitle": {
+    "message": "重做 (Ctrl/Cmd+Shift+Z)"
+  },
+  "editorRedone": {
+    "message": "已重做"
+  },
+  "editorTitle": {
+    "message": "编辑截图 - Page Screenshot Pro"
+  },
+  "editorToolArrow": {
+    "message": "➤ 箭头"
+  },
+  "editorToolArrowTitle": {
+    "message": "箭头 (A)"
+  },
+  "editorToolCrop": {
+    "message": "✂ 裁剪"
+  },
+  "editorToolCropTitle": {
+    "message": "裁剪 (C)——标注会随坐标系一起平移，不会被清除"
+  },
+  "editorToolEllipse": {
+    "message": "◯ 椭圆"
+  },
+  "editorToolEllipseTitle": {
+    "message": "椭圆 (O)"
+  },
+  "editorToolHighlight": {
+    "message": "🖍 荧光笔"
+  },
+  "editorToolHighlightTitle": {
+    "message": "荧光笔 (H)——半透明叠加，底下的文字仍可读"
+  },
+  "editorToolMosaic": {
+    "message": "🔲 马赛克"
+  },
+  "editorToolMosaicTitle": {
+    "message": "马赛克 (M)"
+  },
+  "editorToolPen": {
+    "message": "✎ 画笔"
+  },
+  "editorToolPenTitle": {
+    "message": "自由笔 (P)"
+  },
+  "editorToolRect": {
+    "message": "▭ 矩形"
+  },
+  "editorToolRectTitle": {
+    "message": "矩形 (R)"
+  },
+  "editorToolSelect": {
+    "message": "⬉ 选择"
+  },
+  "editorToolSelectTitle": {
+    "message": "选择/移动已有标注 (V)"
+  },
+  "editorToolText": {
+    "message": "T 文字"
+  },
+  "editorToolTextTitle": {
+    "message": "文字 (T)"
+  },
+  "editorUndo": {
+    "message": "↩ 撤销"
+  },
+  "editorUndoTitle": {
+    "message": "撤销 (Ctrl/Cmd+Z)"
+  },
+  "editorUndone": {
+    "message": "已撤销"
+  },
+  "editorZoomFit": {
+    "message": "适应"
+  },
+  "editorZoomFitTitle": {
+    "message": "适应窗口 (0)"
+  },
+  "editorZoomFitWidth": {
+    "message": "适配宽度"
+  },
+  "editorZoomFitWidthTitle": {
+    "message": "让图片宽度填满可视区，上下滚动查看 (W)"
+  },
+  "editorZoomInTitle": {
+    "message": "放大 (+)"
+  },
+  "editorZoomLabelTitle": {
+    "message": "点击恢复适应窗口 (0)"
+  },
+  "editorZoomOutTitle": {
+    "message": "缩小 (−)"
+  },
+  "extensionDescription": {
+    "message": "专业网页全屏滚动长截图工具：支持整页滚动截屏、无限滚动智能拼接、本地文件截图、画框标注编辑、PDF导出与离线OCR文字识别，AI 客户端可经 MCP 调用截图。纯本地离线处理，数据零上传，安全保护隐私。"
+  },
+  "extensionName": {
+    "message": "Page Screenshot Pro"
+  },
+  "feedbackEmail": {
+    "message": "邮箱"
+  },
+  "feedbackEmailHint": {
+    "message": "（选填 —— 留空即匿名提交；想收到回复就填上）"
+  },
+  "feedbackHeading": {
+    "message": "提交反馈"
+  },
+  "feedbackIntro": {
+    "message": "你的反馈会直达开发者。不会附带任何截图或网页内容。"
+  },
+  "feedbackMessage": {
+    "message": "发生了什么？"
+  },
+  "feedbackMessageHint": {
+    "message": "（必填 —— 在哪个页面、点了什么、期望是什么）"
+  },
+  "feedbackPrivacy": {
+    "message": "不需要账号，也没有埋点。邮箱只用于回复你。"
+  },
+  "feedbackSend": {
+    "message": "提交"
+  },
+  "feedbackSending": {
+    "message": "正在发送…"
+  },
+  "feedbackSent": {
+    "message": "感谢，反馈已收到。"
+  },
+  "feedbackTitle": {
+    "message": "反馈 - Page Screenshot Pro"
+  },
+  "feedbackType": {
+    "message": "类型"
+  },
+  "feedbackTypeBug": {
+    "message": "问题 / 功能坏了"
+  },
+  "feedbackTypeFeature": {
+    "message": "功能建议"
+  },
+  "feedbackTypeOther": {
+    "message": "其他"
+  },
+  "feedbackTypePurchase": {
+    "message": "购买或授权问题"
+  },
+  "mcpBusy": {
+    "message": "已有截图任务在进行中，请稍后再试。"
+  },
+  "mcpElementNotFound": {
+    "message": "没有元素匹配这个选择器。请用开发者工具确认后重试。"
+  },
+  "mcpImageTooLarge": {
+    "message": "图片太大了。请把 maxWidth 调小一些。"
+  },
+  "mcpProRequired": {
+    "message": "MCP 访问需要 Pro。打开扩展设置即可升级。"
+  },
+  "mcpSelectorRequired": {
+    "message": "capture_element 需要 CSS 选择器，例如 \"#main .title\"。"
+  },
+  "mcpUnknownTool": {
+    "message": "未知的工具。请重新获取工具列表——扩展可能是另一个版本。"
+  },
+  "ocrBadLibrary": {
+    "message": "OCR 主库接口异常（缺少 createWorker）"
+  },
+  "ocrFailed": {
+    "message": "OCR 识别失败：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "识别错误"
+      }
+    }
+  },
+  "ocrInitializing": {
+    "message": "正在初始化识别引擎"
+  },
+  "ocrInitializingApi": {
+    "message": "正在初始化识别接口"
+  },
+  "ocrLoadLibraryFailed": {
+    "message": "OCR 主库加载失败：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "模块错误"
+      }
+    }
+  },
+  "ocrLoadingCore": {
+    "message": "正在加载识别核心"
+  },
+  "ocrLoadingLanguages": {
+    "message": "正在加载语言包（中英）"
+  },
+  "ocrRecognizing": {
+    "message": "正在识别文字"
+  },
+  "ocrUnavailable": {
+    "message": "当前不在扩展环境中运行，无法加载 OCR 引擎"
+  },
+  "optionsAnnotate": {
+    "message": "截图后打开编辑器标注"
+  },
+  "optionsCapture": {
+    "message": "抓取"
+  },
+  "optionsCopy": {
+    "message": "截图后自动复制到剪贴板"
+  },
+  "optionsDownload": {
+    "message": "下载"
+  },
+  "optionsExpandInfinite": {
+    "message": "抓取前展开无限滚动页面"
+  },
+  "optionsFilename": {
+    "message": "文件名模板"
+  },
+  "optionsFolder": {
+    "message": "子目录"
+  },
+  "optionsFolderHint": {
+    "message": "例如 Screenshots/Web，目录不存在会自动创建。"
+  },
+  "optionsFolderPlaceholder": {
+    "message": "留空 = 下载根目录"
+  },
+  "optionsFormat": {
+    "message": "默认格式"
+  },
+  "optionsHeading": {
+    "message": "截图设置"
+  },
+  "optionsInterface": {
+    "message": "界面"
+  },
+  "optionsIntro": {
+    "message": "设置保存在浏览器账号里（chrome.storage.sync），换机器会自动同步。"
+  },
+  "optionsJpg": {
+    "message": "JPG（有损，体积约为 PNG 的 1/5）"
+  },
+  "optionsLanguage": {
+    "message": "界面语言"
+  },
+  "optionsLanguageHint": {
+    "message": "默认跟随 Chrome 的界面语言；在这里改只影响本机。改完立即生效，无需保存。"
+  },
+  "optionsLanguageSaved": {
+    "message": "语言已切换"
+  },
+  "optionsLazyWarning": {
+    "message": "下面两项只作用于「整页截图」；关掉后抓得更快，但页面里的懒加载图片可能还没加载出来，截图里留下空白。"
+  },
+  "optionsMcpBody": {
+    "message": "让 Claude Desktop、Cursor、Claude Code 这类 AI 工具通过本扩展截图。全程在本机运行，不上传任何内容。"
+  },
+  "optionsMcpConfigHint": {
+    "message": "把下面这段粘贴到 AI 客户端配置文件的 mcpServers 里："
+  },
+  "optionsMcpCopied": {
+    "message": "已复制"
+  },
+  "optionsMcpCopy": {
+    "message": "复制配置"
+  },
+  "optionsMcpCopyFailed": {
+    "message": "复制失败，请手动选中这段文字复制。"
+  },
+  "optionsMcpGuide": {
+    "message": "完整配置说明"
+  },
+  "optionsMcpHint": {
+    "message": "浏览器要求截图前有过一次点击。如果 AI 报告权限错误，点一下扩展图标，再让它重试。"
+  },
+  "optionsMcpLogTitle": {
+    "message": "最近调用"
+  },
+  "optionsMcpPro": {
+    "message": "Pro"
+  },
+  "optionsMcpProNote": {
+    "message": "MCP 访问是 Pro 功能。"
+  },
+  "optionsMcpReset": {
+    "message": "重置 Token"
+  },
+  "optionsMcpResetConfirm": {
+    "message": "旧配置会立刻失效。确定继续吗？"
+  },
+  "optionsMcpResetDone": {
+    "message": "Token 已重置，请把新的配置粘贴到 AI 客户端。"
+  },
+  "optionsMcpResetKeep": {
+    "message": "保留当前 Token"
+  },
+  "optionsMcpResetProceed": {
+    "message": "仍要重置"
+  },
+  "optionsMcpStateFail": {
+    "message": "连不上。确认 AI 客户端已重启，且配置里的 Token 与上面一致。"
+  },
+  "optionsMcpStateLost": {
+    "message": "上次连接：$TIME$。AI 客户端退出后断开是正常的。",
+    "placeholders": {
+      "time": {
+        "content": "$1",
+        "example": "2026-11-01 09:05"
+      }
+    }
+  },
+  "optionsMcpStateNever": {
+    "message": "还没有连接过。AI 客户端启动后会自动连上。"
+  },
+  "optionsMcpStateOff": {
+    "message": "未连接"
+  },
+  "optionsMcpStateOn": {
+    "message": "已连接"
+  },
+  "optionsMcpStep1": {
+    "message": "把上面的 JSON 粘贴到 AI 客户端配置文件的 mcpServers 里。需要 Node 20 或更高版本。"
+  },
+  "optionsMcpStep2": {
+    "message": "重启客户端。桥接进程连上后，顶部的圆点会变绿。"
+  },
+  "optionsMcpStep3": {
+    "message": "先让它调用 psp_status：这个工具免费，会说明哪里出了问题。"
+  },
+  "optionsMcpStepsTitle": {
+    "message": "使用方法"
+  },
+  "optionsMcpTitle": {
+    "message": "AI / MCP 访问"
+  },
+  "optionsMcpToggle": {
+    "message": "启用 MCP 访问"
+  },
+  "optionsMcpUpgrade": {
+    "message": "升级到 Pro"
+  },
+  "optionsPng": {
+    "message": "PNG（无损，体积大）"
+  },
+  "optionsPreloadLazy": {
+    "message": "抓取前触发并等待懒加载图片"
+  },
+  "optionsQuality": {
+    "message": "JPG 质量"
+  },
+  "optionsRequestFailed": {
+    "message": "请求失败"
+  },
+  "optionsReset": {
+    "message": "恢复默认"
+  },
+  "optionsResetDone": {
+    "message": "已恢复默认"
+  },
+  "optionsSampleHost": {
+    "message": "example.com"
+  },
+  "optionsSampleTitle": {
+    "message": "网页截图"
+  },
+  "optionsSaveAs": {
+    "message": "每次下载都弹出「另存为」对话框"
+  },
+  "optionsSaveFailed": {
+    "message": "保存失败：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "存储失败"
+      }
+    }
+  },
+  "optionsSaved": {
+    "message": "已保存"
+  },
+  "optionsSynced": {
+    "message": "已同步其他窗口的修改"
+  },
+  "optionsTemplateInsertHint": {
+    "message": "插入："
+  },
+  "optionsTemplateInsertTitle": {
+    "message": "在光标处插入此占位符"
+  },
+  "optionsTemplatePreview": {
+    "message": "预览："
+  },
+  "optionsTitle": {
+    "message": "设置 - Page Screenshot Pro"
+  },
+  "payApiNotConfigured": {
+    "message": "支付后端未配置"
+  },
+  "payApiStatus": {
+    "message": "后端返回 $STATUS$",
+    "placeholders": {
+      "status": {
+        "content": "$1",
+        "example": "502"
+      }
+    }
+  },
+  "payApiTimeout": {
+    "message": "请求支付服务器超时"
+  },
+  "payCheckoutFailed": {
+    "message": "下单失败：后端未返回收银台地址"
+  },
+  "payMockPlanSuffix": {
+    "message": "（测试）"
+  },
+  "payNeedInstallId": {
+    "message": "后端模式下单需要安装身份（installId），调用方未提供"
+  },
+  "payNoteCanceled": {
+    "message": "订阅已终止"
+  },
+  "payNoteCanceling": {
+    "message": "已取消续费，到期前仍可使用"
+  },
+  "payNoteClientCeiling": {
+    "message": "当前为纯客户端模式：续费与退款不会同步到本机，订阅到期后 Pro 仍会保持开启。"
+  },
+  "payNoteExpired": {
+    "message": "订阅已到期"
+  },
+  "payNoteLifetime": {
+    "message": "Pro 买断授权（永久有效，不受订阅退款/取消影响）"
+  },
+  "payNotePastDue": {
+    "message": "续费失败，订阅已暂停，请更新支付方式"
+  },
+  "payNoteSubscriptionEnd": {
+    "message": "订阅有效期至 $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "2099-03-04"
+      }
+    }
+  },
+  "payUnconfigured": {
+    "message": "支付尚未配置：请先在 utils/payment-config.ts 填入 Waffo 收银台链接"
+  },
+  "payUnknownPlan": {
+    "message": "未知套餐：$PLAN$",
+    "placeholders": {
+      "plan": {
+        "content": "$1",
+        "example": "monthly"
+      }
+    }
+  },
+  "planLifetime": {
+    "message": "Pro 买断"
+  },
+  "planMonthly": {
+    "message": "Pro 月付"
+  },
+  "planPro": {
+    "message": "Pro"
+  },
+  "planYearly": {
+    "message": "Pro 年付"
+  },
+  "popupCannotOpenExtensions": {
+    "message": "无法自动打开，请手动前往 chrome://extensions"
+  },
+  "popupCaptureFull": {
+    "message": "📄 整页截图"
+  },
+  "popupCaptureRegion": {
+    "message": "✂️ 选区截图"
+  },
+  "popupCaptureVisible": {
+    "message": "🖥️ 可视区域截图"
+  },
+  "popupChecking": {
+    "message": "检查中…"
+  },
+  "popupCheckoutFailed": {
+    "message": "打开收银台失败"
+  },
+  "popupCheckoutTitle": {
+    "message": "点击前往 Waffo 安全收银台完成支付"
+  },
+  "popupClear": {
+    "message": "清空"
+  },
+  "popupClearConfirm": {
+    "message": "确定清空全部历史记录吗？"
+  },
+  "popupCommunicationFailed": {
+    "message": "通信失败：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "连接失败"
+      }
+    }
+  },
+  "popupCompleteWarnings": {
+    "message": "完成，但有提醒：$WARNINGS$",
+    "placeholders": {
+      "warnings": {
+        "content": "$1",
+        "example": "图片已压缩"
+      }
+    }
+  },
+  "popupDelete": {
+    "message": "删除"
+  },
+  "popupEmptyHistory": {
+    "message": "暂无截图"
+  },
+  "popupFeedback": {
+    "message": "💬 提交反馈"
+  },
+  "popupFeedbackUnavailable": {
+    "message": "暂时打不开反馈页，请直接发邮件到支持邮箱"
+  },
+  "popupFileGuide": {
+    "message": "本地文件截图需要授权：请在扩展管理页勾选「允许访问文件网址」后重试。"
+  },
+  "popupFreeLocked": {
+    "message": "免费版（Pro 未解锁）"
+  },
+  "popupHistory": {
+    "message": "历史记录"
+  },
+  "popupImageDecodeFailed": {
+    "message": "图片解码失败"
+  },
+  "popupKindElement": {
+    "message": "元素"
+  },
+  "popupKindFullpage": {
+    "message": "整页"
+  },
+  "popupKindRegion": {
+    "message": "选区"
+  },
+  "popupKindVisible": {
+    "message": "可视区域"
+  },
+  "popupLanguage": {
+    "message": "语言"
+  },
+  "popupLanguageAuto": {
+    "message": "跟随 Chrome"
+  },
+  "popupLanguageTitle": {
+    "message": "界面语言（默认跟随 Chrome 界面语言）"
+  },
+  "popupMergeNoOriginals": {
+    "message": "选中的截图原图均已清理，无法导出"
+  },
+  "popupMergePdf": {
+    "message": "合并 PDF"
+  },
+  "popupMergePdfTitle": {
+    "message": "选中多条合并导出 PDF（Pro）"
+  },
+  "popupMergeProRequired": {
+    "message": "「合并导出 PDF」是 Pro 功能"
+  },
+  "popupMergeSelectRequired": {
+    "message": "请先勾选要合并的历史截图"
+  },
+  "popupMergeSelectTitle": {
+    "message": "选中以合并导出 PDF"
+  },
+  "popupMergingPdf": {
+    "message": "正在合成 PDF…"
+  },
+  "popupOpen": {
+    "message": "打开"
+  },
+  "popupOpenExtensions": {
+    "message": "打开扩展管理页"
+  },
+  "popupOpenHistoryFailed": {
+    "message": "原图已清理，仅保留缩略图"
+  },
+  "popupPaidPro": {
+    "message": "Pro 已解锁（已付费）"
+  },
+  "popupPaidProNotUnlocked": {
+    "message": "免费版（Pro 未解锁）"
+  },
+  "popupPaymentUnconfigured": {
+    "message": "支付尚未配置：在 utils/payment-config.ts 填入 Waffo 商户信息与收银台链接后，这里会显示付费套餐。"
+  },
+  "popupPreparing": {
+    "message": "准备中…"
+  },
+  "popupRemaining": {
+    "message": "今日剩余 $COUNT$ 次",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "popupRestore": {
+    "message": "恢复购买"
+  },
+  "popupRestoreEmail": {
+    "message": "付款邮箱"
+  },
+  "popupRestoreEmailRequired": {
+    "message": "请填写付款时使用的邮箱"
+  },
+  "popupRestoreFailed": {
+    "message": "请求失败，请稍后重试"
+  },
+  "popupRestoreHint": {
+    "message": "在别的电脑上买过 Pro，或者重装过插件？填当初付款用的邮箱、点「恢复购买」，已经买过的 Pro 就会回到这台机器上，不用再付一次钱。"
+  },
+  "popupRestoreNotFound": {
+    "message": "没有查到该邮箱的购买记录。请确认邮箱与付款时一致；若刚付款，请稍等几秒后重试。"
+  },
+  "popupReviewAsk": {
+    "message": "用着还顺手的话，去 Chrome 应用商店留一句评价，能帮到其他正在找工具的人。"
+  },
+  "popupReviewGo": {
+    "message": "去评价"
+  },
+  "popupReviewLater": {
+    "message": "暂时不用"
+  },
+  "popupReviewOpenFailed": {
+    "message": "打不开 Chrome 应用商店页面。可以自己在商店里搜索这个扩展。"
+  },
+  "popupSelectAll": {
+    "message": "全选"
+  },
+  "popupSettings": {
+    "message": "⚙ 设置"
+  },
+  "popupSettingsTitle": {
+    "message": "默认格式、文件名模板、子目录等"
+  },
+  "popupStart": {
+    "message": "开始…"
+  },
+  "popupSupport": {
+    "message": "支持"
+  },
+  "popupSupportEmail": {
+    "message": "✉ 发邮件"
+  },
+  "popupTestPro": {
+    "message": "Pro 已解锁（测试）"
+  },
+  "popupTitle": {
+    "message": "Page Screenshot Pro"
+  },
+  "popupUnknownError": {
+    "message": "未知错误"
+  },
+  "popupUnlimited": {
+    "message": "不限次数"
+  },
+  "popupUpgradeTitle": {
+    "message": "升级 Pro，解锁全部功能"
+  },
+  "priceLifetime": {
+    "message": "$AMOUNT$ 买断",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$39.9"
+      }
+    }
+  },
+  "priceMonthly": {
+    "message": "$AMOUNT$/月",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$4.99"
+      }
+    }
+  },
+  "priceYearly": {
+    "message": "$AMOUNT$/年",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$19.9"
+      }
+    }
+  },
+  "restoreSaveEmail": {
+    "message": "请保存好这个付款邮箱——它是你在别的电脑上找回授权的唯一凭据。"
+  },
+  "stitchBottomMissing": {
+    "message": "拼接可能遗漏底部约 $PIXELS$px 内容",
+    "placeholders": {
+      "pixels": {
+        "content": "$1",
+        "example": "120"
+      }
+    }
+  },
+  "stitchCellSkipped": {
+    "message": "第 $ROW$ 行第 $COL$ 列无有效区域，已跳过",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "3"
+      },
+      "col": {
+        "content": "$2",
+        "example": "2"
+      }
+    }
+  },
+  "stitchClipboardUnsupported": {
+    "message": "当前浏览器不支持写入图片剪贴板"
+  },
+  "stitchDataTooLarge": {
+    "message": "截图数据过大，超过浏览器单条消息 64MB 上限。页面可能过长或在持续加载，建议缩短页面后重试，或分多次截取。"
+  },
+  "stitchEncodeFailed": {
+    "message": "图片编码失败"
+  },
+  "stitchMissingSessionId": {
+    "message": "缺少拼接会话 ID"
+  },
+  "stitchRightUncaptured": {
+    "message": "页面宽度超出视口，右侧约 $PIXELS$px 未截取",
+    "placeholders": {
+      "pixels": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
+  },
+  "stitchRowSkipped": {
+    "message": "第 $ROW$ 行滚动位置超出页面底部，已跳过",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "stitchSeamFixed": {
+    "message": "检测到拼接断裂，已自动偏移 $PIXELS$px 修复",
+    "placeholders": {
+      "pixels": {
+        "content": "$1",
+        "example": "8"
+      }
+    }
+  },
+  "stitchSeamUnfixed": {
+    "message": "边界差异较大（$DIFF$），自动修复未成功，请检查原页面",
+    "placeholders": {
+      "diff": {
+        "content": "$1",
+        "example": "96"
+      }
+    }
+  },
+  "stitchSessionExpired": {
+    "message": "拼接会话不存在或已过期"
+  },
+  "stitchTile": {
+    "message": "第 $ROW$ 屏",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "stitchTileRowCol": {
+    "message": "第 $ROW$ 行第 $COL$ 列",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "2"
+      },
+      "col": {
+        "content": "$2",
+        "example": "3"
+      }
+    }
+  },
+  "stitchTooTall": {
+    "message": "页面超长（$HEIGHT$px），已按比例压缩到 $OUT$px，画质略有损失",
+    "placeholders": {
+      "height": {
+        "content": "$1",
+        "example": "30000"
+      },
+      "out": {
+        "content": "$2",
+        "example": "16000"
+      }
+    }
+  },
+  "stitchTooWide": {
+    "message": "页面过宽（$WIDTH$px），超出单张位图 $LIMIT$px 单边上限，已按比例压缩到 $OUT$px，画质略有损失",
+    "placeholders": {
+      "width": {
+        "content": "$1",
+        "example": "20000"
+      },
+      "limit": {
+        "content": "$2",
+        "example": "16000"
+      },
+      "out": {
+        "content": "$3",
+        "example": "16000"
+      }
+    }
+  },
+  "subActionFailed": {
+    "message": "操作失败：$REASON$",
+    "placeholders": {
+      "reason": {
+        "content": "$1",
+        "example": "network error"
+      }
+    }
+  },
+  "subBack": {
+    "message": "返回"
+  },
+  "subCancel": {
+    "message": "取消续订"
+  },
+  "subCancelConfirm": {
+    "message": "确认取消续订"
+  },
+  "subCancelContinue": {
+    "message": "继续取消"
+  },
+  "subCancelDone": {
+    "message": "已取消续订，Pro 可用到本周期结束。"
+  },
+  "subCancelFinal": {
+    "message": "最后确认：取消 $PLAN$ 的续订？",
+    "placeholders": {
+      "plan": {
+        "content": "$1",
+        "example": "Pro yearly"
+      }
+    }
+  },
+  "subCancelFinalWithDate": {
+    "message": "最后确认：取消续订？Pro 可以用到 $DATE$，之后要重新付费订阅才能恢复。",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "2027-03-04"
+      }
+    }
+  },
+  "subCancelKeep": {
+    "message": "保留订阅"
+  },
+  "subCancelStep1": {
+    "message": "取消后 Pro 会在 $DATE$ 关闭：元素截图、PDF 导出、合并 PDF、MCP 访问和 OCR 都会随之失效。",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "2027-03-04"
+      }
+    }
+  },
+  "subCancelStep1NoDate": {
+    "message": "取消后 Pro 会在这个计费周期结束时关闭：元素截图、PDF 导出、合并 PDF、MCP 访问和 OCR 都会随之失效。"
+  },
+  "subCancelStep2Monthly": {
+    "message": "Pro 是 $AMOUNT$ / 月。取消后以后重买还是这个价，但中间这些天就没了。",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$4.99"
+      }
+    }
+  },
+  "subCancelStep2Yearly": {
+    "message": "年付是 $AMOUNT$ / 年，折算下来只有月付的三分之一。取消就等于放弃这个价格。",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$19.9"
+      }
+    }
+  },
+  "subCarryNote": {
+    "message": "这段没用完的时间不会作废：以后重新订阅任一档，它会累加到新订阅的到期日上。"
+  },
+  "subCheckoutOpened": {
+    "message": "已在新标签页打开结账页，付款完成后授权会自动更新。"
+  },
+  "subCurrentTitle": {
+    "message": "当前订阅"
+  },
+  "subExpiresLabel": {
+    "message": "到期时间"
+  },
+  "subFeedbackEmpty": {
+    "message": "请先填写反馈内容。"
+  },
+  "subFeedbackFailed": {
+    "message": "反馈没有提交成功，请稍后重试。"
+  },
+  "subFeedbackTooMany": {
+    "message": "一小时内提交太多次，请稍后再试。"
+  },
+  "subFeedbackUnavailable": {
+    "message": "反馈服务暂时不可用，请改用支持邮箱联系我们。"
+  },
+  "subFreeDetailNote": {
+    "message": "你还没有订阅。选下面任一套餐即可开始订阅。"
+  },
+  "subFreeNote": {
+    "message": "你还没有订阅。点开上面的订阅状态，就能选套餐开始订阅。"
+  },
+  "subFreePlan": {
+    "message": "免费版"
+  },
+  "subFreeStatus": {
+    "message": "未订阅"
+  },
+  "subLeftoverDetailNote": {
+    "message": "你已买断，但这笔 $PLAN$ 订阅还在自动续费。点下面的「$CANCEL$」停掉它，本期结束前仍可使用。",
+    "placeholders": {
+      "plan": {
+        "content": "$1",
+        "example": "Pro 月付"
+      },
+      "cancel": {
+        "content": "$2",
+        "example": "取消续订"
+      }
+    }
+  },
+  "subLeftoverNote": {
+    "message": "你已买断，但还有一笔 $PLAN$ 订阅在自动续费。点开上面的订阅状态可以取消它。",
+    "placeholders": {
+      "plan": {
+        "content": "$1",
+        "example": "Pro 月付"
+      }
+    }
+  },
+  "subLifetimeNote": {
+    "message": "你已购买买断授权，没有需要续订的订阅。"
+  },
+  "subManageTitle": {
+    "message": "订阅管理"
+  },
+  "subNextLifetime": {
+    "message": "一次买断，永久有效，不需要续费。"
+  },
+  "subNextNone": {
+    "message": "不再续订。到期后订阅结束，需要重新订阅才能恢复 Pro。"
+  },
+  "subNextRenews": {
+    "message": "$DATE$ 起自动续费（续费后顺延一期）",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "2027-03-04"
+      }
+    }
+  },
+  "subNextRenewsNoDate": {
+    "message": "到期后自动续费，续费后顺延一期"
+  },
+  "subNextTitle": {
+    "message": "下个周期"
+  },
+  "subNoActionNote": {
+    "message": "这笔订阅的续订已经取消，此刻没有可执行的操作；稍后刷新会重新检查。"
+  },
+  "subReactivate": {
+    "message": "恢复订阅"
+  },
+  "subReactivateDone": {
+    "message": "订阅已恢复，本次没有扣款。"
+  },
+  "subResumeNow": {
+    "message": "↻ 恢复订阅"
+  },
+  "subResumeNowNote": {
+    "message": "续订已取消 —— 点一下就能恢复，不用再付钱。"
+  },
+  "subStatusActive": {
+    "message": "生效中"
+  },
+  "subStatusCanceled": {
+    "message": "已取消"
+  },
+  "subStatusCanceling": {
+    "message": "已取消续订 —— 到期前仍可使用"
+  },
+  "subStatusEnded": {
+    "message": "已结束"
+  },
+  "subStatusPastDue": {
+    "message": "扣款失败 —— 已暂停"
+  },
+  "subStatusRefunded": {
+    "message": "已退款"
+  },
+  "subViewTitle": {
+    "message": "订阅详情"
+  },
+  "subWorking": {
+    "message": "正在处理…"
+  },
+  "welcomeFeatures": {
+    "message": "它擅长什么"
+  },
+  "welcomeFileHint": {
+    "message": "首次截本地文件（file://）时 Chrome 会要求你手动授权一次：在 chrome://extensions 里勾选本扩展的「允许访问文件网址」。"
+  },
+  "welcomeFooter": {
+    "message": "截图与标注全部在你的设备上完成，不上传到任何服务器。"
+  },
+  "welcomeHeaderBody": {
+    "message": "第 1 屏保留导航栏，第 2 屏起才隐藏固定元素——既不重复，也不是整张图没页头。"
+  },
+  "welcomeHeaderTitle": {
+    "message": "页头只出现一次"
+  },
+  "welcomeInfiniteBody": {
+    "message": "先滚到底把内容都触发出来，再开始截，不会只截到第一屏。"
+  },
+  "welcomeInfiniteTitle": {
+    "message": "无限滚动页面"
+  },
+  "welcomeLanguage": {
+    "message": "界面语言"
+  },
+  "welcomeLazyBody": {
+    "message": "用 img.decode() 等到位图真的就绪，而不是猜一个等待时间。"
+  },
+  "welcomeLazyTitle": {
+    "message": "懒加载图片"
+  },
+  "welcomeLocalBody": {
+    "message": "截图、标注、OCR 全部在你的浏览器里完成，图片不上传到任何地方。"
+  },
+  "welcomeLocalTitle": {
+    "message": "纯本地处理"
+  },
+  "welcomeOpenPopupFailed": {
+    "message": "请点击工具栏上的扩展图标查看套餐"
+  },
+  "welcomePlans": {
+    "message": "查看套餐"
+  },
+  "welcomePricingBody": {
+    "message": "整页截图、无限滚动、懒加载，以及编辑器里的全部编辑工具——马赛克、裁剪、矩形、文字——都免费，每天 20 次。Pro 增加 PDF 导出、合并 PDF、OCR、MCP 访问与元素截图，并且不限次数。"
+  },
+  "welcomePricingTitle": {
+    "message": "免费版与 Pro"
+  },
+  "welcomePrivacy": {
+    "message": "隐私政策"
+  },
+  "welcomeQuerying": {
+    "message": "正在查询…"
+  },
+  "welcomeRestoreEmail": {
+    "message": "付款邮箱"
+  },
+  "welcomeRestoreHint": {
+    "message": "换电脑或重装过？填付款时用的邮箱即可找回 Pro。"
+  },
+  "welcomeRestoreSuccess": {
+    "message": "已恢复，Pro 已解锁。感谢支持！"
+  },
+  "welcomeSeamBody": {
+    "message": "相邻分屏做连续性检测，错位时在 ±16px 内搜索最佳偏移。"
+  },
+  "welcomeSeamTitle": {
+    "message": "接缝自动修复"
+  },
+  "welcomeServerNote": {
+    "message": "（订阅状态会与本扩展的授权服务器核对，服务器只保存安装 ID 与套餐状态。）"
+  },
+  "welcomeSettings": {
+    "message": "打开设置"
+  },
+  "welcomeStepCapture": {
+    "message": "点工具栏图标，或按 Alt+Shift+D"
+  },
+  "welcomeStepCaptureBody": {
+    "message": "Alt+Shift+V 只截当前可视区域。"
+  },
+  "welcomeStepDownload": {
+    "message": "在下载目录找到文件"
+  },
+  "welcomeStepDownloadBody": {
+    "message": "文件名格式可在设置里改（默认「页面标题 - 日期 时间.png」）。"
+  },
+  "welcomeStepPage": {
+    "message": "打开一个长页面"
+  },
+  "welcomeStepPageBody": {
+    "message": "文章、动态流、更新日志都行——越长越能看出差别。"
+  },
+  "welcomeTagline": {
+    "message": "整页截图，一次到底。滚动拼接、无限滚动、懒加载图片全自动处理。"
+  },
+  "welcomeTitle": {
+    "message": "欢迎使用 - Page Screenshot Pro"
+  },
+  "welcomeTry": {
+    "message": "试一下"
+  },
+  "welcomeWideBody": {
+    "message": "宽表格、看板、横向流程图按网格分列抓取，右边缘内容不会丢。"
+  },
+  "welcomeWideTitle": {
+    "message": "比视口宽的页面"
+  }
+}

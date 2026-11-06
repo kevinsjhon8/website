@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050a14">
+
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon16.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon48.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- Android Chrome 的「添加到主屏幕」靠 manifest 拿启动图标、name 与
+     theme_color；没有它就只能退回 favicon，装出来的图标是 48px 放大的糊图。
+     图标全部 192/512 —— Chrome 装应用时只认真实尺寸够大的那几张，声明了
+     尺寸却给一张小图，它会拒绝安装而不是缩小使用。 -->
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/styles.css">
+
+<!-- 每个路由的 <title>/description/canonical/hreflang/og/JSON-LD 由
+     scripts/prerender.mjs 插在这里。构建出的 dist/*/index.html 里是一整份
+     真实 HTML，不依赖 JS 才看得到内容——这正是选预渲染而不是纯 SPA 的原因。 -->
+<!--app-head-->
+</head>
+<body>
+<div id="root"><!--app-html--></div>
+<!-- Vite 的客户端入口。产物里不会有**这个 script 标签**——prerender.mjs 的
+     stripClientScript() 会剥掉它、并删除 dist/assets/。这一行留着是给 Vite
+     一个入口，同时让那个剥离函数在正则落空时抛错（删了它会立刻构建失败）。
+     注意这段注释本身**会**随产物发出去：HTML 注释不参与压缩前删除，
+     所以保持短。（理由的全文在 scripts/prerender.mjs 顶上。） -->
+<script type="module" src="/src/main.tsx"></script>
+</body>
+</html>

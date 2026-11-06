@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "entries": {
+    "/": {
+      "hash": "ca225d6a546cb130",
+      "date": "2026-11-05"
+    },
+    "/de/": {
+      "hash": "3da0129e4571dff9",
+      "date": "2026-11-05"
+    },
+    "/de/faq/": {
+      "hash": "16066051f6cabec0",
+      "date": "2026-11-02"
+    },
+    "/de/pricing/": {
+      "hash": "4dcc6d67815c0fc8",
+      "date": "2026-11-01"
+    },
+    "/de/privacy/": {
+      "hash": "6821471f0eb08d4a",
+      "date": "2026-11-02"
+    },
+    "/de/support/": {
+      "hash": "d31c8a5778c6f527",
+      "date": "2026-11-01"
+    },
+    "/de/terms/": {
+      "hash": "c40ac943d19b80cd",
+      "date": "2026-11-01"
+    },
+    "/es/": {
+      "hash": "2c42b1d40795b78f",
+      "date": "2026-11-05"
+    },
+    "/es/faq/": {
+      "hash": "4e729e9932ab3b73",
+      "date": "2026-11-02"
+    },
+    "/es/pricing/": {
+      "hash": "dc830b7df01ef499",
+      "date": "2026-11-01"
+    },
+    "/es/privacy/": {
+      "hash": "00e2501e6f9b5def",
+      "date": "2026-11-02"
+    },
+    "/es/support/": {
+      "hash": "8609acbef101d724",
+      "date": "2026-11-01"
+    },
+    "/es/terms/": {
+      "hash": "86c91385e1a53999",
+      "date": "2026-11-01"
+    },
+    "/faq/": {
+      "hash": "b020ebd27cea286f",
+      "date": "2026-11-02"
+    },
+    "/fr/": {
+      "hash": "d52e5a10e9f664b9",
+      "date": "2026-11-05"
+    },
+    "/fr/faq/": {
+      "hash": "fe7efda9c366d04a",
+      "date": "2026-11-02"
+    },
+    "/fr/pricing/": {
+      "hash": "61c489f3ee17ad85",
+      "date": "2026-11-01"
+    },
+    "/fr/privacy/": {
+      "hash": "9ca60ab0bd217876",
+      "date": "2026-11-02"
+    },
+    "/fr/support/": {
+      "hash": "640ec1128c28c725",
+      "date": "2026-11-01"
+    },
+    "/fr/terms/": {
+      "hash": "88c77ac627023544",
+      "date": "2026-11-01"
+    },
+    "/ja/": {
+      "hash": "0e745596250326e8",
+      "date": "2026-11-05"
+    },
+    "/ja/faq/": {
+      "hash": "3b1f64669c50d2b2",
+      "date": "2026-11-02"
+    },
+    "/ja/pricing/": {
+      "hash": "03771b14175c2218",
+      "date": "2026-11-01"
+    },
+    "/ja/privacy/": {
+      "hash": "c49db04f50e818a3",
+      "date": "2026-11-02"
+    },
+    "/ja/support/": {
+      "hash": "159640542d7cdfe2",
+      "date": "2026-11-01"
+    },
+    "/ja/terms/": {
+      "hash": "7f6c239375a9f153",
+      "date": "2026-11-01"
+    },
+    "/ko/": {
+      "hash": "8d5b41b080d7ba92",
+      "date": "2026-11-05"
+    },
+    "/ko/faq/": {
+      "hash": "025cc612f6bc4e21",
+      "date": "2026-11-05"
+    },
+    "/ko/pricing/": {
+      "hash": "871b5453776652cc",
+      "date": "2026-11-01"
+    },
+    "/ko/privacy/": {
+      "hash": "1b7b32cda98d9dc6",
+      "date": "2026-11-02"
+    },
+    "/ko/support/": {
+      "hash": "27e1fb28cbe426ed",
+      "date": "2026-11-01"
+    },
+    "/ko/terms/": {
+      "hash": "f70ba2f6757a53de",
+      "date": "2026-11-01"
+    },
+    "/pricing/": {
+      "hash": "b19a5b0e8da513dc",
+      "date": "2026-11-01"
+    },
+    "/privacy/": {
+      "hash": "6f48a471c4766842",
+      "date": "2026-11-02"
+    },
+    "/support/": {
+      "hash": "69371bce7a01b083",
+      "date": "2026-11-01"
+    },
+    "/terms/": {
+      "hash": "977946570b476683",
+      "date": "2026-11-01"
+    },
+    "/zh-cn/": {
+      "hash": "798607587532eb85",
+      "date": "2026-11-05"
+    },
+    "/zh-cn/faq/": {
+      "hash": "5db16a56c2b7f10c",
+      "date": "2026-11-05"
+    },
+    "/zh-cn/pricing/": {
+      "hash": "8f1d5dfc93456179",
+      "date": "2026-11-01"
+    },
+    "/zh-cn/privacy/": {
+      "hash": "5267c2580aa61792",
+      "date": "2026-11-02"
+    },
+    "/zh-cn/support/": {
+      "hash": "1701a889592ce3d5",
+      "date": "2026-11-01"
+    },
+    "/zh-cn/terms/": {
+      "hash": "8b1dd6c0330a95ee",
+      "date": "2026-11-01"
+    },
+    "/zh-tw/": {
+      "hash": "d8afb68e708d3116",
+      "date": "2026-11-05"
+    },
+    "/zh-tw/faq/": {
+      "hash": "f78f5725a5a03e53",
+      "date": "2026-11-05"
+    },
+    "/zh-tw/pricing/": {
+      "hash": "11940e6613ea3e29",
+      "date": "2026-11-01"
+    },
+    "/zh-tw/privacy/": {
+      "hash": "11614ba48c6f0b55",
+      "date": "2026-11-02"
+    },
+    "/zh-tw/support/": {
+      "hash": "ad8dbeb8f4eaf2cb",
+      "date": "2026-11-01"
+    },
+    "/zh-tw/terms/": {
+      "hash": "2fc661b32ed188f7",
+      "date": "2026-11-01"
+    }
+  }
+}

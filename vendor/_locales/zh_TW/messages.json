@@ -1,0 +1,1493 @@
+{
+  "bgBusy": {
+    "message": "已有截圖任務在進行中，請等它完成後再試"
+  },
+  "bgCanvasChunkFailed": {
+    "message": "Canvas 後端處理第 $BATCH$ 批分屏失敗",
+    "placeholders": {
+      "batch": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "bgCanvasFailed": {
+    "message": "Canvas 後端處理失敗"
+  },
+  "bgCanvasInitFailed": {
+    "message": "Canvas 後端初始化失敗"
+  },
+  "bgCanvasReadyTimeout": {
+    "message": "Canvas 後端啟動超時，請重試（$DETAIL$）",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "等待 Canvas 后端就绪超时"
+      }
+    }
+  },
+  "bgCaptureFailed": {
+    "message": "截圖失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "页面无响应"
+      }
+    }
+  },
+  "bgCaptureProgress": {
+    "message": "正在擷取第 $CURRENT$/$TOTAL$ 屏",
+    "placeholders": {
+      "current": {
+        "content": "$1",
+        "example": "3"
+      },
+      "total": {
+        "content": "$2",
+        "example": "40"
+      }
+    }
+  },
+  "bgCaptureRetry": {
+    "message": "正在擷取第 $CURRENT$/$TOTAL$ 屏（重試 $ATTEMPT$）",
+    "placeholders": {
+      "current": {
+        "content": "$1",
+        "example": "3"
+      },
+      "total": {
+        "content": "$2",
+        "example": "40"
+      },
+      "attempt": {
+        "content": "$3",
+        "example": "2"
+      }
+    }
+  },
+  "bgCapturing": {
+    "message": "正在擷取畫面…"
+  },
+  "bgClipboardFailed": {
+    "message": "複製到剪貼簿失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "剪贴板不可用"
+      }
+    }
+  },
+  "bgCompleteNoEditor": {
+    "message": "截圖完成"
+  },
+  "bgElementFailed": {
+    "message": "擷取元素失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "元素过大"
+      }
+    }
+  },
+  "bgFileAccess": {
+    "message": "本地檔案截圖需要授權：請在擴充套件管理頁勾選「允許訪問檔案網址」後重試。"
+  },
+  "bgHidingFixed": {
+    "message": "正在隱藏固定元素…"
+  },
+  "bgInternalPage": {
+    "message": "瀏覽器內部頁面無法截圖"
+  },
+  "bgNoActiveTab": {
+    "message": "沒有活動的分頁可以截圖"
+  },
+  "bgNoFocusedDocument": {
+    "message": "沒有可寫入的焦點視窗（關掉其他彈窗後重試）"
+  },
+  "bgNoScrollAdvance": {
+    "message": "第 $ROW$ 行沒有繼續推進，提前結束",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "bgNoSegments": {
+    "message": "沒有可拼接的有效分屏"
+  },
+  "bgNotScrollable": {
+    "message": "頁面不可滾動，無需整頁截圖"
+  },
+  "bgOpeningEditor": {
+    "message": "正在開啟編輯器…"
+  },
+  "bgPageInfoFailed": {
+    "message": "獲取頁面資訊失敗"
+  },
+  "bgPaymentUnconfigured": {
+    "message": "支付尚未配置：請先在 utils/payment-config.ts 填入 Waffo 收銀台連結"
+  },
+  "bgPortalNeedsBackend": {
+    "message": "管理訂閱需要後端支援：請先配置 payment-config.ts 的 backendUrl"
+  },
+  "bgPortalUnavailable": {
+    "message": "打不開訂閱管理頁面，請稍後重試"
+  },
+  "bgPreparePage": {
+    "message": "正在準備頁面…"
+  },
+  "bgProRequired": {
+    "message": "這是 Pro 功能（當前未解鎖）"
+  },
+  "bgQuotaExhausted": {
+    "message": "今日免費額度已用完（$COUNT$ 次）。升級 Pro 可無限截圖。",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "50"
+      }
+    }
+  },
+  "bgRestoreNeedsBackend": {
+    "message": "恢復購買需要後端支援：請先配置 payment-config.ts 的 backendUrl"
+  },
+  "bgShotExpired": {
+    "message": "截圖資料已失效（後臺被回收且備份過期），請重新截圖"
+  },
+  "bgStitching": {
+    "message": "正在拼接分屏…"
+  },
+  "bgStorePage": {
+    "message": "應用商店頁面無法截圖"
+  },
+  "bgTabTimeout": {
+    "message": "等待「$STEP$」超時，請重試",
+    "placeholders": {
+      "step": {
+        "content": "$1",
+        "example": "psp-prepare"
+      }
+    }
+  },
+  "bgTruncated": {
+    "message": "頁面過長，僅擷取前 $ROWS$ 行",
+    "placeholders": {
+      "rows": {
+        "content": "$1",
+        "example": "40"
+      }
+    }
+  },
+  "bgUnknownOperation": {
+    "message": "未知操作"
+  },
+  "commandCaptureFull": {
+    "message": "整頁截圖"
+  },
+  "commandCaptureVisible": {
+    "message": "可視區域截圖"
+  },
+  "contentPickHint": {
+    "message": "移動滑鼠高亮元素，點選確認，Esc 取消"
+  },
+  "contentRegionHint": {
+    "message": "拖曳選擇截圖區域，Esc 取消"
+  },
+  "contentRegionTooSmall": {
+    "message": "區域太小"
+  },
+  "contentUnknownMessage": {
+    "message": "未知訊息：$TYPE$",
+    "placeholders": {
+      "type": {
+        "content": "$1",
+        "example": "psp-unknown"
+      }
+    }
+  },
+  "contextMenuElement": {
+    "message": "擷取該元素（Page Screenshot Pro）"
+  },
+  "editorClearAnnotations": {
+    "message": "🗑 清除標註"
+  },
+  "editorClearConfirm": {
+    "message": "確定清除全部標註嗎？"
+  },
+  "editorClipboardDenied": {
+    "message": "複製失敗：瀏覽器拒絕了剪貼簿寫入"
+  },
+  "editorClose": {
+    "message": "關閉"
+  },
+  "editorColor": {
+    "message": "顏色"
+  },
+  "editorCopied": {
+    "message": "已複製到剪貼簿"
+  },
+  "editorCopy": {
+    "message": "📋 複製到剪貼簿"
+  },
+  "editorCopyFailed": {
+    "message": "複製失敗"
+  },
+  "editorCopyFailedDetail": {
+    "message": "複製失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "剪贴板错误"
+      }
+    }
+  },
+  "editorCopyText": {
+    "message": "複製文字"
+  },
+  "editorCropDone": {
+    "message": "已裁剪（標註已隨圖平移，可按撤銷恢復）"
+  },
+  "editorDecodeFailed": {
+    "message": "截圖解碼失敗，請重新截圖"
+  },
+  "editorDeletedAnnotation": {
+    "message": "已刪除標註"
+  },
+  "editorDownloadJpg": {
+    "message": "⬇ 下載 JPG"
+  },
+  "editorDownloadJpgTitle": {
+    "message": "體積約為 PNG 的 1/5，適合長圖分享"
+  },
+  "editorDownloadPng": {
+    "message": "⬇ 下載 PNG"
+  },
+  "editorExportFailed": {
+    "message": "匯出失敗"
+  },
+  "editorExportPdf": {
+    "message": "📕 匯出 PDF"
+  },
+  "editorJpgDownloadStarted": {
+    "message": "JPG 已開始下載"
+  },
+  "editorLicenseCheckFailed": {
+    "message": "授權檢查失敗"
+  },
+  "editorLineWidth": {
+    "message": "線寬"
+  },
+  "editorLoadFailed": {
+    "message": "截圖載入失敗"
+  },
+  "editorLoadFailedDetail": {
+    "message": "載入失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "存储错误"
+      }
+    }
+  },
+  "editorLoading": {
+    "message": "正在載入截圖…"
+  },
+  "editorMissingShotId": {
+    "message": "缺少截圖 ID，請從外掛彈窗重新截圖"
+  },
+  "editorNothingToRedo": {
+    "message": "沒有可重做的操作"
+  },
+  "editorNothingToUndo": {
+    "message": "沒有可撤銷的操作"
+  },
+  "editorOcr": {
+    "message": "🔍 OCR 識別（實驗功能）"
+  },
+  "editorOcrFailed": {
+    "message": "識別失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "识别错误"
+      }
+    }
+  },
+  "editorOcrNoText": {
+    "message": "（未識別出文字）"
+  },
+  "editorOcrPreparing": {
+    "message": "準備識別…"
+  },
+  "editorOcrResult": {
+    "message": "OCR 識別結果"
+  },
+  "editorPdfDownloadStarted": {
+    "message": "PDF 已開始下載"
+  },
+  "editorPdfExportFailed": {
+    "message": "PDF 匯出失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "导出错误"
+      }
+    }
+  },
+  "editorPngDownloadStarted": {
+    "message": "PNG 已開始下載"
+  },
+  "editorProOcrTitle": {
+    "message": "Pro：識別圖中文字"
+  },
+  "editorProPdfTitle": {
+    "message": "Pro：匯出 PDF"
+  },
+  "editorProRequired": {
+    "message": "這是 Pro 功能（當前未解鎖）"
+  },
+  "editorRedo": {
+    "message": "↪ 重做"
+  },
+  "editorRedoTitle": {
+    "message": "重做 (Ctrl/Cmd+Shift+Z)"
+  },
+  "editorRedone": {
+    "message": "已重做"
+  },
+  "editorTitle": {
+    "message": "編輯截圖 - Page Screenshot Pro"
+  },
+  "editorToolArrow": {
+    "message": "➤ 箭頭"
+  },
+  "editorToolArrowTitle": {
+    "message": "箭頭 (A)"
+  },
+  "editorToolCrop": {
+    "message": "✂ 裁剪"
+  },
+  "editorToolCropTitle": {
+    "message": "裁剪 (C)——標註會隨座標系一起平移，不會被清除"
+  },
+  "editorToolEllipse": {
+    "message": "◯ 橢圓"
+  },
+  "editorToolEllipseTitle": {
+    "message": "橢圓 (O)"
+  },
+  "editorToolHighlight": {
+    "message": "🖍 熒光筆"
+  },
+  "editorToolHighlightTitle": {
+    "message": "熒光筆 (H)——半透明疊加，底下的文字仍可讀"
+  },
+  "editorToolMosaic": {
+    "message": "🔲 馬賽克"
+  },
+  "editorToolMosaicTitle": {
+    "message": "馬賽克 (M)"
+  },
+  "editorToolPen": {
+    "message": "✎ 畫筆"
+  },
+  "editorToolPenTitle": {
+    "message": "自由筆 (P)"
+  },
+  "editorToolRect": {
+    "message": "▭ 矩形"
+  },
+  "editorToolRectTitle": {
+    "message": "矩形 (R)"
+  },
+  "editorToolSelect": {
+    "message": "⬉ 選擇"
+  },
+  "editorToolSelectTitle": {
+    "message": "選擇/移動已有標註 (V)"
+  },
+  "editorToolText": {
+    "message": "T 文字"
+  },
+  "editorToolTextTitle": {
+    "message": "文字 (T)"
+  },
+  "editorUndo": {
+    "message": "↩ 撤銷"
+  },
+  "editorUndoTitle": {
+    "message": "撤銷 (Ctrl/Cmd+Z)"
+  },
+  "editorUndone": {
+    "message": "已撤銷"
+  },
+  "editorZoomFit": {
+    "message": "適應"
+  },
+  "editorZoomFitTitle": {
+    "message": "適應視窗 (0)"
+  },
+  "editorZoomFitWidth": {
+    "message": "適配寬度"
+  },
+  "editorZoomFitWidthTitle": {
+    "message": "讓圖片寬度填滿可視區，上下滾動檢視 (W)"
+  },
+  "editorZoomInTitle": {
+    "message": "放大 (+)"
+  },
+  "editorZoomLabelTitle": {
+    "message": "點選恢復適應視窗 (0)"
+  },
+  "editorZoomOutTitle": {
+    "message": "縮小 (−)"
+  },
+  "extensionDescription": {
+    "message": "專業網頁全螢幕滾動長截圖工具：支援整頁滾動截圖、無限滾動智慧拼接、本地檔案截圖、標註編輯器、PDF匯出與離線OCR文字辨識，AI 用戶端可經 MCP 呼叫截圖。純本地離線處理，資料零上傳，安全保護隱私。"
+  },
+  "extensionName": {
+    "message": "Page Screenshot Pro"
+  },
+  "feedbackEmail": {
+    "message": "信箱"
+  },
+  "feedbackEmailHint": {
+    "message": "（選填 —— 留空即匿名提交；想收到回覆就填上）"
+  },
+  "feedbackHeading": {
+    "message": "提交回饋"
+  },
+  "feedbackIntro": {
+    "message": "你的回饋會直達開發者。不會附帶任何截圖或網頁內容。"
+  },
+  "feedbackMessage": {
+    "message": "發生了什麼？"
+  },
+  "feedbackMessageHint": {
+    "message": "（必填 —— 在哪個頁面、點了什麼、期望是什麼）"
+  },
+  "feedbackPrivacy": {
+    "message": "不需要帳號，也沒有埋點。信箱只用於回覆你。"
+  },
+  "feedbackSend": {
+    "message": "提交"
+  },
+  "feedbackSending": {
+    "message": "正在傳送…"
+  },
+  "feedbackSent": {
+    "message": "感謝，回饋已收到。"
+  },
+  "feedbackTitle": {
+    "message": "回饋 - Page Screenshot Pro"
+  },
+  "feedbackType": {
+    "message": "類型"
+  },
+  "feedbackTypeBug": {
+    "message": "問題 / 功能壞了"
+  },
+  "feedbackTypeFeature": {
+    "message": "功能建議"
+  },
+  "feedbackTypeOther": {
+    "message": "其他"
+  },
+  "feedbackTypePurchase": {
+    "message": "購買或授權問題"
+  },
+  "mcpBusy": {
+    "message": "已有截圖工作在進行中，請稍後再試。"
+  },
+  "mcpElementNotFound": {
+    "message": "沒有元素符合這個選擇器。請用開發人員工具確認後重試。"
+  },
+  "mcpImageTooLarge": {
+    "message": "圖片太大了。請把 maxWidth 調小一些。"
+  },
+  "mcpProRequired": {
+    "message": "MCP 訪問需要 Pro。開啟擴充套件設定即可升級。"
+  },
+  "mcpSelectorRequired": {
+    "message": "capture_element 需要 CSS 選擇器，例如 \"#main .title\"。"
+  },
+  "mcpUnknownTool": {
+    "message": "未知的工具。請重新取得工具清單——擴充套件可能是另一個版本。"
+  },
+  "ocrBadLibrary": {
+    "message": "OCR 主庫介面異常（缺少 createWorker）"
+  },
+  "ocrFailed": {
+    "message": "OCR 識別失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "识别错误"
+      }
+    }
+  },
+  "ocrInitializing": {
+    "message": "正在初始化識別引擎"
+  },
+  "ocrInitializingApi": {
+    "message": "正在初始化識別介面"
+  },
+  "ocrLoadLibraryFailed": {
+    "message": "OCR 主庫載入失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "模块错误"
+      }
+    }
+  },
+  "ocrLoadingCore": {
+    "message": "正在載入識別核心"
+  },
+  "ocrLoadingLanguages": {
+    "message": "正在載入語言包（中英）"
+  },
+  "ocrRecognizing": {
+    "message": "正在識別文字"
+  },
+  "ocrUnavailable": {
+    "message": "當前不在擴充套件環境中執行，無法載入 OCR 引擎"
+  },
+  "optionsAnnotate": {
+    "message": "截圖後開啟編輯器標註"
+  },
+  "optionsCapture": {
+    "message": "抓取"
+  },
+  "optionsCopy": {
+    "message": "截圖後自動複製到剪貼簿"
+  },
+  "optionsDownload": {
+    "message": "下載"
+  },
+  "optionsExpandInfinite": {
+    "message": "抓取前展開無限滾動頁面"
+  },
+  "optionsFilename": {
+    "message": "檔名模板"
+  },
+  "optionsFolder": {
+    "message": "子目錄"
+  },
+  "optionsFolderHint": {
+    "message": "例如 Screenshots/Web，目錄不存在會自動建立。"
+  },
+  "optionsFolderPlaceholder": {
+    "message": "留空 = 下載根目錄"
+  },
+  "optionsFormat": {
+    "message": "預設格式"
+  },
+  "optionsHeading": {
+    "message": "截圖設定"
+  },
+  "optionsInterface": {
+    "message": "介面"
+  },
+  "optionsIntro": {
+    "message": "設定儲存在瀏覽器帳號裡（chrome.storage.sync），換機器會自動同步。"
+  },
+  "optionsJpg": {
+    "message": "JPG（有損，體積約為 PNG 的 1/5）"
+  },
+  "optionsLanguage": {
+    "message": "介面語言"
+  },
+  "optionsLanguageHint": {
+    "message": "預設跟隨 Chrome 的介面語言；在這裡改只影響本機。改完立即生效，無需儲存。"
+  },
+  "optionsLanguageSaved": {
+    "message": "語言已切換"
+  },
+  "optionsLazyWarning": {
+    "message": "下面兩項只作用於「整頁截圖」；關掉後抓得更快，但頁面裡的懶載入圖片可能還沒載入出來，截圖裡留下空白。"
+  },
+  "optionsMcpBody": {
+    "message": "讓 Claude Desktop、Cursor、Claude Code 這類 AI 工具透過本擴充功能截圖。全程在本機執行，不上傳任何內容。"
+  },
+  "optionsMcpConfigHint": {
+    "message": "把下面這段貼到 AI 用戶端設定檔的 mcpServers 裡："
+  },
+  "optionsMcpCopied": {
+    "message": "已複製"
+  },
+  "optionsMcpCopy": {
+    "message": "複製設定"
+  },
+  "optionsMcpCopyFailed": {
+    "message": "複製失敗，請手動選取這段文字複製。"
+  },
+  "optionsMcpGuide": {
+    "message": "完整設定說明"
+  },
+  "optionsMcpHint": {
+    "message": "瀏覽器要求截圖前必須有過一次點擊。如果 AI 回報權限錯誤，點一下擴充功能圖示，再請它重試。"
+  },
+  "optionsMcpLogTitle": {
+    "message": "最近的呼叫"
+  },
+  "optionsMcpPro": {
+    "message": "Pro"
+  },
+  "optionsMcpProNote": {
+    "message": "MCP 訪問是 Pro 功能。"
+  },
+  "optionsMcpReset": {
+    "message": "重設 Token"
+  },
+  "optionsMcpResetConfirm": {
+    "message": "舊設定會立刻失效。確定要繼續嗎？"
+  },
+  "optionsMcpResetDone": {
+    "message": "Token 已重設，請把新的設定貼到 AI 用戶端。"
+  },
+  "optionsMcpResetKeep": {
+    "message": "保留目前的 Token"
+  },
+  "optionsMcpResetProceed": {
+    "message": "仍要重設"
+  },
+  "optionsMcpStateFail": {
+    "message": "連不上。確認 AI 用戶端已重新啟動，且設定裡的 Token 與上面一致。"
+  },
+  "optionsMcpStateLost": {
+    "message": "上次連線：$TIME$。AI 用戶端結束後斷線是正常的。",
+    "placeholders": {
+      "time": {
+        "content": "$1",
+        "example": "2026-11-01 09:05"
+      }
+    }
+  },
+  "optionsMcpStateNever": {
+    "message": "還沒有連線過。AI 用戶端啟動後會自動連上。"
+  },
+  "optionsMcpStateOff": {
+    "message": "未連線"
+  },
+  "optionsMcpStateOn": {
+    "message": "已連線"
+  },
+  "optionsMcpStep1": {
+    "message": "把上面的 JSON 貼到 AI 用戶端設定檔的 mcpServers 裡。需要 Node 20 或更新版本。"
+  },
+  "optionsMcpStep2": {
+    "message": "重新啟動用戶端。橋接程序連上後，頂端的圓點會變成綠色。"
+  },
+  "optionsMcpStep3": {
+    "message": "先請它呼叫 psp_status：這個工具免費，會說明哪裡出了問題。"
+  },
+  "optionsMcpStepsTitle": {
+    "message": "使用方式"
+  },
+  "optionsMcpTitle": {
+    "message": "AI / MCP 訪問"
+  },
+  "optionsMcpToggle": {
+    "message": "啟用 MCP 訪問"
+  },
+  "optionsMcpUpgrade": {
+    "message": "升級到 Pro"
+  },
+  "optionsPng": {
+    "message": "PNG（無損，體積大）"
+  },
+  "optionsPreloadLazy": {
+    "message": "抓取前觸發並等待懶載入圖片"
+  },
+  "optionsQuality": {
+    "message": "JPG 質量"
+  },
+  "optionsRequestFailed": {
+    "message": "請求失敗"
+  },
+  "optionsReset": {
+    "message": "恢復預設"
+  },
+  "optionsResetDone": {
+    "message": "已恢復預設"
+  },
+  "optionsSampleHost": {
+    "message": "example.com"
+  },
+  "optionsSampleTitle": {
+    "message": "網頁截圖"
+  },
+  "optionsSaveAs": {
+    "message": "每次下載都彈出「另存為」對話方塊"
+  },
+  "optionsSaveFailed": {
+    "message": "儲存失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "存储失败"
+      }
+    }
+  },
+  "optionsSaved": {
+    "message": "已儲存"
+  },
+  "optionsSynced": {
+    "message": "已同步其他視窗的修改"
+  },
+  "optionsTemplateInsertHint": {
+    "message": "插入："
+  },
+  "optionsTemplateInsertTitle": {
+    "message": "在游標處插入此佔位符"
+  },
+  "optionsTemplatePreview": {
+    "message": "預覽："
+  },
+  "optionsTitle": {
+    "message": "設定 - Page Screenshot Pro"
+  },
+  "payApiNotConfigured": {
+    "message": "支付後端未配置"
+  },
+  "payApiStatus": {
+    "message": "後端返回 $STATUS$",
+    "placeholders": {
+      "status": {
+        "content": "$1",
+        "example": "502"
+      }
+    }
+  },
+  "payApiTimeout": {
+    "message": "請求支付伺服器超時"
+  },
+  "payCheckoutFailed": {
+    "message": "下單失敗：後端未返回收銀台地址"
+  },
+  "payMockPlanSuffix": {
+    "message": "（測試）"
+  },
+  "payNeedInstallId": {
+    "message": "後端模式下單需要安裝身份（installId），呼叫方未提供"
+  },
+  "payNoteCanceled": {
+    "message": "訂閱已終止"
+  },
+  "payNoteCanceling": {
+    "message": "已取消續費，到期前仍可使用"
+  },
+  "payNoteClientCeiling": {
+    "message": "當前為純客戶端模式：續費與退款不會同步到本機，訂閱到期後 Pro 仍會保持開啟。"
+  },
+  "payNoteExpired": {
+    "message": "訂閱已到期"
+  },
+  "payNoteLifetime": {
+    "message": "Pro 買斷授權（永久有效，不受訂閱退款/取消影響）"
+  },
+  "payNotePastDue": {
+    "message": "續費失敗，訂閱已暫停，請更新支付方式"
+  },
+  "payNoteSubscriptionEnd": {
+    "message": "訂閱有效期至 $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "2099-03-04"
+      }
+    }
+  },
+  "payUnconfigured": {
+    "message": "支付尚未配置：請先在 utils/payment-config.ts 填入 Waffo 收銀台連結"
+  },
+  "payUnknownPlan": {
+    "message": "未知套餐：$PLAN$",
+    "placeholders": {
+      "plan": {
+        "content": "$1",
+        "example": "monthly"
+      }
+    }
+  },
+  "planLifetime": {
+    "message": "Pro 買斷"
+  },
+  "planMonthly": {
+    "message": "Pro 月付"
+  },
+  "planPro": {
+    "message": "Pro"
+  },
+  "planYearly": {
+    "message": "Pro 年付"
+  },
+  "popupCannotOpenExtensions": {
+    "message": "無法自動開啟，請手動前往 chrome://extensions"
+  },
+  "popupCaptureFull": {
+    "message": "📄 整頁截圖"
+  },
+  "popupCaptureRegion": {
+    "message": "✂️ 選區截圖"
+  },
+  "popupCaptureVisible": {
+    "message": "🖥️ 可視區域截圖"
+  },
+  "popupChecking": {
+    "message": "檢查中…"
+  },
+  "popupCheckoutFailed": {
+    "message": "開啟收銀台失敗"
+  },
+  "popupCheckoutTitle": {
+    "message": "點選前往 Waffo 安全收銀台完成支付"
+  },
+  "popupClear": {
+    "message": "清空"
+  },
+  "popupClearConfirm": {
+    "message": "確定清空全部歷史記錄嗎？"
+  },
+  "popupCommunicationFailed": {
+    "message": "通訊失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "连接失败"
+      }
+    }
+  },
+  "popupCompleteWarnings": {
+    "message": "完成，但有提醒：$WARNINGS$",
+    "placeholders": {
+      "warnings": {
+        "content": "$1",
+        "example": "图片已压缩"
+      }
+    }
+  },
+  "popupDelete": {
+    "message": "刪除"
+  },
+  "popupEmptyHistory": {
+    "message": "暫無截圖"
+  },
+  "popupFeedback": {
+    "message": "💬 提交回饋"
+  },
+  "popupFeedbackUnavailable": {
+    "message": "暫時打不開回饋頁，請直接發郵件到支援信箱"
+  },
+  "popupFileGuide": {
+    "message": "本地檔案截圖需要授權：請在擴充套件管理頁勾選「允許訪問檔案網址」後重試。"
+  },
+  "popupFreeLocked": {
+    "message": "免費版（Pro 未解鎖）"
+  },
+  "popupHistory": {
+    "message": "歷史記錄"
+  },
+  "popupImageDecodeFailed": {
+    "message": "圖片解碼失敗"
+  },
+  "popupKindElement": {
+    "message": "元素"
+  },
+  "popupKindFullpage": {
+    "message": "整頁"
+  },
+  "popupKindRegion": {
+    "message": "選區"
+  },
+  "popupKindVisible": {
+    "message": "可視區域"
+  },
+  "popupLanguage": {
+    "message": "語言"
+  },
+  "popupLanguageAuto": {
+    "message": "跟隨 Chrome"
+  },
+  "popupLanguageTitle": {
+    "message": "介面語言（預設跟隨 Chrome 介面語言）"
+  },
+  "popupMergeNoOriginals": {
+    "message": "選中的截圖原圖均已清理，無法匯出"
+  },
+  "popupMergePdf": {
+    "message": "合併 PDF"
+  },
+  "popupMergePdfTitle": {
+    "message": "選中多條合併匯出 PDF（Pro）"
+  },
+  "popupMergeProRequired": {
+    "message": "「合併匯出 PDF」是 Pro 功能"
+  },
+  "popupMergeSelectRequired": {
+    "message": "請先勾選要合併的歷史截圖"
+  },
+  "popupMergeSelectTitle": {
+    "message": "選中以合併匯出 PDF"
+  },
+  "popupMergingPdf": {
+    "message": "正在合成 PDF…"
+  },
+  "popupOpen": {
+    "message": "開啟"
+  },
+  "popupOpenExtensions": {
+    "message": "開啟擴充套件管理頁"
+  },
+  "popupOpenHistoryFailed": {
+    "message": "原圖已清理，僅保留縮圖"
+  },
+  "popupPaidPro": {
+    "message": "Pro 已解鎖（已付費）"
+  },
+  "popupPaidProNotUnlocked": {
+    "message": "免費版（Pro 未解鎖）"
+  },
+  "popupPaymentUnconfigured": {
+    "message": "支付尚未配置：在 utils/payment-config.ts 填入 Waffo 商戶資訊與收銀台連結後，這裡會顯示付費套餐。"
+  },
+  "popupPreparing": {
+    "message": "準備中…"
+  },
+  "popupRemaining": {
+    "message": "今日剩餘 $COUNT$ 次",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "popupRestore": {
+    "message": "恢復購買"
+  },
+  "popupRestoreEmail": {
+    "message": "付款信箱"
+  },
+  "popupRestoreEmailRequired": {
+    "message": "請填寫付款時使用的信箱"
+  },
+  "popupRestoreFailed": {
+    "message": "請求失敗，請稍後重試"
+  },
+  "popupRestoreHint": {
+    "message": "在別的電腦上買過 Pro，或者重灌過外掛？填當初付款用的信箱、點「恢復購買」，已經買過的 Pro 就會回到這台機器上，不用再付一次錢。"
+  },
+  "popupRestoreNotFound": {
+    "message": "沒有查到該信箱的購買記錄。請確認信箱與付款時一致；若剛付款，請稍等幾秒後重試。"
+  },
+  "popupReviewAsk": {
+    "message": "用得還順手的話，到 Chrome 線上應用程式商店留一句評價，能幫到其他正在找工具的人。"
+  },
+  "popupReviewGo": {
+    "message": "去評價"
+  },
+  "popupReviewLater": {
+    "message": "暫時不用"
+  },
+  "popupReviewOpenFailed": {
+    "message": "打不開 Chrome 線上應用程式商店頁面。可以自己在商店裡搜尋這個擴充功能。"
+  },
+  "popupSelectAll": {
+    "message": "全選"
+  },
+  "popupSettings": {
+    "message": "⚙ 設定"
+  },
+  "popupSettingsTitle": {
+    "message": "預設格式、檔名模板、子目錄等"
+  },
+  "popupStart": {
+    "message": "開始…"
+  },
+  "popupSupport": {
+    "message": "支援"
+  },
+  "popupSupportEmail": {
+    "message": "✉ 發郵件"
+  },
+  "popupTestPro": {
+    "message": "Pro 已解鎖（測試）"
+  },
+  "popupTitle": {
+    "message": "Page Screenshot Pro"
+  },
+  "popupUnknownError": {
+    "message": "未知錯誤"
+  },
+  "popupUnlimited": {
+    "message": "不限次數"
+  },
+  "popupUpgradeTitle": {
+    "message": "升級 Pro，解鎖全部功能"
+  },
+  "priceLifetime": {
+    "message": "$AMOUNT$ 買斷",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$39.9"
+      }
+    }
+  },
+  "priceMonthly": {
+    "message": "$AMOUNT$/月",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$4.99"
+      }
+    }
+  },
+  "priceYearly": {
+    "message": "$AMOUNT$/年",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$19.9"
+      }
+    }
+  },
+  "restoreSaveEmail": {
+    "message": "請保存好這個付款信箱——它是你在別的電腦上找回授權的唯一憑據。"
+  },
+  "stitchBottomMissing": {
+    "message": "拼接可能遺漏底部約 $PIXELS$px 內容",
+    "placeholders": {
+      "pixels": {
+        "content": "$1",
+        "example": "120"
+      }
+    }
+  },
+  "stitchCellSkipped": {
+    "message": "第 $ROW$ 行第 $COL$ 列無有效區域，已跳過",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "3"
+      },
+      "col": {
+        "content": "$2",
+        "example": "2"
+      }
+    }
+  },
+  "stitchClipboardUnsupported": {
+    "message": "當前瀏覽器不支援寫入圖片剪貼簿"
+  },
+  "stitchDataTooLarge": {
+    "message": "截圖資料過大，超過瀏覽器單條訊息 64MB 上限。頁面可能過長或在持續載入，建議縮短頁面後重試，或分多次擷取。"
+  },
+  "stitchEncodeFailed": {
+    "message": "圖片編碼失敗"
+  },
+  "stitchMissingSessionId": {
+    "message": "缺少拼接會話 ID"
+  },
+  "stitchRightUncaptured": {
+    "message": "頁面寬度超出視口，右側約 $PIXELS$px 未擷取",
+    "placeholders": {
+      "pixels": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
+  },
+  "stitchRowSkipped": {
+    "message": "第 $ROW$ 行滾動位置超出頁面底部，已跳過",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "stitchSeamFixed": {
+    "message": "檢測到拼接斷裂，已自動偏移 $PIXELS$px 修復",
+    "placeholders": {
+      "pixels": {
+        "content": "$1",
+        "example": "8"
+      }
+    }
+  },
+  "stitchSeamUnfixed": {
+    "message": "邊界差異較大（$DIFF$），自動修復未成功，請檢查原頁面",
+    "placeholders": {
+      "diff": {
+        "content": "$1",
+        "example": "96"
+      }
+    }
+  },
+  "stitchSessionExpired": {
+    "message": "拼接會話不存在或已過期"
+  },
+  "stitchTile": {
+    "message": "第 $ROW$ 屏",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "stitchTileRowCol": {
+    "message": "第 $ROW$ 行第 $COL$ 列",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "2"
+      },
+      "col": {
+        "content": "$2",
+        "example": "3"
+      }
+    }
+  },
+  "stitchTooTall": {
+    "message": "頁面超長（$HEIGHT$px），已按比例壓縮到 $OUT$px，畫質略有損失",
+    "placeholders": {
+      "height": {
+        "content": "$1",
+        "example": "30000"
+      },
+      "out": {
+        "content": "$2",
+        "example": "16000"
+      }
+    }
+  },
+  "stitchTooWide": {
+    "message": "頁面過寬（$WIDTH$px），超出單張點陣圖 $LIMIT$px 單邊上限，已按比例壓縮到 $OUT$px，畫質略有損失",
+    "placeholders": {
+      "width": {
+        "content": "$1",
+        "example": "20000"
+      },
+      "limit": {
+        "content": "$2",
+        "example": "16000"
+      },
+      "out": {
+        "content": "$3",
+        "example": "16000"
+      }
+    }
+  },
+  "subActionFailed": {
+    "message": "操作失敗：$REASON$",
+    "placeholders": {
+      "reason": {
+        "content": "$1",
+        "example": "network error"
+      }
+    }
+  },
+  "subBack": {
+    "message": "返回"
+  },
+  "subCancel": {
+    "message": "取消續訂"
+  },
+  "subCancelConfirm": {
+    "message": "確認取消續訂"
+  },
+  "subCancelContinue": {
+    "message": "繼續取消"
+  },
+  "subCancelDone": {
+    "message": "已取消續訂，Pro 可用到本週期結束。"
+  },
+  "subCancelFinal": {
+    "message": "最後確認：取消 $PLAN$ 的續訂？",
+    "placeholders": {
+      "plan": {
+        "content": "$1",
+        "example": "Pro yearly"
+      }
+    }
+  },
+  "subCancelFinalWithDate": {
+    "message": "最後確認：取消續訂？Pro 可以用到 $DATE$，之後要重新付費訂閱才能恢復。",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "2027-03-04"
+      }
+    }
+  },
+  "subCancelKeep": {
+    "message": "保留訂閱"
+  },
+  "subCancelStep1": {
+    "message": "取消後 Pro 會在 $DATE$ 關閉：元素截圖、PDF 匯出、合併 PDF、MCP 訪問和 OCR 都會隨之失效。",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "2027-03-04"
+      }
+    }
+  },
+  "subCancelStep1NoDate": {
+    "message": "取消後 Pro 會在這個計費週期結束時關閉：元素截圖、PDF 匯出、合併 PDF、MCP 訪問和 OCR 都會隨之失效。"
+  },
+  "subCancelStep2Monthly": {
+    "message": "Pro 是 $AMOUNT$ / 月。取消後以後重買還是這個價，但中間這些天就沒了。",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$4.99"
+      }
+    }
+  },
+  "subCancelStep2Yearly": {
+    "message": "年付是 $AMOUNT$ / 年，折算下來只有月付的三分之一。取消就等於放棄這個價格。",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$19.9"
+      }
+    }
+  },
+  "subCarryNote": {
+    "message": "這段沒用完的時間不會作廢：日後重新訂閱任一方案，它會累加到新訂閱的到期日上。"
+  },
+  "subCheckoutOpened": {
+    "message": "已在新分頁開啟結賬頁，付款完成後授權會自動更新。"
+  },
+  "subCurrentTitle": {
+    "message": "當前訂閱"
+  },
+  "subExpiresLabel": {
+    "message": "到期時間"
+  },
+  "subFeedbackEmpty": {
+    "message": "請先填寫回饋內容。"
+  },
+  "subFeedbackFailed": {
+    "message": "回饋沒有提交成功，請稍後重試。"
+  },
+  "subFeedbackTooMany": {
+    "message": "一小時內提交太多次，請稍後再試。"
+  },
+  "subFeedbackUnavailable": {
+    "message": "回饋服務暫時不可用，請改用支援信箱聯絡我們。"
+  },
+  "subFreeDetailNote": {
+    "message": "你還沒有訂閱。選下面任一套餐即可開始訂閱。"
+  },
+  "subFreeNote": {
+    "message": "你還沒有訂閱。點開上面的訂閱狀態，就能選套餐開始訂閱。"
+  },
+  "subFreePlan": {
+    "message": "免費版"
+  },
+  "subFreeStatus": {
+    "message": "未訂閱"
+  },
+  "subLeftoverDetailNote": {
+    "message": "你已買斷，但這筆 $PLAN$ 訂閱還在自動續訂。點下面的「$CANCEL$」停掉它，本期結束前仍可使用。",
+    "placeholders": {
+      "plan": {
+        "content": "$1",
+        "example": "Pro 月付"
+      },
+      "cancel": {
+        "content": "$2",
+        "example": "取消續訂"
+      }
+    }
+  },
+  "subLeftoverNote": {
+    "message": "你已買斷，但還有一筆 $PLAN$ 訂閱在自動續訂。點開上面的訂閱狀態可以取消它。",
+    "placeholders": {
+      "plan": {
+        "content": "$1",
+        "example": "Pro 月付"
+      }
+    }
+  },
+  "subLifetimeNote": {
+    "message": "你已購買買斷授權，沒有需要續訂的訂閱。"
+  },
+  "subManageTitle": {
+    "message": "訂閱管理"
+  },
+  "subNextLifetime": {
+    "message": "一次買斷，永久有效，不需要續費。"
+  },
+  "subNextNone": {
+    "message": "不再續訂。到期後訂閱結束，需要重新訂閱才能恢復 Pro。"
+  },
+  "subNextRenews": {
+    "message": "$DATE$ 起自動續費（續費後順延一期）",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "2027-03-04"
+      }
+    }
+  },
+  "subNextRenewsNoDate": {
+    "message": "到期後自動續費，續費後順延一期"
+  },
+  "subNextTitle": {
+    "message": "下個週期"
+  },
+  "subNoActionNote": {
+    "message": "這筆訂閱的續訂已經取消，此刻沒有可執行的操作；稍後重新整理會再檢查一次。"
+  },
+  "subReactivate": {
+    "message": "恢復訂閱"
+  },
+  "subReactivateDone": {
+    "message": "訂閱已恢復，本次沒有扣款。"
+  },
+  "subResumeNow": {
+    "message": "↻ 恢復訂閱"
+  },
+  "subResumeNowNote": {
+    "message": "續訂已取消 —— 點一下就能恢復，不用再付錢。"
+  },
+  "subStatusActive": {
+    "message": "生效中"
+  },
+  "subStatusCanceled": {
+    "message": "已取消"
+  },
+  "subStatusCanceling": {
+    "message": "已取消續訂 —— 到期前仍可使用"
+  },
+  "subStatusEnded": {
+    "message": "已結束"
+  },
+  "subStatusPastDue": {
+    "message": "扣款失敗 —— 已暫停"
+  },
+  "subStatusRefunded": {
+    "message": "已退款"
+  },
+  "subViewTitle": {
+    "message": "訂閱詳情"
+  },
+  "subWorking": {
+    "message": "正在處理…"
+  },
+  "welcomeFeatures": {
+    "message": "它擅長什麼"
+  },
+  "welcomeFileHint": {
+    "message": "首次截本地檔案（file://）時 Chrome 會要求你手動授權一次：在 chrome://extensions 裡勾選本擴充套件的「允許訪問檔案網址」。"
+  },
+  "welcomeFooter": {
+    "message": "截圖與標註全部在你的裝置上完成，不上傳到任何伺服器。"
+  },
+  "welcomeHeaderBody": {
+    "message": "第 1 屏保留導航欄，第 2 屏起才隱藏固定元素——既不重複，也不是整張圖沒頁頭。"
+  },
+  "welcomeHeaderTitle": {
+    "message": "頁頭只出現一次"
+  },
+  "welcomeInfiniteBody": {
+    "message": "先滾到底把內容都觸發出來，再開始截，不會只截到第一屏。"
+  },
+  "welcomeInfiniteTitle": {
+    "message": "無限滾動頁面"
+  },
+  "welcomeLanguage": {
+    "message": "介面語言"
+  },
+  "welcomeLazyBody": {
+    "message": "用 img.decode() 等到點陣圖真的就緒，而不是猜一個等待時間。"
+  },
+  "welcomeLazyTitle": {
+    "message": "懶載入圖片"
+  },
+  "welcomeLocalBody": {
+    "message": "截圖、標註、OCR 全部在你的瀏覽器裡完成，圖片不上傳到任何地方。"
+  },
+  "welcomeLocalTitle": {
+    "message": "純本地處理"
+  },
+  "welcomeOpenPopupFailed": {
+    "message": "請點選工具欄上的擴充套件圖示檢視套餐"
+  },
+  "welcomePlans": {
+    "message": "檢視套餐"
+  },
+  "welcomePricingBody": {
+    "message": "整頁截圖、無限滾動、懶載入，以及編輯器裡的全部編輯工具——馬賽克、裁剪、矩形、文字——都免費，每天 20 次。Pro 增加 PDF 匯出、合併 PDF、OCR、MCP 訪問與元素截圖，並且不限次數。"
+  },
+  "welcomePricingTitle": {
+    "message": "免費版與 Pro"
+  },
+  "welcomePrivacy": {
+    "message": "隱私權政策"
+  },
+  "welcomeQuerying": {
+    "message": "正在查詢…"
+  },
+  "welcomeRestoreEmail": {
+    "message": "付款信箱"
+  },
+  "welcomeRestoreHint": {
+    "message": "換電腦或重灌過？填付款時用的信箱即可找回 Pro。"
+  },
+  "welcomeRestoreSuccess": {
+    "message": "已恢復，Pro 已解鎖。感謝支援！"
+  },
+  "welcomeSeamBody": {
+    "message": "相鄰分屏做連續性檢測，錯位時在 ±16px 內搜尋最佳偏移。"
+  },
+  "welcomeSeamTitle": {
+    "message": "接縫自動修復"
+  },
+  "welcomeServerNote": {
+    "message": "（訂閱狀態會與本擴充套件的授權伺服器核對，伺服器只儲存安裝 ID 與套餐狀態。）"
+  },
+  "welcomeSettings": {
+    "message": "開啟設定"
+  },
+  "welcomeStepCapture": {
+    "message": "點工具欄圖示，或按 Alt+Shift+D"
+  },
+  "welcomeStepCaptureBody": {
+    "message": "Alt+Shift+V 只截當前可視區域。"
+  },
+  "welcomeStepDownload": {
+    "message": "在下載目錄找到檔案"
+  },
+  "welcomeStepDownloadBody": {
+    "message": "檔名格式可在設定裡改（預設「頁面標題 - 日期 時間.png」）。"
+  },
+  "welcomeStepPage": {
+    "message": "開啟一個長頁面"
+  },
+  "welcomeStepPageBody": {
+    "message": "文章、動態流、更新日誌都行——越長越能看出差別。"
+  },
+  "welcomeTagline": {
+    "message": "整頁截圖，一次到底。滾動拼接、無限滾動、懶載入圖片全自動處理。"
+  },
+  "welcomeTitle": {
+    "message": "歡迎使用 - Page Screenshot Pro"
+  },
+  "welcomeTry": {
+    "message": "試一下"
+  },
+  "welcomeWideBody": {
+    "message": "寬表格、看板、橫向流程圖按網格分列抓取，右邊緣內容不會丟。"
+  },
+  "welcomeWideTitle": {
+    "message": "比視口寬的頁面"
+  }
+}

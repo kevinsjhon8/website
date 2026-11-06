@@ -1,0 +1,1493 @@
+{
+  "bgBusy": {
+    "message": "すでに撮影が実行中です。完了してからもう一度お試しください"
+  },
+  "bgCanvasChunkFailed": {
+    "message": "Canvas バックエンドが第 $BATCH$ バッチの分割の処理に失敗しました",
+    "placeholders": {
+      "batch": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "bgCanvasFailed": {
+    "message": "Canvas バックエンドの処理に失敗しました"
+  },
+  "bgCanvasInitFailed": {
+    "message": "Canvas バックエンドの初期化に失敗しました"
+  },
+  "bgCanvasReadyTimeout": {
+    "message": "Canvas バックエンドの起動がタイムアウトしました。もう一度お試しください（$DETAIL$）",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "Canvas バックエンドの準備待ちがタイムアウト"
+      }
+    }
+  },
+  "bgCaptureFailed": {
+    "message": "撮影に失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "ページが応答しません"
+      }
+    }
+  },
+  "bgCaptureProgress": {
+    "message": "第 $CURRENT$/$TOTAL$ 画面を撮影中",
+    "placeholders": {
+      "current": {
+        "content": "$1",
+        "example": "3"
+      },
+      "total": {
+        "content": "$2",
+        "example": "40"
+      }
+    }
+  },
+  "bgCaptureRetry": {
+    "message": "第 $CURRENT$/$TOTAL$ 画面を撮影中（再試行 $ATTEMPT$）",
+    "placeholders": {
+      "current": {
+        "content": "$1",
+        "example": "3"
+      },
+      "total": {
+        "content": "$2",
+        "example": "40"
+      },
+      "attempt": {
+        "content": "$3",
+        "example": "2"
+      }
+    }
+  },
+  "bgCapturing": {
+    "message": "画面を撮影中…"
+  },
+  "bgClipboardFailed": {
+    "message": "クリップボードへのコピーに失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "クリップボードが使えません"
+      }
+    }
+  },
+  "bgCompleteNoEditor": {
+    "message": "撮影が完了しました"
+  },
+  "bgElementFailed": {
+    "message": "要素の撮影に失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "要素が大きすぎます"
+      }
+    }
+  },
+  "bgFileAccess": {
+    "message": "ローカルファイルを撮影するには権限が必要です。拡張機能の管理ページで「ファイルの URL へのアクセスを許可する」をオンにしてから、もう一度お試しください。"
+  },
+  "bgHidingFixed": {
+    "message": "固定要素を非表示にしています…"
+  },
+  "bgInternalPage": {
+    "message": "ブラウザの内部ページは撮影できません"
+  },
+  "bgNoActiveTab": {
+    "message": "撮影できるアクティブなタブがありません"
+  },
+  "bgNoFocusedDocument": {
+    "message": "書き込み可能なフォーカス中のウィンドウがありません（他のポップアップを閉じて再試行してください）"
+  },
+  "bgNoScrollAdvance": {
+    "message": "第 $ROW$ 行がそれ以上進まないため、早めに終了します",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "bgNoSegments": {
+    "message": "結合できる有効な分割がありません"
+  },
+  "bgNotScrollable": {
+    "message": "ページはスクロールしないため、ページ全体の撮影は不要です"
+  },
+  "bgOpeningEditor": {
+    "message": "エディタを開いています…"
+  },
+  "bgPageInfoFailed": {
+    "message": "ページ情報の取得に失敗しました"
+  },
+  "bgPaymentUnconfigured": {
+    "message": "決済が未設定です。先に utils/payment-config.ts に Waffo のチェックアウトリンクを入力してください"
+  },
+  "bgPortalNeedsBackend": {
+    "message": "サブスクリプションの管理にはバックエンドが必要です。先に payment-config.ts の backendUrl を設定してください"
+  },
+  "bgPortalUnavailable": {
+    "message": "サブスクリプション管理ページを開けませんでした。しばらくしてからもう一度お試しください"
+  },
+  "bgPreparePage": {
+    "message": "ページを準備中…"
+  },
+  "bgProRequired": {
+    "message": "これは Pro 機能です（現在は未開放）"
+  },
+  "bgQuotaExhausted": {
+    "message": "本日の無料枠（$COUNT$ 回）を使い切りました。Pro にすると回数無制限で撮影できます。",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "50"
+      }
+    }
+  },
+  "bgRestoreNeedsBackend": {
+    "message": "購入の復元にはバックエンドが必要です。先に payment-config.ts の backendUrl を設定してください"
+  },
+  "bgShotExpired": {
+    "message": "スクリーンショットのデータが失効しました（バックグラウンドが再利用され、バックアップも期限切れです）。撮影し直してください"
+  },
+  "bgStitching": {
+    "message": "分割を結合中…"
+  },
+  "bgStorePage": {
+    "message": "ストアのページは撮影できません"
+  },
+  "bgTabTimeout": {
+    "message": "「$STEP$」の待機がタイムアウトしました。もう一度お試しください",
+    "placeholders": {
+      "step": {
+        "content": "$1",
+        "example": "psp-prepare"
+      }
+    }
+  },
+  "bgTruncated": {
+    "message": "ページが長すぎるため、先頭の $ROWS$ 行のみを撮影しました",
+    "placeholders": {
+      "rows": {
+        "content": "$1",
+        "example": "40"
+      }
+    }
+  },
+  "bgUnknownOperation": {
+    "message": "不明な操作"
+  },
+  "commandCaptureFull": {
+    "message": "ページ全体を撮影"
+  },
+  "commandCaptureVisible": {
+    "message": "表示範囲を撮影"
+  },
+  "contentPickHint": {
+    "message": "マウスを動かして要素を強調、クリックで確定、Esc でキャンセル"
+  },
+  "contentRegionHint": {
+    "message": "ドラッグして撮影範囲を選択、Esc でキャンセル"
+  },
+  "contentRegionTooSmall": {
+    "message": "範囲が小さすぎます"
+  },
+  "contentUnknownMessage": {
+    "message": "不明なメッセージ：$TYPE$",
+    "placeholders": {
+      "type": {
+        "content": "$1",
+        "example": "psp-unknown"
+      }
+    }
+  },
+  "contextMenuElement": {
+    "message": "この要素を撮影（Page Screenshot Pro）"
+  },
+  "editorClearAnnotations": {
+    "message": "🗑 注釈をクリア"
+  },
+  "editorClearConfirm": {
+    "message": "注釈をすべてクリアしますか？"
+  },
+  "editorClipboardDenied": {
+    "message": "コピーに失敗：ブラウザがクリップボードへの書き込みを拒否しました"
+  },
+  "editorClose": {
+    "message": "閉じる"
+  },
+  "editorColor": {
+    "message": "色"
+  },
+  "editorCopied": {
+    "message": "クリップボードにコピーしました"
+  },
+  "editorCopy": {
+    "message": "📋 クリップボードにコピー"
+  },
+  "editorCopyFailed": {
+    "message": "コピーに失敗しました"
+  },
+  "editorCopyFailedDetail": {
+    "message": "コピーに失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "クリップボードエラー"
+      }
+    }
+  },
+  "editorCopyText": {
+    "message": "文字をコピー"
+  },
+  "editorCropDone": {
+    "message": "トリミングしました（注釈は画像と一緒に移動済み。元に戻せます）"
+  },
+  "editorDecodeFailed": {
+    "message": "スクリーンショットをデコードできません。撮影し直してください"
+  },
+  "editorDeletedAnnotation": {
+    "message": "注釈を削除しました"
+  },
+  "editorDownloadJpg": {
+    "message": "⬇ JPG をダウンロード"
+  },
+  "editorDownloadJpgTitle": {
+    "message": "サイズは PNG の約 1/5。長い画像の共有に向いています"
+  },
+  "editorDownloadPng": {
+    "message": "⬇ PNG をダウンロード"
+  },
+  "editorExportFailed": {
+    "message": "書き出しに失敗しました"
+  },
+  "editorExportPdf": {
+    "message": "📕 PDF を書き出す"
+  },
+  "editorJpgDownloadStarted": {
+    "message": "JPG のダウンロードを開始しました"
+  },
+  "editorLicenseCheckFailed": {
+    "message": "ライセンスの確認に失敗しました"
+  },
+  "editorLineWidth": {
+    "message": "線の太さ"
+  },
+  "editorLoadFailed": {
+    "message": "スクリーンショットを読み込めませんでした"
+  },
+  "editorLoadFailedDetail": {
+    "message": "読み込みに失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "ストレージエラー"
+      }
+    }
+  },
+  "editorLoading": {
+    "message": "スクリーンショットを読み込み中…"
+  },
+  "editorMissingShotId": {
+    "message": "スクリーンショット ID がありません。拡張機能のポップアップから撮影し直してください"
+  },
+  "editorNothingToRedo": {
+    "message": "やり直す操作がありません"
+  },
+  "editorNothingToUndo": {
+    "message": "元に戻す操作がありません"
+  },
+  "editorOcr": {
+    "message": "🔍 OCR 認識（実験機能）"
+  },
+  "editorOcrFailed": {
+    "message": "認識に失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "認識エラー"
+      }
+    }
+  },
+  "editorOcrNoText": {
+    "message": "（文字を認識できませんでした）"
+  },
+  "editorOcrPreparing": {
+    "message": "認識の準備中…"
+  },
+  "editorOcrResult": {
+    "message": "OCR 認識結果"
+  },
+  "editorPdfDownloadStarted": {
+    "message": "PDF のダウンロードを開始しました"
+  },
+  "editorPdfExportFailed": {
+    "message": "PDF の書き出しに失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "書き出しエラー"
+      }
+    }
+  },
+  "editorPngDownloadStarted": {
+    "message": "PNG のダウンロードを開始しました"
+  },
+  "editorProOcrTitle": {
+    "message": "Pro：画像内の文字を認識"
+  },
+  "editorProPdfTitle": {
+    "message": "Pro：PDF を書き出す"
+  },
+  "editorProRequired": {
+    "message": "これは Pro 機能です（現在は未開放）"
+  },
+  "editorRedo": {
+    "message": "↪ やり直す"
+  },
+  "editorRedoTitle": {
+    "message": "やり直す (Ctrl/Cmd+Shift+Z)"
+  },
+  "editorRedone": {
+    "message": "やり直しました"
+  },
+  "editorTitle": {
+    "message": "スクリーンショットを編集 - Page Screenshot Pro"
+  },
+  "editorToolArrow": {
+    "message": "➤ 矢印"
+  },
+  "editorToolArrowTitle": {
+    "message": "矢印 (A)"
+  },
+  "editorToolCrop": {
+    "message": "✂ トリミング"
+  },
+  "editorToolCropTitle": {
+    "message": "トリミング (C)——注釈は座標系ごと移動し、消えません"
+  },
+  "editorToolEllipse": {
+    "message": "◯ 楕円"
+  },
+  "editorToolEllipseTitle": {
+    "message": "楕円 (O)"
+  },
+  "editorToolHighlight": {
+    "message": "🖍 マーカー"
+  },
+  "editorToolHighlightTitle": {
+    "message": "マーカー (H)——半透明の重ね塗りで、下の文字は読めます"
+  },
+  "editorToolMosaic": {
+    "message": "🔲 モザイク"
+  },
+  "editorToolMosaicTitle": {
+    "message": "モザイク (M)"
+  },
+  "editorToolPen": {
+    "message": "✎ ペン"
+  },
+  "editorToolPenTitle": {
+    "message": "フリーハンドのペン (P)"
+  },
+  "editorToolRect": {
+    "message": "▭ 長方形"
+  },
+  "editorToolRectTitle": {
+    "message": "長方形 (R)"
+  },
+  "editorToolSelect": {
+    "message": "⬉ 選択"
+  },
+  "editorToolSelectTitle": {
+    "message": "既存の注釈を選択・移動 (V)"
+  },
+  "editorToolText": {
+    "message": "T 文字"
+  },
+  "editorToolTextTitle": {
+    "message": "文字 (T)"
+  },
+  "editorUndo": {
+    "message": "↩ 元に戻す"
+  },
+  "editorUndoTitle": {
+    "message": "元に戻す (Ctrl/Cmd+Z)"
+  },
+  "editorUndone": {
+    "message": "元に戻しました"
+  },
+  "editorZoomFit": {
+    "message": "フィット"
+  },
+  "editorZoomFitTitle": {
+    "message": "ウィンドウに合わせる (0)"
+  },
+  "editorZoomFitWidth": {
+    "message": "幅に合わせる"
+  },
+  "editorZoomFitWidthTitle": {
+    "message": "画像の幅を表示領域に合わせ、上下にスクロールして見る (W)"
+  },
+  "editorZoomInTitle": {
+    "message": "拡大 (+)"
+  },
+  "editorZoomLabelTitle": {
+    "message": "クリックでウィンドウに合わせる (0)"
+  },
+  "editorZoomOutTitle": {
+    "message": "縮小 (−)"
+  },
+  "extensionDescription": {
+    "message": "Webページ全体の高画質スクロールスクリーンショット＆長画像キャプチャ：自動結合、注釈編集、PDFエクスポート、オフラインOCR。MCP経由でAIクライアントも撮影可能。全処理が端末内で完結し画像は一切送信されません。"
+  },
+  "extensionName": {
+    "message": "Page Screenshot Pro"
+  },
+  "feedbackEmail": {
+    "message": "メールアドレス"
+  },
+  "feedbackEmailHint": {
+    "message": "（任意 — 空欄のままなら匿名で送信されます。返信が欲しい場合はご記入ください）"
+  },
+  "feedbackHeading": {
+    "message": "フィードバックを送る"
+  },
+  "feedbackIntro": {
+    "message": "フィードバックは開発者に直接届きます。画面のスクリーンショットやページの内容は一切添付されません。"
+  },
+  "feedbackMessage": {
+    "message": "何が起きましたか？"
+  },
+  "feedbackMessageHint": {
+    "message": "（必須 — どのページで、何をクリックし、何を期待していたか）"
+  },
+  "feedbackPrivacy": {
+    "message": "アカウントもトラッキングもありません。メールアドレスは返信のためだけに使います。"
+  },
+  "feedbackSend": {
+    "message": "送信"
+  },
+  "feedbackSending": {
+    "message": "送信中…"
+  },
+  "feedbackSent": {
+    "message": "ありがとうございます。フィードバックを送信しました。"
+  },
+  "feedbackTitle": {
+    "message": "フィードバック - Page Screenshot Pro"
+  },
+  "feedbackType": {
+    "message": "種類"
+  },
+  "feedbackTypeBug": {
+    "message": "不具合 / 壊れた"
+  },
+  "feedbackTypeFeature": {
+    "message": "機能の要望"
+  },
+  "feedbackTypeOther": {
+    "message": "その他"
+  },
+  "feedbackTypePurchase": {
+    "message": "購入またはライセンスの問題"
+  },
+  "mcpBusy": {
+    "message": "すでに撮影中です。しばらくしてからもう一度お試しください。"
+  },
+  "mcpElementNotFound": {
+    "message": "そのセレクターに一致する要素がありません。DevTools で確認してからもう一度お試しください。"
+  },
+  "mcpImageTooLarge": {
+    "message": "画像が大きすぎます。maxWidth を小さくしてお試しください。"
+  },
+  "mcpProRequired": {
+    "message": "MCP アクセスには Pro が必要です。拡張機能の設定からアップグレードできます。"
+  },
+  "mcpSelectorRequired": {
+    "message": "capture_element には CSS セレクターが必要です（例: \"#main .title\"）。"
+  },
+  "mcpUnknownTool": {
+    "message": "不明なツールです。ツール一覧を取得し直してください。拡張機能のバージョンが異なる可能性があります。"
+  },
+  "ocrBadLibrary": {
+    "message": "OCR ライブラリのインターフェースが異常です（createWorker がありません）"
+  },
+  "ocrFailed": {
+    "message": "OCR 認識に失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "認識エラー"
+      }
+    }
+  },
+  "ocrInitializing": {
+    "message": "認識エンジンを初期化中"
+  },
+  "ocrInitializingApi": {
+    "message": "認識 API を初期化中"
+  },
+  "ocrLoadLibraryFailed": {
+    "message": "OCR ライブラリの読み込みに失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "モジュールエラー"
+      }
+    }
+  },
+  "ocrLoadingCore": {
+    "message": "認識コアを読み込み中"
+  },
+  "ocrLoadingLanguages": {
+    "message": "言語データを読み込み中（中国語・英語）"
+  },
+  "ocrRecognizing": {
+    "message": "文字を認識中"
+  },
+  "ocrUnavailable": {
+    "message": "拡張機能の環境外で動作しているため、OCR エンジンを読み込めません"
+  },
+  "optionsAnnotate": {
+    "message": "撮影後に注釈エディタを開く"
+  },
+  "optionsCapture": {
+    "message": "撮影"
+  },
+  "optionsCopy": {
+    "message": "撮影後に自動的にクリップボードへコピーする"
+  },
+  "optionsDownload": {
+    "message": "ダウンロード"
+  },
+  "optionsExpandInfinite": {
+    "message": "撮影前に無限スクロールのページを展開する"
+  },
+  "optionsFilename": {
+    "message": "ファイル名テンプレート"
+  },
+  "optionsFolder": {
+    "message": "サブフォルダ"
+  },
+  "optionsFolderHint": {
+    "message": "例：Screenshots/Web。存在しないフォルダは自動的に作成されます。"
+  },
+  "optionsFolderPlaceholder": {
+    "message": "空欄 = ダウンロードフォルダ直下"
+  },
+  "optionsFormat": {
+    "message": "既定の形式"
+  },
+  "optionsHeading": {
+    "message": "スクリーンショットの設定"
+  },
+  "optionsInterface": {
+    "message": "界面"
+  },
+  "optionsIntro": {
+    "message": "設定はブラウザのアカウント（chrome.storage.sync）に保存され、別の端末でも自動的に同期されます。"
+  },
+  "optionsJpg": {
+    "message": "JPG（非可逆圧縮、サイズは PNG の約 1/5）"
+  },
+  "optionsLanguage": {
+    "message": "界面言語"
+  },
+  "optionsLanguageHint": {
+    "message": "既定では Chrome の界面言語に従います。ここで変更するのはこの端末だけに影響し、保存は不要ですぐに反映されます。"
+  },
+  "optionsLanguageSaved": {
+    "message": "言語を切り替えました"
+  },
+  "optionsLazyWarning": {
+    "message": "以下の 2 項は「ページ全体を撮影」にのみ作用します。オフにすると撮影は速くなりますが、遅延読み込みの画像がまだ表示されず、スクリーンショットに空白が残ることがあります。"
+  },
+  "optionsMcpBody": {
+    "message": "Claude Desktop、Cursor、Claude Code などの AI ツールから、この拡張機能で撮影できるようにします。すべてお使いの端末内で動作し、何もアップロードしません。"
+  },
+  "optionsMcpConfigHint": {
+    "message": "以下を AI クライアントの設定ファイルの mcpServers に貼り付けてください："
+  },
+  "optionsMcpCopied": {
+    "message": "コピーしました"
+  },
+  "optionsMcpCopy": {
+    "message": "設定をコピー"
+  },
+  "optionsMcpCopyFailed": {
+    "message": "コピーできませんでした。テキストを選択して手動でコピーしてください。"
+  },
+  "optionsMcpGuide": {
+    "message": "詳しい設定手順"
+  },
+  "optionsMcpHint": {
+    "message": "ブラウザは撮影の前にクリックを必要とします。AI が権限エラーを報告したら、拡張機能のアイコンをクリックしてから再試行させてください。"
+  },
+  "optionsMcpLogTitle": {
+    "message": "最近の呼び出し"
+  },
+  "optionsMcpPro": {
+    "message": "Pro"
+  },
+  "optionsMcpProNote": {
+    "message": "MCP アクセスは Pro 機能です。"
+  },
+  "optionsMcpReset": {
+    "message": "トークンをリセット"
+  },
+  "optionsMcpResetConfirm": {
+    "message": "以前の設定はすぐに使えなくなります。続行しますか？"
+  },
+  "optionsMcpResetDone": {
+    "message": "トークンをリセットしました。新しい設定を AI クライアントに貼り付けてください。"
+  },
+  "optionsMcpResetKeep": {
+    "message": "現在のトークンを残す"
+  },
+  "optionsMcpResetProceed": {
+    "message": "リセットする"
+  },
+  "optionsMcpStateFail": {
+    "message": "接続できません。AI クライアントを再起動し、設定のトークンが上記と一致するか確認してください。"
+  },
+  "optionsMcpStateLost": {
+    "message": "最終接続：$TIME$。AI クライアントの終了で切断されるのは正常です。",
+    "placeholders": {
+      "time": {
+        "content": "$1",
+        "example": "2026-11-01 09:05"
+      }
+    }
+  },
+  "optionsMcpStateNever": {
+    "message": "まだ接続していません。AI クライアントを起動すると自動的に接続します。"
+  },
+  "optionsMcpStateOff": {
+    "message": "未接続"
+  },
+  "optionsMcpStateOn": {
+    "message": "接続済み"
+  },
+  "optionsMcpStep1": {
+    "message": "上の JSON を AI クライアントの設定ファイルの mcpServers に貼り付けてください。Node 20 以上が必要です。"
+  },
+  "optionsMcpStep2": {
+    "message": "クライアントを再起動します。ブリッジが接続すると上部のドットが緑になります。"
+  },
+  "optionsMcpStep3": {
+    "message": "まず psp_status を呼ばせてください。無料のツールで、どこが問題か教えてくれます。"
+  },
+  "optionsMcpStepsTitle": {
+    "message": "使い方"
+  },
+  "optionsMcpTitle": {
+    "message": "AI / MCP アクセス"
+  },
+  "optionsMcpToggle": {
+    "message": "MCP アクセスを有効にする"
+  },
+  "optionsMcpUpgrade": {
+    "message": "Pro にアップグレード"
+  },
+  "optionsPng": {
+    "message": "PNG（可逆圧縮、サイズ大）"
+  },
+  "optionsPreloadLazy": {
+    "message": "撮影前に遅延読み込み画像を発生させて待つ"
+  },
+  "optionsQuality": {
+    "message": "JPG の画質"
+  },
+  "optionsRequestFailed": {
+    "message": "リクエストに失敗しました"
+  },
+  "optionsReset": {
+    "message": "既定値に戻す"
+  },
+  "optionsResetDone": {
+    "message": "既定値に戻しました"
+  },
+  "optionsSampleHost": {
+    "message": "example.com"
+  },
+  "optionsSampleTitle": {
+    "message": "スクリーンショット"
+  },
+  "optionsSaveAs": {
+    "message": "毎回「名前を付けて保存」ダイアログを表示する"
+  },
+  "optionsSaveFailed": {
+    "message": "保存に失敗：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "保存に失敗"
+      }
+    }
+  },
+  "optionsSaved": {
+    "message": "保存しました"
+  },
+  "optionsSynced": {
+    "message": "別ウィンドウの変更を同期しました"
+  },
+  "optionsTemplateInsertHint": {
+    "message": "挿入："
+  },
+  "optionsTemplateInsertTitle": {
+    "message": "カーソル位置にこのプレースホルダーを挿入"
+  },
+  "optionsTemplatePreview": {
+    "message": "プレビュー："
+  },
+  "optionsTitle": {
+    "message": "設定 - Page Screenshot Pro"
+  },
+  "payApiNotConfigured": {
+    "message": "決済バックエンドが未設定です"
+  },
+  "payApiStatus": {
+    "message": "バックエンドが $STATUS$ を返しました",
+    "placeholders": {
+      "status": {
+        "content": "$1",
+        "example": "502"
+      }
+    }
+  },
+  "payApiTimeout": {
+    "message": "決済サーバーへのリクエストがタイムアウトしました"
+  },
+  "payCheckoutFailed": {
+    "message": "注文に失敗：バックエンドがチェックアウト URL を返しませんでした"
+  },
+  "payMockPlanSuffix": {
+    "message": "（テスト）"
+  },
+  "payNeedInstallId": {
+    "message": "バックエンドモードの注文にはインストール ID（installId）が必要ですが、呼び出し側が渡していません"
+  },
+  "payNoteCanceled": {
+    "message": "サブスクリプションを終了しました"
+  },
+  "payNoteCanceling": {
+    "message": "自動更新を停止しました。期限までは利用できます"
+  },
+  "payNoteClientCeiling": {
+    "message": "現在はクライアントのみモードです：更新と返金はこの端末に同期されないため、サブスクリプションの期限が切れても Pro は有効なままです。"
+  },
+  "payNoteExpired": {
+    "message": "サブスクリプションの期限が切れました"
+  },
+  "payNoteLifetime": {
+    "message": "Pro 買い切りライセンス（永久に有効、サブスクリプションの返金・停止の影響を受けません）"
+  },
+  "payNotePastDue": {
+    "message": "更新に失敗し、サブスクリプションは停止中です。支払い方法を更新してください"
+  },
+  "payNoteSubscriptionEnd": {
+    "message": "サブスクリプションの有効期限：$DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "2099-03-04"
+      }
+    }
+  },
+  "payUnconfigured": {
+    "message": "決済が未設定です。先に utils/payment-config.ts に Waffo のチェックアウトリンクを入力してください"
+  },
+  "payUnknownPlan": {
+    "message": "不明なプラン：$PLAN$",
+    "placeholders": {
+      "plan": {
+        "content": "$1",
+        "example": "monthly"
+      }
+    }
+  },
+  "planLifetime": {
+    "message": "Pro 買い切り"
+  },
+  "planMonthly": {
+    "message": "Pro 月額"
+  },
+  "planPro": {
+    "message": "Pro"
+  },
+  "planYearly": {
+    "message": "Pro 年額"
+  },
+  "popupCannotOpenExtensions": {
+    "message": "自動的に開けませんでした。手動で chrome://extensions に移動してください"
+  },
+  "popupCaptureFull": {
+    "message": "📄 ページ全体を撮影"
+  },
+  "popupCaptureRegion": {
+    "message": "✂️ 範囲を選択して撮影"
+  },
+  "popupCaptureVisible": {
+    "message": "🖥️ 表示範囲を撮影"
+  },
+  "popupChecking": {
+    "message": "確認中…"
+  },
+  "popupCheckoutFailed": {
+    "message": "チェックアウトを開けませんでした"
+  },
+  "popupCheckoutTitle": {
+    "message": "Waffo の安全なチェックアウトへ進んで支払いを完了します"
+  },
+  "popupClear": {
+    "message": "クリア"
+  },
+  "popupClearConfirm": {
+    "message": "履歴をすべてクリアしますか？"
+  },
+  "popupCommunicationFailed": {
+    "message": "通信に失敗しました：$ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "接続に失敗"
+      }
+    }
+  },
+  "popupCompleteWarnings": {
+    "message": "完了しましたが注意事項があります：$WARNINGS$",
+    "placeholders": {
+      "warnings": {
+        "content": "$1",
+        "example": "画像が圧縮されました"
+      }
+    }
+  },
+  "popupDelete": {
+    "message": "削除"
+  },
+  "popupEmptyHistory": {
+    "message": "まだスクリーンショットがありません"
+  },
+  "popupFeedback": {
+    "message": "💬 フィードバックを送る"
+  },
+  "popupFeedbackUnavailable": {
+    "message": "今はフィードバックページを開けません。サポートのメールアドレスまでご連絡ください。"
+  },
+  "popupFileGuide": {
+    "message": "ローカルファイルを撮影するには権限が必要です。拡張機能の管理ページで「ファイルの URL へのアクセスを許可する」をオンにしてから、もう一度お試しください。"
+  },
+  "popupFreeLocked": {
+    "message": "無料版（Pro は未開放）"
+  },
+  "popupHistory": {
+    "message": "履歴"
+  },
+  "popupImageDecodeFailed": {
+    "message": "画像のデコードに失敗しました"
+  },
+  "popupKindElement": {
+    "message": "要素"
+  },
+  "popupKindFullpage": {
+    "message": "ページ全体"
+  },
+  "popupKindRegion": {
+    "message": "選択範囲"
+  },
+  "popupKindVisible": {
+    "message": "表示範囲"
+  },
+  "popupLanguage": {
+    "message": "言語"
+  },
+  "popupLanguageAuto": {
+    "message": "Chrome に従う"
+  },
+  "popupLanguageTitle": {
+    "message": "界面言語（既定では Chrome の界面言語に従います）"
+  },
+  "popupMergeNoOriginals": {
+    "message": "選択したスクリーンショットの元画像は整理済みのため書き出せません"
+  },
+  "popupMergePdf": {
+    "message": "PDF に結合"
+  },
+  "popupMergePdfTitle": {
+    "message": "複数選択して PDF に書き出す（Pro）"
+  },
+  "popupMergeProRequired": {
+    "message": "「PDF に結合して書き出し」は Pro 機能です"
+  },
+  "popupMergeSelectRequired": {
+    "message": "先に結合する履歴を選択してください"
+  },
+  "popupMergeSelectTitle": {
+    "message": "選択して PDF に結合"
+  },
+  "popupMergingPdf": {
+    "message": "PDF を作成中…"
+  },
+  "popupOpen": {
+    "message": "開く"
+  },
+  "popupOpenExtensions": {
+    "message": "拡張機能の管理ページを開く"
+  },
+  "popupOpenHistoryFailed": {
+    "message": "元画像は整理済みで、サムネイルのみ残っています"
+  },
+  "popupPaidPro": {
+    "message": "Pro が有効です（購入済み）"
+  },
+  "popupPaidProNotUnlocked": {
+    "message": "無料版（Pro は未開放）"
+  },
+  "popupPaymentUnconfigured": {
+    "message": "決済が未設定です。utils/payment-config.ts に Waffo の加盟店情報とチェックアウトのリンクを入力すると、ここにプランが表示されます。"
+  },
+  "popupPreparing": {
+    "message": "準備中…"
+  },
+  "popupRemaining": {
+    "message": "今日の残り回数：$COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "popupRestore": {
+    "message": "購入を復元"
+  },
+  "popupRestoreEmail": {
+    "message": "支払い時のメールアドレス"
+  },
+  "popupRestoreEmailRequired": {
+    "message": "支払い時に使ったメールアドレスを入力してください"
+  },
+  "popupRestoreFailed": {
+    "message": "リクエストに失敗しました。しばらくしてからもう一度お試しください"
+  },
+  "popupRestoreHint": {
+    "message": "別のパソコンで Pro を購入した、または拡張機能を入れ直したことはありませんか？支払いに使ったメールアドレスを入力して「購入を復元」を押すと、購入済みの Pro がこの端末に戻ります。もう一度支払う必要はありません。"
+  },
+  "popupRestoreNotFound": {
+    "message": "そのメールアドレスの購入履歴は見つかりませんでした。支払い時と同じアドレスか確認してください。支払った直後なら、数秒待ってから再試行してください。"
+  },
+  "popupReviewAsk": {
+    "message": "しばらく使ってみて調子がよければ、Chrome ウェブストアにひとことレビューを書いていただけると、同じツールを探している人の助けになります。"
+  },
+  "popupReviewGo": {
+    "message": "レビューを書く"
+  },
+  "popupReviewLater": {
+    "message": "今はしない"
+  },
+  "popupReviewOpenFailed": {
+    "message": "Chrome ウェブストアのページを開けませんでした。ストアで拡張機能を検索してみてください。"
+  },
+  "popupSelectAll": {
+    "message": "すべて選択"
+  },
+  "popupSettings": {
+    "message": "⚙ 設定"
+  },
+  "popupSettingsTitle": {
+    "message": "既定の形式、ファイル名テンプレート、サブフォルダなど"
+  },
+  "popupStart": {
+    "message": "開始中…"
+  },
+  "popupSupport": {
+    "message": "サポート"
+  },
+  "popupSupportEmail": {
+    "message": "✉ メール"
+  },
+  "popupTestPro": {
+    "message": "Pro が有効です（テスト）"
+  },
+  "popupTitle": {
+    "message": "Page Screenshot Pro"
+  },
+  "popupUnknownError": {
+    "message": "不明なエラー"
+  },
+  "popupUnlimited": {
+    "message": "無制限"
+  },
+  "popupUpgradeTitle": {
+    "message": "Pro にアップグレードして全機能を解放"
+  },
+  "priceLifetime": {
+    "message": "$AMOUNT$ 買い切り",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$39.9"
+      }
+    }
+  },
+  "priceMonthly": {
+    "message": "$AMOUNT$/月",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$4.99"
+      }
+    }
+  },
+  "priceYearly": {
+    "message": "$AMOUNT$/年",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$19.9"
+      }
+    }
+  },
+  "restoreSaveEmail": {
+    "message": "この支払い用メールアドレスは必ず保存してください。別のパソコンでライセンスを復元できる唯一の手がかりです。"
+  },
+  "stitchBottomMissing": {
+    "message": "結合後の画像で下端約 $PIXELS$px が欠けている可能性があります",
+    "placeholders": {
+      "pixels": {
+        "content": "$1",
+        "example": "120"
+      }
+    }
+  },
+  "stitchCellSkipped": {
+    "message": "第 $ROW$ 行第 $COL$ 列に有効な領域がないためスキップしました",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "3"
+      },
+      "col": {
+        "content": "$2",
+        "example": "2"
+      }
+    }
+  },
+  "stitchClipboardUnsupported": {
+    "message": "このブラウザは画像のクリップボードへの書き込みに対応していません"
+  },
+  "stitchDataTooLarge": {
+    "message": "スクリーンショットのデータが大きすぎて、ブラウザの 1 メッセージあたり 64MB の上限を超えました。ページが長すぎるか読み込み中の可能性があります。ページを短くするか、数回に分けて撮影してください。"
+  },
+  "stitchEncodeFailed": {
+    "message": "画像をエンコードできませんでした"
+  },
+  "stitchMissingSessionId": {
+    "message": "結合セッション ID がありません"
+  },
+  "stitchRightUncaptured": {
+    "message": "ページ幅がビューポートを超えており、右側約 $PIXELS$px が撮影されていません",
+    "placeholders": {
+      "pixels": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
+  },
+  "stitchRowSkipped": {
+    "message": "第 $ROW$ 行のスクロール位置がページ下端を超えたためスキップしました",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "stitchSeamFixed": {
+    "message": "継ぎ目の断裂を検出し、$PIXELS$px ずらして自動補正しました",
+    "placeholders": {
+      "pixels": {
+        "content": "$1",
+        "example": "8"
+      }
+    }
+  },
+  "stitchSeamUnfixed": {
+    "message": "境界の差が大きく（$DIFF$）、自動補正できませんでした。元のページを確認してください",
+    "placeholders": {
+      "diff": {
+        "content": "$1",
+        "example": "96"
+      }
+    }
+  },
+  "stitchSessionExpired": {
+    "message": "結合セッションが存在しないか期限切れです"
+  },
+  "stitchTile": {
+    "message": "第 $ROW$ 画面で",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "stitchTileRowCol": {
+    "message": "第 $ROW$ 行第 $COL$ 列で",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "2"
+      },
+      "col": {
+        "content": "$2",
+        "example": "3"
+      }
+    }
+  },
+  "stitchTooTall": {
+    "message": "ページが縦に長すぎます（$HEIGHT$px）。$OUT$px に縮小しました（画質はわずかに低下します）",
+    "placeholders": {
+      "height": {
+        "content": "$1",
+        "example": "30000"
+      },
+      "out": {
+        "content": "$2",
+        "example": "16000"
+      }
+    }
+  },
+  "stitchTooWide": {
+    "message": "ページが幅広すぎます（$WIDTH$px）。1 枚のビットマップの片辺上限 $LIMIT$px を超えるため $OUT$px に縮小しました（画質はわずかに低下します）",
+    "placeholders": {
+      "width": {
+        "content": "$1",
+        "example": "20000"
+      },
+      "limit": {
+        "content": "$2",
+        "example": "16000"
+      },
+      "out": {
+        "content": "$3",
+        "example": "16000"
+      }
+    }
+  },
+  "subActionFailed": {
+    "message": "操作に失敗しました：$REASON$",
+    "placeholders": {
+      "reason": {
+        "content": "$1",
+        "example": "network error"
+      }
+    }
+  },
+  "subBack": {
+    "message": "戻る"
+  },
+  "subCancel": {
+    "message": "自動更新を停止"
+  },
+  "subCancelConfirm": {
+    "message": "自動更新を停止する"
+  },
+  "subCancelContinue": {
+    "message": "キャンセルを続ける"
+  },
+  "subCancelDone": {
+    "message": "自動更新を停止しました。Pro は今期の終わりまで使えます。"
+  },
+  "subCancelFinal": {
+    "message": "最終確認：$PLAN$ の自動更新を停止しますか？",
+    "placeholders": {
+      "plan": {
+        "content": "$1",
+        "example": "Pro yearly"
+      }
+    }
+  },
+  "subCancelFinalWithDate": {
+    "message": "最終確認：自動更新を停止しますか？Pro は $DATE$ まで使えますが、その後は再びお申し込みが必要です。",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "2027-03-04"
+      }
+    }
+  },
+  "subCancelKeep": {
+    "message": "サブスクリプションを維持"
+  },
+  "subCancelStep1": {
+    "message": "キャンセルすると Pro は $DATE$ に終了します：要素撮影、PDF 書き出し、PDF 結合、MCP アクセス、OCR がすべて使えなくなります。",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "2027-03-04"
+      }
+    }
+  },
+  "subCancelStep1NoDate": {
+    "message": "キャンセルすると Pro はこの請求期間の終わりに終了します：要素撮影、PDF 書き出し、PDF 結合、MCP アクセス、OCR がすべて使えなくなります。"
+  },
+  "subCancelStep2Monthly": {
+    "message": "Pro は $AMOUNT$ / 月です。あとで同じ価格で買い直せますが、その間の日数は戻りません。",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$4.99"
+      }
+    }
+  },
+  "subCancelStep2Yearly": {
+    "message": "年払いは $AMOUNT$ / 年で、同じ期間を月払いで払う額の 3 分の 1 です。キャンセルするとこの価格を失います。",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$19.9"
+      }
+    }
+  },
+  "subCarryNote": {
+    "message": "残りの期間は失われません。あとでどのプランに加入し直しても、新しいサブスクリプションの有効期限に加算されます。"
+  },
+  "subCheckoutOpened": {
+    "message": "新しいタブでチェックアウトを開きました。支払いが完了するとライセンスが自動で更新されます。"
+  },
+  "subCurrentTitle": {
+    "message": "現在のサブスクリプション"
+  },
+  "subExpiresLabel": {
+    "message": "有効期限"
+  },
+  "subFeedbackEmpty": {
+    "message": "フィードバックの内容を入力してください。"
+  },
+  "subFeedbackFailed": {
+    "message": "フィードバックを送信できませんでした。しばらくしてからもう一度お試しください。"
+  },
+  "subFeedbackTooMany": {
+    "message": "1 時間に送信できる回数を超えました。しばらくしてからお試しください。"
+  },
+  "subFeedbackUnavailable": {
+    "message": "フィードバック送信サービスは現在利用できません。サポートメールをご利用ください。"
+  },
+  "subFreeDetailNote": {
+    "message": "まだ有効なサブスクリプションはありません。下のプランを選ぶと登録できます。"
+  },
+  "subFreeNote": {
+    "message": "まだ有効なサブスクリプションはありません。上のステータスを開くと、プランを選んで登録できます。"
+  },
+  "subFreePlan": {
+    "message": "無料版"
+  },
+  "subFreeStatus": {
+    "message": "未契約"
+  },
+  "subLeftoverDetailNote": {
+    "message": "買い切りライセンスをお持ちですが、この $PLAN$ のサブスクリプションがまだ自動更新されています。下の「$CANCEL$」で停止できます。今期の終わりまでは引き続きご利用いただけます。",
+    "placeholders": {
+      "plan": {
+        "content": "$1",
+        "example": "Pro 月額"
+      },
+      "cancel": {
+        "content": "$2",
+        "example": "自動更新を停止"
+      }
+    }
+  },
+  "subLeftoverNote": {
+    "message": "買い切りライセンスをお持ちですが、$PLAN$ のサブスクリプションがまだ自動更新されています。上のサブスクリプション状態を開くと解約できます。",
+    "placeholders": {
+      "plan": {
+        "content": "$1",
+        "example": "Pro 月額"
+      }
+    }
+  },
+  "subLifetimeNote": {
+    "message": "買い切りライセンスをご購入済みです。更新が必要なサブスクリプションはありません。"
+  },
+  "subManageTitle": {
+    "message": "サブスクリプション管理"
+  },
+  "subNextLifetime": {
+    "message": "買い切りのため永続的に有効です。更新は不要です。"
+  },
+  "subNextNone": {
+    "message": "自動更新はありません。有効期限が切れると Pro は終了し、Pro に戻すには再度お申し込みが必要です。"
+  },
+  "subNextRenews": {
+    "message": "$DATE$ から自動更新（更新ごとに 1 期間延長）",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "2027-03-04"
+      }
+    }
+  },
+  "subNextRenewsNoDate": {
+    "message": "有効期限後に自動更新（更新ごとに 1 期間延長）"
+  },
+  "subNextTitle": {
+    "message": "次回の期間"
+  },
+  "subNoActionNote": {
+    "message": "このサブスクリプションはすでに自動更新を停止しています。いま実行できる操作はありません。しばらくして再読み込みすると再確認します。"
+  },
+  "subReactivate": {
+    "message": "サブスクリプションを再開"
+  },
+  "subReactivateDone": {
+    "message": "サブスクリプションを再開しました。請求は発生していません。"
+  },
+  "subResumeNow": {
+    "message": "↻ サブスクリプションを再開"
+  },
+  "subResumeNowNote": {
+    "message": "自動更新を停止済み — ワンクリックで戻せます。追加の請求はありません。"
+  },
+  "subStatusActive": {
+    "message": "有効"
+  },
+  "subStatusCanceled": {
+    "message": "キャンセル済み"
+  },
+  "subStatusCanceling": {
+    "message": "自動更新を停止済み — 期限までは利用できます"
+  },
+  "subStatusEnded": {
+    "message": "終了"
+  },
+  "subStatusPastDue": {
+    "message": "決済失敗 — 一時停止中"
+  },
+  "subStatusRefunded": {
+    "message": "返金済み"
+  },
+  "subViewTitle": {
+    "message": "サブスクリプションの詳細"
+  },
+  "subWorking": {
+    "message": "処理中…"
+  },
+  "welcomeFeatures": {
+    "message": "得意なこと"
+  },
+  "welcomeFileHint": {
+    "message": "最初にローカルファイル（file://）を撮影するとき、Chrome は一度手動の許可を求めます。chrome://extensions でこの拡張機能の「ファイルの URL へのアクセスを許可する」をオンにしてください。"
+  },
+  "welcomeFooter": {
+    "message": "スクリーンショットと注釈はすべてお使いの端末で完結し、どのサーバーにもアップロードされません。"
+  },
+  "welcomeHeaderBody": {
+    "message": "1 画面目にはナビゲーションを残し、2 画面目以降で固定要素を隠します。重複も、ヘッダーが丸ごと消えることもありません。"
+  },
+  "welcomeHeaderTitle": {
+    "message": "ヘッダーは一度だけ"
+  },
+  "welcomeInfiniteBody": {
+    "message": "先に下端までスクロールして内容をすべて読み込んでから撮影するので、最初の 1 画面だけになることはありません。"
+  },
+  "welcomeInfiniteTitle": {
+    "message": "無限スクロールのページ"
+  },
+  "welcomeLanguage": {
+    "message": "界面言語"
+  },
+  "welcomeLazyBody": {
+    "message": "待ち時間を推測するのではなく、img.decode() でビットマップの準備が本当に完了するまで待ちます。"
+  },
+  "welcomeLazyTitle": {
+    "message": "遅延読み込みの画像"
+  },
+  "welcomeLocalBody": {
+    "message": "撮影、注釈、OCR はすべてブラウザ内で完結し、画像がどこかにアップロードされることはありません。"
+  },
+  "welcomeLocalTitle": {
+    "message": "すべて端末内で処理"
+  },
+  "welcomeOpenPopupFailed": {
+    "message": "ツールバーの拡張機能アイコンをクリックしてプランを確認してください"
+  },
+  "welcomePlans": {
+    "message": "プランを見る"
+  },
+  "welcomePricingBody": {
+    "message": "ページ全体の撮影、無限スクロール、遅延読み込み、そしてエディターの編集ツール一式——モザイク、トリミング、図形、テキスト——が無料で、1 日 20 回まで使えます。Pro は PDF 書き出し、PDF 結合、OCR、MCP アクセス、要素撮影が加わり、回数も無制限になります。"
+  },
+  "welcomePricingTitle": {
+    "message": "無料版と Pro"
+  },
+  "welcomePrivacy": {
+    "message": "プライバシーポリシー"
+  },
+  "welcomeQuerying": {
+    "message": "照会中…"
+  },
+  "welcomeRestoreEmail": {
+    "message": "支払い時のメールアドレス"
+  },
+  "welcomeRestoreHint": {
+    "message": "パソコンを替えた、または再インストールした場合は、支払い時に使ったメールアドレスで Pro を復元できます。"
+  },
+  "welcomeRestoreSuccess": {
+    "message": "復元しました。Pro が有効です。ご利用ありがとうございます！"
+  },
+  "welcomeSeamBody": {
+    "message": "隣り合う分割を連続性チェックし、ずれがあれば ±16px の範囲で最適なオフセットを探します。"
+  },
+  "welcomeSeamTitle": {
+    "message": "継ぎ目の自動補正"
+  },
+  "welcomeServerNote": {
+    "message": "（サブスクリプションの状態はこの拡張機能のライセンスサーバーと照合されます。サーバーが保存するのはインストール ID とプランの状態だけです。）"
+  },
+  "welcomeSettings": {
+    "message": "設定を開く"
+  },
+  "welcomeStepCapture": {
+    "message": "ツールバーのアイコンをクリック、または Alt+Shift+D"
+  },
+  "welcomeStepCaptureBody": {
+    "message": "Alt+Shift+V は表示範囲のみを撮影します。"
+  },
+  "welcomeStepDownload": {
+    "message": "ダウンロードフォルダでファイルを探す"
+  },
+  "welcomeStepDownloadBody": {
+    "message": "ファイル名の形式は設定で変更できます（既定は「ページタイトル - 日付 時刻.png」）。"
+  },
+  "welcomeStepPage": {
+    "message": "長いページを開く"
+  },
+  "welcomeStepPageBody": {
+    "message": "記事、フィード、リリースノートなど何でも構いません。長いほど違いが分かります。"
+  },
+  "welcomeTagline": {
+    "message": "ページ全体のスクリーンショットを一度に。スクロール結合、無限スクロール、遅延読み込み画像はすべて自動処理されます。"
+  },
+  "welcomeTitle": {
+    "message": "ようこそ - Page Screenshot Pro"
+  },
+  "welcomeTry": {
+    "message": "試してみる"
+  },
+  "welcomeWideBody": {
+    "message": "横に長い表、ボード、横向きのフローチャートはグリッド状に分割して撮影するので、右端が欠けません。"
+  },
+  "welcomeWideTitle": {
+    "message": "ビューポートより広いページ"
+  }
+}

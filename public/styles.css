@@ -1,0 +1,607 @@
+/* Page Screenshot Pro — 官网样式（八种语言、六个页面共用一份）
+ *
+ * 视觉参考同组织的 walletpro 站点：深色底 + 玻璃卡片 + 蓝紫渐变。
+ *
+ * 这份样式表是 `public/styles.css`，由 Vite 原样复制到 `dist/styles.css`，
+ * **不**经过打包、也不带文件名指纹。原因是它和 React 那边没有关系：站点
+ * 预渲染成静态 HTML，样式表就是那堆 HTML 的样式表。于是 _headers 里
+ * `/styles.css` 那条缓存规则指的是一个稳定地址（见那里的注释）。
+ *
+ * 全部是类选择器，页面里**不写** style=""。这不是洁癖：_headers 的 CSP 是
+ * style-src 'self'，内联 style 属性归 style-src-attr 管、缺省回落到
+ * style-src，所以部署后会被浏览器静默丢弃——本地 file:// 打开看不出差别，
+ * 也不会让任何检查变红。间距全部收在下面这几条类里。
+ *
+ * 断点有四个，各管一件事，别合并：
+ *   900px  三列栅格（.grid-3 / .steps）收成两列，奇数个元素时最后一张横跨整行
+ *   720px  导航收起文字链接、首屏与区块留白收紧
+ *   660px  所有栅格塌成单列（两列卡片的算式下限）
+ *   560px  品牌字隐藏、卡片内边距收紧
+ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --bg: #050a14;
+  --bg-deep: #02060e;
+  --primary: #3b82f6;
+  --primary-light: #60a5fa;
+  --primary-glow: rgba(59, 130, 246, 0.42);
+  --accent: #a855f7;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --muted-2: #64748b;
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-hover: rgba(255, 255, 255, 0.06);
+  /* 弹层底：**必须不透明**。半透明的 --glass 压在深色卡片上是对的，但凡是
+     浏览器自己画的浮层（语言菜单、<select> 的选项列表）都只能给不透明色，
+     否则它会合成到白底上，而字色还是 --text，结果就是白底白字。 */
+  --popover-bg: #0b1120;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --ok: #34d399;
+  --warn: #fbbf24;
+  --radius: 20px;
+  --maxw: 1120px;
+  --nav-h: 64px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "PingFang SC", "PingFang TC", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Apple SD Gothic Neo", "Malgun Gothic", "Microsoft YaHei", "Noto Sans KR",
+    "Noto Sans JP", sans-serif;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 20px); }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--text);
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(1100px 620px at 50% -12%, rgba(59, 130, 246, 0.18), transparent 70%),
+    radial-gradient(900px 520px at 88% 4%, rgba(168, 85, 247, 0.13), transparent 66%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; }
+
+/* 代码/模板占位符在正文和卡片里都要能读，所以这条是全局的；
+   .prose code 只是把字号再收一点（见下）。 */
+code {
+  padding: 1px 6px; border-radius: 5px; font-size: 0.88em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: rgba(255, 255, 255, 0.07); color: #e2e8f0;
+}
+
+a { color: var(--primary-light); text-decoration: none; }
+a:hover { color: #93c5fd; }
+
+:focus-visible { outline: 2px solid var(--primary-light); outline-offset: 3px; border-radius: 6px; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+/* ---------------------------------------------------------------- 导航 */
+
+.nav {
+  position: fixed; inset: 0 0 auto 0; z-index: 100;
+  height: var(--nav-h);
+  background: rgba(5, 10, 20, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+
+.brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: var(--text); font-weight: 800; font-size: 0.86rem;
+  letter-spacing: 0.07em; text-transform: uppercase; white-space: nowrap;
+}
+.brand img { border-radius: 7px; }
+.brand:hover { color: var(--text); }
+
+.nav-links { display: flex; align-items: center; gap: 1.5rem; }
+.nav-links > a:not(.btn) { color: var(--muted); font-size: 0.92rem; }
+.nav-links > a:not(.btn):hover { color: var(--text); }
+
+/* 语言菜单：原生 <details>，没有 JS 也能展开。
+ *
+ * 定位用 relative + absolute 而不是把列表塞进文档流：导航是 fixed、高 56px，
+ * 列表若在流内会把整个导航条撑高，压住下面的 hero。 */
+.lang-menu { position: relative; }
+.lang-menu > summary {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.3rem 0.6rem; border-radius: 8px;
+  color: var(--muted); font-size: 0.9rem; cursor: pointer;
+  list-style: none; /* 去掉默认三角，否则和 🌐 并排很挤 */
+}
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary:hover, .lang-menu[open] > summary { color: var(--text); background: var(--glass); }
+.lang-menu-list {
+  position: absolute; top: calc(100% + 0.5rem); right: 0; z-index: 101;
+  min-width: 10rem; padding: 0.4rem;
+  background: var(--popover-bg); border: 1px solid var(--border-strong);
+  border-radius: 12px; box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+.lang-menu-list a {
+  display: block; padding: 0.45rem 0.7rem; border-radius: 8px;
+  color: var(--muted); font-size: 0.9rem; white-space: nowrap;
+}
+.lang-menu-list a:hover { color: var(--text); background: var(--glass); }
+.lang-menu-list a[aria-current='true'] { color: var(--text); font-weight: 700; }
+
+/* ---------------------------------------------------------------- 按钮 */
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding: 0.72rem 1.5rem; border-radius: 999px;
+  font-size: 0.95rem; font-weight: 600; line-height: 1.2;
+  border: 1px solid transparent; cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease,
+    border-color 0.18s ease, color 0.18s ease;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), #6366f1);
+  color: #fff;
+  box-shadow: 0 6px 22px var(--primary-glow);
+}
+.btn-primary:hover { color: #fff; transform: translateY(-2px); box-shadow: 0 10px 30px var(--primary-glow); }
+.btn-ghost { background: var(--glass); border-color: var(--border-strong); color: var(--text); }
+.btn-ghost:hover { background: var(--glass-hover); color: var(--text); transform: translateY(-2px); }
+.btn-sm { padding: 0.5rem 1.1rem; font-size: 0.88rem; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+
+/* ---------------------------------------------------------------- 首屏 */
+
+main { padding-top: var(--nav-h); }
+
+.hero { padding: 5.5rem 0 0; text-align: center; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.35rem 0.9rem; border-radius: 999px;
+  background: var(--glass); border: 1px solid var(--border);
+  color: var(--muted); font-size: 0.8rem; letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+}
+.eyebrow b { color: var(--ok); font-weight: 600; }
+
+h1.hero-title {
+  margin: 0 auto;
+  font-size: clamp(2.3rem, 5.6vw, 4rem);
+  line-height: 1.06; letter-spacing: -0.025em; font-weight: 900;
+  max-width: 15em;
+}
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary-light), var(--accent));
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+.lead {
+  max-width: 660px; margin: 1.5rem auto 2.25rem;
+  font-size: 1.09rem; color: var(--muted);
+}
+.lead strong { color: var(--text); font-weight: 600; }
+
+.trust { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 2.25rem 0 0; padding: 0; list-style: none; }
+.trust li {
+  padding: 0.32rem 0.8rem; border-radius: 999px;
+  background: var(--glass); border: 1px solid var(--border);
+  color: var(--muted); font-size: 0.8rem;
+}
+
+/* 首屏的"长图"示意：纯 CSS，不加载任何图片。
+   三段之间用虚线缝标出拼接位置，正是产品在做的事。 */
+.shot {
+  max-width: 780px; margin: 3.25rem auto 0;
+  border: 1px solid var(--border-strong); border-radius: 18px; overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 40px 90px rgba(2, 6, 14, 0.75);
+}
+.shot-bar {
+  display: flex; align-items: center; gap: 6px;
+  padding: 0.6rem 0.85rem;
+  background: rgba(255, 255, 255, 0.04); border-bottom: 1px solid var(--border);
+}
+.shot-dot { width: 9px; height: 9px; border-radius: 50%; background: #475569; }
+.shot-url {
+  flex: 1; margin-left: 0.6rem; height: 22px; border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  display: flex; align-items: center; padding: 0 0.7rem;
+  font-size: 0.68rem; color: var(--muted-2);
+  overflow: hidden; white-space: nowrap;
+}
+.shot-page {
+  padding: 1.1rem 1.25rem 1.35rem;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(2, 6, 14, 0.96));
+}
+.shot-sticky {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.4rem 0.6rem; margin-bottom: 0.9rem;
+  border: 1px dashed rgba(52, 211, 153, 0.45); border-radius: 8px;
+  font-size: 0.62rem; color: var(--ok);
+}
+.shot-sticky::before { content: ""; width: 14px; height: 8px; border-radius: 2px; background: rgba(52, 211, 153, 0.55); }
+.shot-h { height: 15px; border-radius: 5px; background: rgba(255, 255, 255, 0.22); margin-bottom: 12px; }
+.shot-line { height: 8px; border-radius: 4px; background: rgba(255, 255, 255, 0.09); margin-bottom: 8px; }
+.shot-line.w80 { width: 80%; }
+.shot-line.w62 { width: 62%; }
+.shot-line.w90 { width: 90%; }
+.shot-seam {
+  position: relative; height: 0; margin: 15px 0 19px;
+  border-top: 1px dashed rgba(56, 189, 248, 0.55);
+}
+.shot-seam span {
+  position: absolute; right: 0; top: -10px;
+  padding: 1px 7px; border-radius: 999px;
+  background: var(--bg-deep); border: 1px solid rgba(56, 189, 248, 0.4);
+  font-size: 0.6rem; color: #38bdf8; white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------- 区块 */
+
+.section { margin-top: 6rem; }
+.section-head { max-width: 720px; margin: 0 auto 2.75rem; text-align: center; }
+.section-head h2 { margin: 0 0 0.75rem; font-size: clamp(1.65rem, 3.6vw, 2.35rem); letter-spacing: -0.02em; }
+.section-head p { margin: 0; color: var(--muted); }
+.section-head.left { margin-left: 0; text-align: left; }
+
+/* 三个收紧段间距的变体，代替页面里原来写的 style="margin-top:…"。
+   写成 `.section.section-tight`（0,2,0）而不是 `.section-tight`（0,1,0），
+   是因为下面的 @media (max-width:720px) 里还有一条 `.section{margin-top:4.25rem}`：
+   同特异性下文件靠后的赢，普通类会被那条压掉，移动端就变回 4.25rem。 */
+.section.section-tight { margin-top: 2.5rem; }
+.section.section-tighter { margin-top: 1.5rem; }
+.section.section-flush { margin-top: 0; }
+
+.grid { display: grid; gap: 1.25rem; }
+/* 列数写死，不用 auto-fit —— 见下面 .plans 上面那段说明，两处是同一个理由。
+   内容宽 1080px（--maxw 1120 减 .wrap 左右各 20px 内边距）下：
+     .grid-2 / .plans 各 2 列：4 个元素 = 2×2，2 个元素 = 一行 2 个
+     .grid-3 / .steps 各 3 列：6 个元素 = 3×3，3 个元素 = 一行 3 个
+   minmax(0,1fr) 而不是 1fr：1fr 的下限是 auto，一格里的长英文单词会把整列
+   撑出容器。 */
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.card {
+  background: var(--glass); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.75rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+.card:hover { transform: translateY(-4px); border-color: rgba(59, 130, 246, 0.42); background: var(--glass-hover); }
+.card h3 { margin: 0 0 0.55rem; font-size: 1.1rem; letter-spacing: -0.01em; }
+.card h2 { margin: 0 0 0.75rem; font-size: 1.5rem; letter-spacing: -0.01em; }
+/* 「小卡片」：标题是 <h2>（语义上它直接挂在页面的 <h1> 下面，中间没有分区
+   标题，写 <h3> 就是 h1→h3 跳级），但视觉上仍是一张卡片的小标题。
+   把字号钉回 .card h3 的 1.1rem——否则支持页的六张卡片标题会从 1.1rem
+   跳到 1.5rem，比现在大 36%，与其它页不一致。这一条的存在完全是因为
+   「语义层级」与「视觉层级」在这里不是一回事。 */
+.card-sm h2 { margin: 0 0 0.55rem; font-size: 1.1rem; letter-spacing: -0.01em; }
+.card p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+
+/* 卡片内部的排版全部由 CSS 负责，页面里**不写** style=""。
+   原因在 _headers 顶部：CSP 是 style-src 'self'，内联 style 属性
+   归 style-src-attr 管、缺省回落到 style-src，所以部署后会被浏览器
+   静默丢弃——本地 file:// 打开看不出任何差别，也不会让任何检查变红。
+   这几条把原来散在六个 HTML 里的间距收回来，改一次就全站生效。 */
+.card p + p { margin-top: 0.9rem; }
+.card p + .btn { margin-top: 1.1rem; }
+.card .btn-row { margin-top: 1.2rem; }
+.card ul { margin: 0.6rem 0 0; padding-left: 1.25rem; color: var(--muted); font-size: 0.94rem; }
+.card ul li { margin-bottom: 0.35rem; }
+.card-narrow { max-width: 720px; margin-left: auto; margin-right: auto; }
+.card-mid { max-width: 760px; margin-left: auto; margin-right: auto; }
+.card-center { text-align: center; }
+
+.icon {
+  width: 2.7rem; height: 2.7rem; margin-bottom: 1rem;
+  display: grid; place-items: center;
+  border-radius: 14px; font-size: 1.2rem; line-height: 1;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.22), rgba(168, 85, 247, 0.18));
+  border: 1px solid var(--border);
+}
+
+/* ---------------------------------------------------------------- 插图 */
+
+/* 插图（public/images/*.png，由 scripts/gen-site-images.mjs 生成）。
+ *
+ * 宽度收到 900px 而不是撑满 1080px：三张图都是 1200×750，撑满时在 1080 宽
+ * 的区块里高达 675px，把整页拉得很长，而它们只是示意图，不是主体内容。
+ *
+ * 图里的文字为零（八种语言没法烘焙进 PNG），说明全在 <figcaption> 里，
+ * 所以图注不是可选装饰——去掉它这张图就没有任何可读信息了。 */
+.figure { max-width: 900px; margin: 2.75rem auto 0; }
+/* 夹在 .card-mid（760px）下方的插图跟着卡片收窄，否则两边差 140px，
+   卡片和图的左边缘对不齐，看起来像是排错了。 */
+.figure.figure-mid { max-width: 760px; }
+.figure img {
+  display: block; width: 100%; height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-deep);
+  box-shadow: 0 30px 70px rgba(2, 6, 14, 0.6);
+}
+.figure figcaption {
+  margin-top: 0.9rem; text-align: center;
+  color: var(--muted-2); font-size: 0.85rem;
+}
+
+.badge {
+  display: inline-block; padding: 0.12rem 0.5rem; margin-left: 0.45rem;
+  border-radius: 999px; font-size: 0.66rem; font-weight: 700;
+  letter-spacing: 0.04em; text-transform: uppercase; vertical-align: middle;
+  color: #ddd6fe; background: rgba(168, 85, 247, 0.2);
+  border: 1px solid rgba(168, 85, 247, 0.42);
+}
+
+/* ---------------------------------------------------------------- 步骤 */
+
+/* 步骤是三个，正好一行三列。 */
+.steps { counter-reset: step; list-style: none; margin: 0; padding: 0; display: grid; gap: 1.25rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.steps li { position: relative; padding: 1.6rem 1.6rem 1.6rem 3.6rem; background: var(--glass); border: 1px solid var(--border); border-radius: var(--radius); }
+.steps li::before {
+  counter-increment: step; content: counter(step);
+  position: absolute; left: 1.35rem; top: 1.5rem;
+  width: 1.6rem; height: 1.6rem; display: grid; place-items: center;
+  border-radius: 50%; font-size: 0.8rem; font-weight: 700;
+  color: #fff; background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+.steps strong { display: block; margin-bottom: 0.3rem; }
+.steps span { color: var(--muted); font-size: 0.92rem; }
+
+/* ---------------------------------------------------------------- 表格 */
+
+.table-wrap {
+  overflow-x: auto; border-radius: var(--radius);
+  background: var(--glass); border: 1px solid var(--border);
+}
+table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+thead th {
+  text-align: left; padding: 1rem; font-size: 0.82rem; font-weight: 700;
+  letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted);
+  border-bottom: 1px solid var(--border-strong); white-space: nowrap;
+}
+tbody td { padding: 0.95rem 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); vertical-align: top; }
+tbody tr:last-child td { border-bottom: 0; }
+tbody th { padding: 0.95rem 1rem; text-align: left; font-weight: 600; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+.col-us { color: #38bdf8; font-weight: 600; }
+.yes { color: var(--ok); }
+.no { color: var(--muted-2); }
+
+/* ---------------------------------------------------------------- 价格 */
+
+/* 四个套餐排成 2×2，**不**用 auto-fit。
+ *
+ * auto-fit + minmax(265px,1fr) 在内容宽 1080px 下算出来是 3 列
+ * （4×265 + 3×20 = 1120 > 1080），于是四个套餐卡变成"上排 3 个、下排 1 个"——
+ * 那个孤儿卡正是 2026-10-26 报的版式问题。auto-fit 的列数是内容宽度算出来的，
+ * 每加一种语言、每改一次 --maxw 都可能变；这里直接写死 2 列，四个就是 2×2。
+ *
+ * 代价是 auto-fit 原本顺带提供的"窄屏自动塌成单列"没有了，所以下面
+ * @media (max-width:720px) 里必须显式塌列——两件事要一起改。 */
+.plans { display: grid; gap: 1.25rem; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; }
+.plan {
+  display: flex; flex-direction: column;
+  padding: 1.9rem 1.7rem;
+  background: var(--glass); border: 1px solid var(--border); border-radius: var(--radius);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.plan:hover { transform: translateY(-4px); }
+.plan.featured { border-color: rgba(59, 130, 246, 0.55); background: linear-gradient(180deg, rgba(59, 130, 246, 0.1), rgba(255, 255, 255, 0.02)); box-shadow: 0 18px 50px rgba(59, 130, 246, 0.16); }
+.plan-tag { align-self: flex-start; margin-bottom: 0.9rem; padding: 0.15rem 0.6rem; border-radius: 999px; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+.plan.featured .plan-tag { color: #dbeafe; background: rgba(59, 130, 246, 0.28); border: 1px solid rgba(96, 165, 250, 0.5); }
+.plan:not(.featured) .plan-tag { color: var(--muted); background: var(--glass); border: 1px solid var(--border); }
+/* 套餐名在首页是 <h3>、在价格页是 <h2>（见 ui.tsx 的 PlanCard 注释），
+   两条都要覆盖，字号一致——语义层级修好不该让价格页的字变大。 */
+.plan h2, .plan h3 { margin: 0 0 0.4rem; font-size: 1.15rem; }
+.price { display: flex; align-items: baseline; gap: 0.35rem; margin: 0.35rem 0 0.9rem; }
+.price b { font-size: 2.3rem; font-weight: 800; letter-spacing: -0.02em; }
+.price span { color: var(--muted); font-size: 0.9rem; }
+.plan ul { list-style: none; margin: 0 0 1.6rem; padding: 0; display: grid; gap: 0.5rem; font-size: 0.92rem; color: var(--muted); }
+.plan ul li { padding-left: 1.4rem; position: relative; }
+.plan ul li::before { content: "✓"; position: absolute; left: 0; color: var(--ok); font-weight: 700; }
+.plan ul li.off { color: var(--muted-2); }
+.plan ul li.off::before { content: "—"; color: var(--muted-2); }
+.plan .btn { margin-top: auto; width: 100%; }
+
+.note { margin: 1.5rem 0 0; color: var(--muted-2); font-size: 0.85rem; text-align: center; }
+
+/* ---------------------------------------------------------------- 表单 */
+
+/* 支持页内嵌的反馈表单（2026-10-30）。全站唯一的 <form>，也是本文件里
+   唯一一组 input/select/textarea 规则——此前零命中，所以这些样式是从头写的，
+   不是调整既有规则。
+
+   两条硬约束决定了这里的写法：
+   1. **不写内联样式。** CSP 是 style-src 'self'，style="" 归 style-src-attr
+      管、缺省回落到 style-src，部署后会被静默丢弃（本地 file:// 看完全正常）。
+      所以控件外观全部靠下面的类，页面里一个 style 属性都没有。
+   2. **深色底。** 浏览器默认把 input 画成白底黑字，在这套 --bg #050a14 上
+      直接瞎眼；`color-scheme: dark` 顺带让原生下拉箭头、滚动条、日期选择器
+      跟着变深——只改 background 的话，`<select>` 的箭头仍是浅色版。 */
+.feedback-form { display: grid; gap: 1.35rem; }
+.feedback-form .field { display: grid; gap: 0.45rem; }
+.feedback-form .field-label { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+.feedback-form .field-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.7rem 0.9rem;
+  font: inherit;
+  font-size: 0.94rem;
+  line-height: 1.5;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  color-scheme: dark;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+/* `<select>` 展开的那一列是**浏览器画的**，不是 CSS 画的，而且它取的是控件
+   自己的 background-color。上面给的是 rgba(255,255,255,0.04)——半透明，压在
+   深色卡片上才显得对，可弹层没法用半透明：浏览器把它合成到白底上，结果接近
+   白色，而字色是 --text（#f8fafc），两者几乎同色。收起时只显示当前选中项，
+   那一段是控件自己画的、底下有深色卡片，所以只有**一展开**其余几项才全看不清
+   （2026-10-30 用户报的就是这个：「类别下拉框中除了已经选到的项，其他项都看不清」）。
+
+   所以 option 必须给**不透明**底色（--popover-bg），和 .lang-menu-list 那个
+   弹层同一个颜色，站内两个浮层看起来才是一家的。`color` 也显式写一遍：这条
+   规则就自己说清了两端，不依赖祖先链上的字色，也不会被以后某次改字色带着跑。 */
+.feedback-form .field-input option {
+  background-color: var(--popover-bg);
+  color: var(--text);
+}
+.feedback-form .field-input:hover { border-color: rgba(96, 165, 250, 0.5); }
+.feedback-form .field-input:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  background: rgba(255, 255, 255, 0.06);
+}
+/* 焦点环由全局 :focus-visible 提供，但那是给链接和按钮的圆角 6px；输入框
+   自己已经有边框色变化，所以这里只把它换成内嵌的一圈，避免两圈线叠在一起。 */
+.feedback-form .field-input:focus-visible { outline: 2px solid var(--primary-light); outline-offset: 1px; }
+/* 占位符默认是控件字色的 54%，在深底上几乎看不见。 */
+.feedback-form .field-input::placeholder { color: var(--muted-2); opacity: 1; }
+.feedback-form .field-textarea { resize: vertical; min-height: 8rem; }
+.feedback-form .field-hint,
+.feedback-form .field-note {
+  margin: 0;
+  color: var(--muted-2);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+/* 提交行：按钮在左、说明在右，窄屏换行。用 flex 而不是再套一层 grid，
+   因为按钮不该被拉成整行宽——那是「确认」的视觉重量，不是「发送」。 */
+.feedback-form .field-submit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.1rem;
+}
+.feedback-form .field-submit .btn { flex: 0 0 auto; }
+.feedback-form .field-submit .field-note { flex: 1 1 240px; }
+
+/* ---------------------------------------------------------------- FAQ */
+
+.faq { display: grid; gap: 0.75rem; }
+details.qa {
+  background: var(--glass); border: 1px solid var(--border);
+  border-radius: 14px; padding: 0 1.3rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+details.qa[open] { border-color: rgba(59, 130, 246, 0.4); background: var(--glass-hover); }
+details.qa summary {
+  cursor: pointer; list-style: none; padding: 1.05rem 0;
+  font-weight: 600; font-size: 0.98rem;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+}
+details.qa summary::-webkit-details-marker { display: none; }
+details.qa summary::after { content: "+"; color: var(--primary-light); font-size: 1.3rem; line-height: 1; flex: 0 0 auto; }
+details.qa[open] summary::after { content: "–"; }
+details.qa .answer { padding: 0 0 1.2rem; color: var(--muted); font-size: 0.94rem; }
+details.qa .answer p { margin: 0 0 0.7rem; }
+details.qa .answer p:last-child { margin-bottom: 0; }
+details.qa .answer ul { margin: 0.4rem 0 0; padding-left: 1.2rem; }
+
+/* ---------------------------------------------------------------- 正文页 */
+
+.page-head { padding: 4.5rem 0 0; }
+.page-head h1 { margin: 0 0 0.75rem; font-size: clamp(2rem, 4.4vw, 2.9rem); letter-spacing: -0.02em; }
+.page-head p { margin: 0; color: var(--muted); max-width: 720px; }
+/* 标题下面的两三种段落间距，原来是每页手写 style="margin-top:…" 的。 */
+.page-head p + p { margin-top: 1.25rem; }
+.page-head .meta { margin-top: 0.5rem; color: var(--muted-2); font-size: 0.9rem; }
+/* 隐私页那行「中文版在页面下方」夹在两段之间，间距比生效日期松一点。
+   两条 .meta 规则都是 (0,2,0)，压得住上面的 .page-head p + p (0,1,2)。 */
+.page-head .meta-2 { margin-top: 0.75rem; }
+
+.prose { max-width: 800px; margin-top: 2.5rem; }
+.prose h2 { margin: 2.6rem 0 0.75rem; font-size: 1.25rem; letter-spacing: -0.01em; }
+.prose h3 { margin: 1.6rem 0 0.5rem; font-size: 1.02rem; }
+.prose p, .prose li { color: var(--muted); font-size: 0.96rem; }
+.prose ul { padding-left: 1.25rem; }
+.prose li { margin-bottom: 0.45rem; }
+.prose strong { color: var(--text); font-weight: 600; }
+.prose code {
+  padding: 1px 6px; border-radius: 5px; font-size: 0.86em;
+  background: rgba(255, 255, 255, 0.07); color: #e2e8f0;
+}
+.prose .meta { color: var(--muted-2); font-size: 0.88rem; }
+.prose hr { border: 0; border-top: 1px solid var(--border); margin: 3rem 0 0; }
+
+/* 第一块标题不需要上边距——它前面已经是 .page-head 的留白。
+   原来靠每个页面手写 <h2 style="margin-top:0">，现在一条 :first-child 收掉；
+   两页里 `<div class="prose" style="margin-top:0">` 则是 .prose-flush。 */
+.prose > h2:first-child, .prose > h3:first-child { margin-top: 0; }
+.prose-flush { margin-top: 0; }
+
+/* ---------------------------------------------------------------- 页脚 */
+
+.footer { margin-top: 6rem; border-top: 1px solid var(--border); padding: 3rem 0 2rem; }
+.footer-inner { display: flex; flex-wrap: wrap; gap: 2.5rem; justify-content: space-between; }
+.footer-brand { max-width: 320px; }
+.footer-brand p { margin: 0.9rem 0 0; color: var(--muted-2); font-size: 0.88rem; }
+.footer-cols { display: flex; flex-wrap: wrap; gap: 3rem; }
+.footer-cols h2 { margin: 0 0 0.7rem; font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted-2); }
+.footer-cols a { display: block; margin-bottom: 0.45rem; color: var(--muted); font-size: 0.88rem; }
+.footer-cols a:hover { color: var(--text); }
+.footer-bottom {
+  display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: space-between;
+  margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);
+  color: var(--muted-2); font-size: 0.82rem;
+}
+
+/* ---------------------------------------------------------------- 自适应 */
+
+@media (max-width: 900px) {
+  /* 三列收成两列。算式：三列要 3×270 + 2×20 = 850px 内容宽，即视口 890px
+     （.wrap 左右各 20px），取整到 900。
+     收列之后元素个数若是奇数，最后一张会孤零零占半行 —— 正是 .plans 上那段
+     注释说的形状，只是换了个断点。所以让"最后一张且是奇数位"的元素横跨整行：
+     3 个 → 2 + 整行，6 个 → 3×2 不受影响。:not(:first-child) 是给单元素网格
+     兜底的，避免它被拉成整行宽。 */
+  .grid-3, .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-3 > :last-child:nth-child(odd):not(:first-child),
+  .steps > :last-child:nth-child(odd):not(:first-child) { grid-column: 1 / -1; }
+}
+
+@media (max-width: 660px) {
+  /* 再窄就一路单列。两列要 2×300 + 20 = 620px 内容宽，即视口 660px。
+     720px 那条只管导航，与栅格无关，所以栅格自己的断点是 900 和 660。 */
+  .grid-2, .grid-3, .plans, .steps { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 720px) {
+  .nav-links { gap: 1rem; }
+  .nav-links > a:not(.btn) { display: none; }
+  .hero { padding-top: 3.5rem; }
+  .section { margin-top: 4.25rem; }
+  .footer-inner { gap: 2rem; }
+  .footer-cols { gap: 2rem; }
+}
+
+@media (max-width: 560px) {
+  .brand span { display: none; }
+  .lead { font-size: 1rem; }
+  .card { padding: 1.4rem; }
+  .plan { padding: 1.5rem 1.35rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .card:hover, .plan:hover, .btn:hover { transform: none; }
+}
+
+@media print {
+  .nav, .footer, .btn { display: none; }
+  body { background: #fff; color: #000; }
+  .prose p, .prose li { color: #222; }
+}

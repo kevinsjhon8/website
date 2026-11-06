@@ -1,0 +1,22 @@
+# 依赖与构建产物：都能由 npm install / npm run build 重新生成
+node_modules/
+dist/
+dist-ssr/
+
+# 构建中间产物：本轮哪些页面的内容真的变了（给 scripts/indexnow.mjs 读）。
+# **lastmod.json 不在此列** —— 那份清单必须进库，否则每次构建都会把 48 页
+# 全部当成"新发现的"，等于绕回"每次部署都声明全站更新"那个错误。
+.lastmod-changed.json
+
+# wrangler 的本地状态（`npm run preview` 用的本地 D1/KV）与本地密钥
+.wrangler/
+.dev.vars
+.dev.vars.*
+
+# 编辑器与系统产生的杂项
+.DS_Store
+Thumbs.db
+*.log
+# 编辑器原子写入留下的暂存文件（`<name>.tmp.<pid>.<hash>`）。它们出现得
+# 很短暂、内容与源文件相同，但 `git add .` 会把它一起收进去。
+*.tmp.*

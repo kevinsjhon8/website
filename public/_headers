@@ -1,0 +1,127 @@
+# Cloudflare Pages 响应头
+#
+# 这份文件由 Pages 在部署时读取，**不**会作为静态文件对外提供。
+# 语法：一段路径规则（`/*`、`/styles.css`…），下面跟缩进的 `Name: value`。
+# 规则按出现顺序全部应用，同名头以后面的为准——所以默认规则放最前，
+# 具体路径的覆盖放最后。注释只能**单独成行**，不要写在缩进块里。
+#
+# 路径规则只用**精确路径**和结尾的 `/*` 两种写法。中间通配（`/*.png`）
+# 在 _redirects 里能写，但 _headers 的匹配规则文档只承诺了结尾 splat，
+# 拿不准的写法在部署后是**静默不生效**——头没加上，页面照样能开，
+# 没人会发现。所以图标逐条列出来，宁可长一点。
+#
+# ── 关于 script-src ────────────────────────────────────────────────
+# 这一条回到最初的样子：script-src 'none'。
+#
+# 中间有过一段 'self'：那时站点是 React + Vite 的 hydrate 形态，构建会给每个
+# 页面注入 <script type="module" src="/assets/index-<hash>.js">，同源、打包过、
+# 由 Vite 生成，所以放行 'self'（始终没有放过 'unsafe-inline'）。
+#
+# 那段放行的前提在 2026-10-28 消失了：脚本被 scripts/prerender.mjs 的
+# stripClientScript() 从产物里剥掉，dist/assets/ 也一并删除。理由是那个
+# 647 KB（18.4 万 gzip）的 bundle 只做 hydrate——把**已经正确的 DOM** 重新
+# 对一遍，零交互站点上一个像素都不改。
+#
+# 所以现在一个字节的可执行脚本都不发，'none' 才是事实。**这一条和产物必须
+# 同时正确**：HTML 里有脚本而这里写 'none' 会让它被拦（页面照样可用，但白
+# 花 184 KB 下载）；产物里没有脚本而这里写 'self' 则是虚报能力。两边由
+# site-e2e.mjs 一起钉住——它要求 module 脚本数**为 0**、/assets/*.js 取不到，
+# 同时内联脚本仍然不许执行。
+#
+# 页面在脚本被完全禁掉时依然完整可用，这一点没变，而且正是下面这些选择的
+# 结果：FAQ 是原生 <details>，导航与语言切换是普通 <a>，每个地址都是一个预
+# 渲染好的真实 HTML。区别只是：再也不需要"脚本加载成功才能接管"这一步了。
+#
+# ── 关于 style-src ────────────────────────────────────────────────
+# style-src 'self' 保留，**不加** 'unsafe-inline'。内联 style 属性归
+# style-src-attr 管、缺省回落到 style-src，所以 style="" 会被静默丢弃——
+# 本地 file:// 打开完全看不出差别（没有头），也不会让任何静态检查变红。
+# 站点全部间距与版式都写在 styles.css 的类里（.section-tight、.card-narrow…），
+# 所以不需要放行内联样式。往页面里贴 style="" 会被这条 CSP 拦下，这是故意的。
+#
+# 两个容易误判的点：
+# 1. 每页 head 里有 <script type="application/ld+json">，script-src 不会拦它
+#    ——它不是可执行脚本，是数据块。结构化数据照常被搜索引擎读到。
+# 2. frame-ancestors 'none' 与 X-Frame-Options: DENY 是重复的：前者是现代
+#    写法，后者只为兼容老浏览器。两条都留，不冲突。
+#
+# ── 关于 form-action ──────────────────────────────────────────────
+# 2026-10-30 从 'none' 放开到 'self'，只为一件事：支持页内嵌了一个原生
+# <form method="post" action="/api/feedback">（用户要求反馈不要跳外链）。
+# 原生表单提交不需要 JS，所以 script-src 'none' 一个字节没动；而提交目标
+# 归 form-action 管，'none' 会让那次 POST 被浏览器直接拦下——页面上看起来
+# 就是「点了发送，什么都没发生」，控制台之外没有任何提示。
+#
+# 'self' 而不是列出完整来源：跨域提交仍然被禁止，而这个表单只可能打到本站。
+# 提交目标写成**绝对路径** `/api/feedback`（不是相对的 `api/feedback`）：
+# 支持页在 `/support/` 与 `/zh-cn/support/` 两种深度下渲染，相对路径会解成
+# `/zh-cn/api/feedback`，Pages 上没有这个路由，失败的样子是一个 404 页面。
+#
+# 这一条与 site-e2e.mjs 的关系：脚本数仍要求为 0、内联脚本仍不许执行，
+# form-action 只影响表单提交，不影响那两条。
+
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; form-action 'self'; frame-ancestors 'none'; base-uri 'none'; object-src 'none'
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+  Cache-Control: public, max-age=300, must-revalidate
+
+# 样式表文件名不带指纹，所以**不能**写 immutable：改样式后同一个 URL
+# 必须能取到新内容，否则用户会看到旧样式配新文案。一小时 + 每次回源校验。
+/styles.css
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# 这里原本有一条 /assets/* 的 immutable 长缓存规则（给带内容指纹的
+# index-<hash>.js 用）。2026-10-28 剥离客户端 bundle 之后 dist/assets/ 不再
+# 存在，规则已经没有匹配对象，所以删掉而不是留着——留一条指向空目录的规则
+# 只会让下一个人以为站点还在发 JS。将来真要加回带指纹的资源，记得同时恢复
+# 这一条：文件名不带指纹而写 immutable，改版后用户会看不到新内容。
+
+# 图标和 OG 图内容不变，长缓存。换图时同时换文件名（或清 Cloudflare 缓存），
+# 否则社交平台抓到的还是旧的那张。
+/og-image.png
+  Cache-Control: public, max-age=86400
+
+/favicon16.png
+  Cache-Control: public, max-age=86400
+
+/favicon48.png
+  Cache-Control: public, max-age=86400
+
+/apple-touch-icon.png
+  Cache-Control: public, max-age=86400
+
+/icon192.png
+  Cache-Control: public, max-age=86400
+
+/icon512.png
+  Cache-Control: public, max-age=86400
+
+/icon512-maskable.png
+  Cache-Control: public, max-age=86400
+
+# manifest 与图标同理：内容不变、文件名不带指纹。**必须写精确路径**——
+# 这里原本想用 `/*.webmanifest`，但 _headers 只承诺精确路径与结尾 splat
+# 两种写法，中间通配是静默不生效的（见文件开头），头没加上页面照样能装。
+/site.webmanifest
+  Content-Type: application/manifest+json
+  Cache-Control: public, max-age=86400
+
+# IndexNow 的 key 文件（/<key>.txt，见 public/ 与 scripts/indexnow.mjs）。
+# Bing 会来 GET 它做归属校验，所以它必须**能**被取到。这里**不**写它的路径规则：
+# 上面 /* 那条已经给了 300 秒缓存，而写一条带 key 的精确路径等于把 key 抄成
+# 第二份——换 key 时这条会静默留在原地指向一个不存在的文件。
+
+# 首页三张示意图（/images/*.webp，由 scripts/gen-site-images.mjs 生成）。
+# 文件名同样不带指纹，所以给一天而不是 immutable——换图时同一 URL 要能取到
+# 新内容，否则读者看到的是旧示意图配新文案。
+# 这里用结尾 splat（`/images/*`），是 _headers 文档承诺会匹配的两种写法之一；
+# 中间通配（`/images/*.png`）不保证生效，见文件开头的说明。
+/images/*
+  Cache-Control: public, max-age=86400
+
+# 换域名时要改的是 src/content/site.ts 的 SITE_ORIGIN —— canonical / hreflang /
+# og:url / og:image / JSON-LD 全部由它派生（见 src/seo/head.ts），**不**是这份
+# 文件（这里没有任何域名相关的头）。

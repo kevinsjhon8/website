@@ -1,0 +1,1493 @@
+{
+  "bgBusy": {
+    "message": "Une capture est déjà en cours. Attendez la fin, puis réessayez."
+  },
+  "bgCanvasChunkFailed": {
+    "message": "Le moteur canvas a échoué sur le lot $BATCH$ de fragments",
+    "placeholders": {
+      "batch": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "bgCanvasFailed": {
+    "message": "Le moteur canvas a échoué"
+  },
+  "bgCanvasInitFailed": {
+    "message": "Le moteur canvas n'a pas pu s'initialiser"
+  },
+  "bgCanvasReadyTimeout": {
+    "message": "Le moteur canvas a mis trop de temps à démarrer. Réessayez. ($DETAIL$)",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "délai d'attente du moteur canvas dépassé"
+      }
+    }
+  },
+  "bgCaptureFailed": {
+    "message": "Échec de la capture : $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "La page ne répond pas"
+      }
+    }
+  },
+  "bgCaptureProgress": {
+    "message": "Capture du fragment $CURRENT$/$TOTAL$",
+    "placeholders": {
+      "current": {
+        "content": "$1",
+        "example": "3"
+      },
+      "total": {
+        "content": "$2",
+        "example": "40"
+      }
+    }
+  },
+  "bgCaptureRetry": {
+    "message": "Capture du fragment $CURRENT$/$TOTAL$ (tentative $ATTEMPT$)",
+    "placeholders": {
+      "current": {
+        "content": "$1",
+        "example": "3"
+      },
+      "total": {
+        "content": "$2",
+        "example": "40"
+      },
+      "attempt": {
+        "content": "$3",
+        "example": "2"
+      }
+    }
+  },
+  "bgCapturing": {
+    "message": "Capture en cours…"
+  },
+  "bgClipboardFailed": {
+    "message": "Impossible de copier dans le presse-papiers : $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Presse-papiers indisponible"
+      }
+    }
+  },
+  "bgCompleteNoEditor": {
+    "message": "Capture terminée"
+  },
+  "bgElementFailed": {
+    "message": "Échec de la capture de l'élément : $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Élément trop grand"
+      }
+    }
+  },
+  "bgFileAccess": {
+    "message": "La capture de fichiers locaux nécessite une autorisation : activez « Autoriser l'accès aux URL de fichiers » sur la page de gestion des extensions, puis réessayez."
+  },
+  "bgHidingFixed": {
+    "message": "Masquage des éléments fixes…"
+  },
+  "bgInternalPage": {
+    "message": "Les pages internes du navigateur ne peuvent pas être capturées"
+  },
+  "bgNoActiveTab": {
+    "message": "Aucun onglet actif à capturer"
+  },
+  "bgNoFocusedDocument": {
+    "message": "aucune fenêtre active où écrire (fermez les autres fenêtres contextuelles et réessayez)"
+  },
+  "bgNoScrollAdvance": {
+    "message": "La ligne $ROW$ n'a pas avancé davantage ; arrêt anticipé",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "bgNoSegments": {
+    "message": "Aucun fragment valide à assembler"
+  },
+  "bgNotScrollable": {
+    "message": "La page ne défile pas : une capture de page complète n'est pas nécessaire"
+  },
+  "bgOpeningEditor": {
+    "message": "Ouverture de l'éditeur…"
+  },
+  "bgPageInfoFailed": {
+    "message": "Impossible de lire les informations de la page"
+  },
+  "bgPaymentUnconfigured": {
+    "message": "Les paiements ne sont pas configurés. Renseignez d'abord le lien de paiement Waffo dans utils/payment-config.ts."
+  },
+  "bgPortalNeedsBackend": {
+    "message": "La gestion d'un abonnement nécessite le backend. Configurez d'abord backendUrl dans payment-config.ts."
+  },
+  "bgPortalUnavailable": {
+    "message": "Impossible d'ouvrir le portail des abonnements. Réessayez plus tard."
+  },
+  "bgPreparePage": {
+    "message": "Préparation de la page…"
+  },
+  "bgProRequired": {
+    "message": "C'est une fonction Pro (actuellement verrouillée)"
+  },
+  "bgQuotaExhausted": {
+    "message": "Le quota gratuit du jour est épuisé ($COUNT$ captures). Passez à Pro pour des captures illimitées.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "50"
+      }
+    }
+  },
+  "bgRestoreNeedsBackend": {
+    "message": "La restauration d'un achat nécessite le backend. Configurez d'abord backendUrl dans payment-config.ts."
+  },
+  "bgShotExpired": {
+    "message": "Les données de la capture ont expiré (le service en arrière-plan a été recyclé et la sauvegarde est obsolète). Recapturez."
+  },
+  "bgStitching": {
+    "message": "Assemblage des fragments…"
+  },
+  "bgStorePage": {
+    "message": "Les pages du store ne peuvent pas être capturées"
+  },
+  "bgTabTimeout": {
+    "message": "Délai d'attente dépassé pour « $STEP$ ». Réessayez.",
+    "placeholders": {
+      "step": {
+        "content": "$1",
+        "example": "psp-prepare"
+      }
+    }
+  },
+  "bgTruncated": {
+    "message": "La page est très longue ; seules les $ROWS$ premières lignes ont été capturées",
+    "placeholders": {
+      "rows": {
+        "content": "$1",
+        "example": "40"
+      }
+    }
+  },
+  "bgUnknownOperation": {
+    "message": "opération inconnue"
+  },
+  "commandCaptureFull": {
+    "message": "Capturer la page complète"
+  },
+  "commandCaptureVisible": {
+    "message": "Capturer la zone visible"
+  },
+  "contentPickHint": {
+    "message": "Survolez un élément pour le mettre en surbrillance, cliquez pour valider ou appuyez sur Échap pour annuler"
+  },
+  "contentRegionHint": {
+    "message": "Faites glisser pour sélectionner la zone de capture ; appuyez sur Échap pour annuler"
+  },
+  "contentRegionTooSmall": {
+    "message": "La zone sélectionnée est trop petite"
+  },
+  "contentUnknownMessage": {
+    "message": "Message inconnu : $TYPE$",
+    "placeholders": {
+      "type": {
+        "content": "$1",
+        "example": "psp-unknown"
+      }
+    }
+  },
+  "contextMenuElement": {
+    "message": "Capturer cet élément (Page Screenshot Pro)"
+  },
+  "editorClearAnnotations": {
+    "message": "🗑 Effacer les annotations"
+  },
+  "editorClearConfirm": {
+    "message": "Effacer toutes les annotations ?"
+  },
+  "editorClipboardDenied": {
+    "message": "Échec de la copie : le navigateur a refusé l'accès au presse-papiers"
+  },
+  "editorClose": {
+    "message": "Fermer"
+  },
+  "editorColor": {
+    "message": "Couleur"
+  },
+  "editorCopied": {
+    "message": "Copié dans le presse-papiers"
+  },
+  "editorCopy": {
+    "message": "📋 Copier dans le presse-papiers"
+  },
+  "editorCopyFailed": {
+    "message": "Échec de la copie"
+  },
+  "editorCopyFailedDetail": {
+    "message": "Échec de la copie : $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Erreur de presse-papiers"
+      }
+    }
+  },
+  "editorCopyText": {
+    "message": "Copier le texte"
+  },
+  "editorCropDone": {
+    "message": "Recadré. Les annotations ont suivi l'image ; vous pouvez annuler."
+  },
+  "editorDecodeFailed": {
+    "message": "Impossible de décoder la capture. Recapturez."
+  },
+  "editorDeletedAnnotation": {
+    "message": "Annotation supprimée"
+  },
+  "editorDownloadJpg": {
+    "message": "⬇ Télécharger en JPG"
+  },
+  "editorDownloadJpgTitle": {
+    "message": "Environ cinq fois plus léger que le PNG, idéal pour partager de longues images"
+  },
+  "editorDownloadPng": {
+    "message": "⬇ Télécharger en PNG"
+  },
+  "editorExportFailed": {
+    "message": "Échec de l'export"
+  },
+  "editorExportPdf": {
+    "message": "📕 Exporter en PDF"
+  },
+  "editorJpgDownloadStarted": {
+    "message": "Téléchargement du JPG lancé"
+  },
+  "editorLicenseCheckFailed": {
+    "message": "Impossible de vérifier la licence"
+  },
+  "editorLineWidth": {
+    "message": "Épaisseur du trait"
+  },
+  "editorLoadFailed": {
+    "message": "Impossible de charger la capture"
+  },
+  "editorLoadFailedDetail": {
+    "message": "Échec du chargement : $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Erreur de stockage"
+      }
+    }
+  },
+  "editorLoading": {
+    "message": "Chargement de la capture…"
+  },
+  "editorMissingShotId": {
+    "message": "ID de capture manquant. Recapturez depuis la fenêtre contextuelle."
+  },
+  "editorNothingToRedo": {
+    "message": "Rien à rétablir"
+  },
+  "editorNothingToUndo": {
+    "message": "Rien à annuler"
+  },
+  "editorOcr": {
+    "message": "🔍 OCR (expérimental)"
+  },
+  "editorOcrFailed": {
+    "message": "Échec de la reconnaissance : $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Erreur de reconnaissance"
+      }
+    }
+  },
+  "editorOcrNoText": {
+    "message": "Aucun texte reconnu"
+  },
+  "editorOcrPreparing": {
+    "message": "Préparation de la reconnaissance…"
+  },
+  "editorOcrResult": {
+    "message": "Résultats de l'OCR"
+  },
+  "editorPdfDownloadStarted": {
+    "message": "Téléchargement du PDF lancé"
+  },
+  "editorPdfExportFailed": {
+    "message": "Échec de l'export PDF : $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Erreur d'export"
+      }
+    }
+  },
+  "editorPngDownloadStarted": {
+    "message": "Téléchargement du PNG lancé"
+  },
+  "editorProOcrTitle": {
+    "message": "Pro : reconnaître le texte de l'image"
+  },
+  "editorProPdfTitle": {
+    "message": "Pro : exporter en PDF"
+  },
+  "editorProRequired": {
+    "message": "C'est une fonction Pro (actuellement verrouillée)"
+  },
+  "editorRedo": {
+    "message": "↪ Rétablir"
+  },
+  "editorRedoTitle": {
+    "message": "Rétablir (Ctrl/Cmd+Maj+Z)"
+  },
+  "editorRedone": {
+    "message": "Rétabli"
+  },
+  "editorTitle": {
+    "message": "Modifier la capture - Page Screenshot Pro"
+  },
+  "editorToolArrow": {
+    "message": "➤ Flèche"
+  },
+  "editorToolArrowTitle": {
+    "message": "Flèche (A)"
+  },
+  "editorToolCrop": {
+    "message": "✂ Recadrer"
+  },
+  "editorToolCropTitle": {
+    "message": "Recadrer (C) : les annotations suivent l'image"
+  },
+  "editorToolEllipse": {
+    "message": "◯ Ellipse"
+  },
+  "editorToolEllipseTitle": {
+    "message": "Ellipse (O)"
+  },
+  "editorToolHighlight": {
+    "message": "🖍 Surligneur"
+  },
+  "editorToolHighlightTitle": {
+    "message": "Surligneur (H) : la superposition translucide garde le texte lisible"
+  },
+  "editorToolMosaic": {
+    "message": "🔲 Mosaique"
+  },
+  "editorToolMosaicTitle": {
+    "message": "Mosaique (M)"
+  },
+  "editorToolPen": {
+    "message": "✎ Crayon"
+  },
+  "editorToolPenTitle": {
+    "message": "Crayon à main levée (P)"
+  },
+  "editorToolRect": {
+    "message": "▭ Rectangle"
+  },
+  "editorToolRectTitle": {
+    "message": "Rectangle (R)"
+  },
+  "editorToolSelect": {
+    "message": "⬉ Sélection"
+  },
+  "editorToolSelectTitle": {
+    "message": "Sélectionner/déplacer les annotations (V)"
+  },
+  "editorToolText": {
+    "message": "T Texte"
+  },
+  "editorToolTextTitle": {
+    "message": "Texte (T)"
+  },
+  "editorUndo": {
+    "message": "↩ Annuler"
+  },
+  "editorUndoTitle": {
+    "message": "Annuler (Ctrl/Cmd+Z)"
+  },
+  "editorUndone": {
+    "message": "Annulé"
+  },
+  "editorZoomFit": {
+    "message": "Ajuster"
+  },
+  "editorZoomFitTitle": {
+    "message": "Ajuster à la fenêtre (0)"
+  },
+  "editorZoomFitWidth": {
+    "message": "Ajuster à la largeur"
+  },
+  "editorZoomFitWidthTitle": {
+    "message": "Ajuster la largeur de l'image à la zone visible ; faites défiler verticalement pour la voir (W)"
+  },
+  "editorZoomInTitle": {
+    "message": "Agrandir (+)"
+  },
+  "editorZoomLabelTitle": {
+    "message": "Cliquez pour ajuster à la fenêtre (0)"
+  },
+  "editorZoomOutTitle": {
+    "message": "Réduire (−)"
+  },
+  "extensionDescription": {
+    "message": "Capture d'écran pleine page avec défilement. Annotez, éditez, exportez en PDF ou image. Clients IA via MCP. 100% local et privé."
+  },
+  "extensionName": {
+    "message": "Page Screenshot Pro"
+  },
+  "feedbackEmail": {
+    "message": "E-mail"
+  },
+  "feedbackEmailHint": {
+    "message": "(facultatif — laissez-le vide pour rester anonyme. Si vous souhaitez une réponse, renseignez-le.)"
+  },
+  "feedbackHeading": {
+    "message": "Envoyer un avis"
+  },
+  "feedbackIntro": {
+    "message": "Votre avis va directement au développeur. Aucune capture d'écran ni aucun contenu de page n'est joint."
+  },
+  "feedbackMessage": {
+    "message": "Que s'est-il passé ?"
+  },
+  "feedbackMessageHint": {
+    "message": "(obligatoire — sur quelle page vous étiez, ce que vous avez cliqué, ce que vous attendiez)"
+  },
+  "feedbackPrivacy": {
+    "message": "Pas de compte, pas de suivi. L'e-mail sert uniquement à vous répondre."
+  },
+  "feedbackSend": {
+    "message": "Envoyer"
+  },
+  "feedbackSending": {
+    "message": "Envoi…"
+  },
+  "feedbackSent": {
+    "message": "Merci — votre avis a été envoyé."
+  },
+  "feedbackTitle": {
+    "message": "Avis - Page Screenshot Pro"
+  },
+  "feedbackType": {
+    "message": "Type"
+  },
+  "feedbackTypeBug": {
+    "message": "Bug / quelque chose ne va pas"
+  },
+  "feedbackTypeFeature": {
+    "message": "Suggestion de fonctionnalité"
+  },
+  "feedbackTypeOther": {
+    "message": "Autre"
+  },
+  "feedbackTypePurchase": {
+    "message": "Problème d'achat ou de licence"
+  },
+  "mcpBusy": {
+    "message": "Une capture est déjà en cours. Réessayez dans un instant."
+  },
+  "mcpElementNotFound": {
+    "message": "Aucun élément ne correspond à ce sélecteur. Vérifiez-le dans DevTools, puis réessayez."
+  },
+  "mcpImageTooLarge": {
+    "message": "L'image est trop volumineuse. Essayez un maxWidth plus petit."
+  },
+  "mcpProRequired": {
+    "message": "L'accès MCP nécessite Pro. Ouvrez les réglages de l'extension pour passer à Pro."
+  },
+  "mcpSelectorRequired": {
+    "message": "capture_element a besoin d'un sélecteur CSS, par exemple \"#main .title\"."
+  },
+  "mcpUnknownTool": {
+    "message": "Outil inconnu. Redemandez la liste des outils ; l'extension n'est peut-être pas la même version."
+  },
+  "ocrBadLibrary": {
+    "message": "La bibliothèque OCR n'a pas de createWorker."
+  },
+  "ocrFailed": {
+    "message": "Échec de l'OCR : $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Erreur de reconnaissance"
+      }
+    }
+  },
+  "ocrInitializing": {
+    "message": "Initialisation du moteur de reconnaissance"
+  },
+  "ocrInitializingApi": {
+    "message": "Initialisation de l'API de reconnaissance"
+  },
+  "ocrLoadLibraryFailed": {
+    "message": "Impossible de charger la bibliothèque OCR : $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Erreur de module"
+      }
+    }
+  },
+  "ocrLoadingCore": {
+    "message": "Chargement du cœur de reconnaissance"
+  },
+  "ocrLoadingLanguages": {
+    "message": "Chargement des données de langue (chinois et anglais)"
+  },
+  "ocrRecognizing": {
+    "message": "Reconnaissance du texte"
+  },
+  "ocrUnavailable": {
+    "message": "Le moteur OCR n'est pas disponible en dehors de l'environnement de l'extension."
+  },
+  "optionsAnnotate": {
+    "message": "Ouvrir l'éditeur d'annotations après la capture"
+  },
+  "optionsCapture": {
+    "message": "Capture"
+  },
+  "optionsCopy": {
+    "message": "Copier dans le presse-papiers après la capture"
+  },
+  "optionsDownload": {
+    "message": "Téléchargements"
+  },
+  "optionsExpandInfinite": {
+    "message": "Développer les pages à défilement infini avant la capture"
+  },
+  "optionsFilename": {
+    "message": "Modèle de nom de fichier"
+  },
+  "optionsFolder": {
+    "message": "Sous-dossier"
+  },
+  "optionsFolderHint": {
+    "message": "Par exemple Screenshots/Web. Les dossiers manquants sont créés automatiquement."
+  },
+  "optionsFolderPlaceholder": {
+    "message": "Laissez vide pour le dossier Téléchargements"
+  },
+  "optionsFormat": {
+    "message": "Format par défaut"
+  },
+  "optionsHeading": {
+    "message": "Paramètres de capture"
+  },
+  "optionsInterface": {
+    "message": "Interface"
+  },
+  "optionsIntro": {
+    "message": "Les paramètres sont enregistrés dans votre compte de navigateur (chrome.storage.sync) et se synchronisent entre vos appareils."
+  },
+  "optionsJpg": {
+    "message": "JPG (avec perte, environ un cinquième du PNG)"
+  },
+  "optionsLanguage": {
+    "message": "Langue de l'interface"
+  },
+  "optionsLanguageHint": {
+    "message": "Suit par défaut la langue de l'interface de Chrome ; le changement ici ne concerne que cet appareil. Il s'applique aussitôt, rien à enregistrer."
+  },
+  "optionsLanguageSaved": {
+    "message": "Langue changée"
+  },
+  "optionsLazyWarning": {
+    "message": "Les deux options ci-dessous ne concernent que la capture de page complète. Les désactiver est plus rapide, mais certaines images différées peuvent rester blanches dans la capture."
+  },
+  "optionsMcpBody": {
+    "message": "Permet à des outils d'IA comme Claude Desktop, Cursor ou Claude Code de prendre des captures via cette extension. Tout s'exécute sur votre machine et rien n'est envoyé."
+  },
+  "optionsMcpConfigHint": {
+    "message": "Collez ceci dans le bloc mcpServers du fichier de configuration de votre client IA :"
+  },
+  "optionsMcpCopied": {
+    "message": "Copié"
+  },
+  "optionsMcpCopy": {
+    "message": "Copier la configuration"
+  },
+  "optionsMcpCopyFailed": {
+    "message": "Copie impossible. Sélectionnez le texte et copiez-le à la main."
+  },
+  "optionsMcpGuide": {
+    "message": "Guide de configuration complet"
+  },
+  "optionsMcpHint": {
+    "message": "Le navigateur exige un clic avant toute capture. Si l'IA signale une erreur de permission, cliquez sur l'icône de l'extension puis demandez-lui de réessayer."
+  },
+  "optionsMcpLogTitle": {
+    "message": "Appels récents"
+  },
+  "optionsMcpPro": {
+    "message": "Pro"
+  },
+  "optionsMcpProNote": {
+    "message": "L'accès MCP est une fonction Pro."
+  },
+  "optionsMcpReset": {
+    "message": "Réinitialiser le jeton"
+  },
+  "optionsMcpResetConfirm": {
+    "message": "L'ancienne configuration cesse de fonctionner immédiatement. Continuer ?"
+  },
+  "optionsMcpResetDone": {
+    "message": "Jeton réinitialisé. Collez la nouvelle configuration dans votre client IA."
+  },
+  "optionsMcpResetKeep": {
+    "message": "Garder le jeton actuel"
+  },
+  "optionsMcpResetProceed": {
+    "message": "Réinitialiser quand même"
+  },
+  "optionsMcpStateFail": {
+    "message": "Connexion impossible. Vérifiez que le client IA a été redémarré et que son jeton correspond à celui ci-dessus."
+  },
+  "optionsMcpStateLost": {
+    "message": "Dernière connexion : $TIME$. La déconnexion à la fermeture du client IA est normale.",
+    "placeholders": {
+      "time": {
+        "content": "$1",
+        "example": "2026-11-01 09:05"
+      }
+    }
+  },
+  "optionsMcpStateNever": {
+    "message": "Pas encore connecté. La connexion se fait automatiquement au démarrage de votre client IA."
+  },
+  "optionsMcpStateOff": {
+    "message": "Non connecté"
+  },
+  "optionsMcpStateOn": {
+    "message": "Connecté"
+  },
+  "optionsMcpStep1": {
+    "message": "Collez le JSON ci-dessus dans le bloc mcpServers du fichier de configuration de votre client. Node 20 ou plus récent est requis."
+  },
+  "optionsMcpStep2": {
+    "message": "Redémarrez le client. Le point en haut passe au vert dès que le pont se connecte."
+  },
+  "optionsMcpStep3": {
+    "message": "Demandez-lui d'appeler d'abord psp_status : cet outil est gratuit et indique ce qui ne va pas."
+  },
+  "optionsMcpStepsTitle": {
+    "message": "Comment l'utiliser"
+  },
+  "optionsMcpTitle": {
+    "message": "Accès AI / MCP"
+  },
+  "optionsMcpToggle": {
+    "message": "Activer l'accès MCP"
+  },
+  "optionsMcpUpgrade": {
+    "message": "Passer à Pro"
+  },
+  "optionsPng": {
+    "message": "PNG (sans perte, fichier plus volumineux)"
+  },
+  "optionsPreloadLazy": {
+    "message": "Déclencher et attendre les images en chargement différé avant la capture"
+  },
+  "optionsQuality": {
+    "message": "Qualité JPG"
+  },
+  "optionsRequestFailed": {
+    "message": "La requête a échoué"
+  },
+  "optionsReset": {
+    "message": "Rétablir les valeurs par défaut"
+  },
+  "optionsResetDone": {
+    "message": "Valeurs par défaut rétablies"
+  },
+  "optionsSampleHost": {
+    "message": "example.com"
+  },
+  "optionsSampleTitle": {
+    "message": "Capture d'écran"
+  },
+  "optionsSaveAs": {
+    "message": "Afficher la boîte « Enregistrer sous » à chaque téléchargement"
+  },
+  "optionsSaveFailed": {
+    "message": "Échec de l'enregistrement : $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Échec du stockage"
+      }
+    }
+  },
+  "optionsSaved": {
+    "message": "Enregistré"
+  },
+  "optionsSynced": {
+    "message": "Modifications d'une autre fenêtre synchronisées"
+  },
+  "optionsTemplateInsertHint": {
+    "message": "Insérer :"
+  },
+  "optionsTemplateInsertTitle": {
+    "message": "Insérer cette variable au curseur"
+  },
+  "optionsTemplatePreview": {
+    "message": "Aperçu :"
+  },
+  "optionsTitle": {
+    "message": "Paramètres - Page Screenshot Pro"
+  },
+  "payApiNotConfigured": {
+    "message": "Le backend de paiement n'est pas configuré"
+  },
+  "payApiStatus": {
+    "message": "Le backend a renvoyé $STATUS$",
+    "placeholders": {
+      "status": {
+        "content": "$1",
+        "example": "502"
+      }
+    }
+  },
+  "payApiTimeout": {
+    "message": "La requête au serveur de paiement a expiré"
+  },
+  "payCheckoutFailed": {
+    "message": "Échec du paiement : le backend n'a pas renvoyé d'URL de caisse"
+  },
+  "payMockPlanSuffix": {
+    "message": " (test)"
+  },
+  "payNeedInstallId": {
+    "message": "Le paiement en mode backend exige un identifiant d'installation (installId), que l'appelant n'a pas fourni"
+  },
+  "payNoteCanceled": {
+    "message": "Abonnement terminé"
+  },
+  "payNoteCanceling": {
+    "message": "Renouvellement annulé ; l'accès reste valable jusqu'à la date de fin"
+  },
+  "payNoteClientCeiling": {
+    "message": "Mode client seul : les renouvellements et les remboursements ne sont pas synchronisés avec cet appareil, donc Pro reste actif même après l'expiration de l'abonnement."
+  },
+  "payNoteExpired": {
+    "message": "L'abonnement a expiré"
+  },
+  "payNoteLifetime": {
+    "message": "Licence Pro à vie (permanente, non affectée par les remboursements ou annulations d'abonnement)"
+  },
+  "payNotePastDue": {
+    "message": "Le renouvellement a échoué et l'abonnement est suspendu. Mettez à jour votre moyen de paiement."
+  },
+  "payNoteSubscriptionEnd": {
+    "message": "Abonnement actif jusqu'au $DATE$",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "2099-03-04"
+      }
+    }
+  },
+  "payUnconfigured": {
+    "message": "Les paiements ne sont pas configurés. Renseignez d'abord le lien de paiement Waffo dans utils/payment-config.ts."
+  },
+  "payUnknownPlan": {
+    "message": "Formule inconnue : $PLAN$",
+    "placeholders": {
+      "plan": {
+        "content": "$1",
+        "example": "monthly"
+      }
+    }
+  },
+  "planLifetime": {
+    "message": "Pro à vie"
+  },
+  "planMonthly": {
+    "message": "Pro mensuel"
+  },
+  "planPro": {
+    "message": "Pro"
+  },
+  "planYearly": {
+    "message": "Pro annuel"
+  },
+  "popupCannotOpenExtensions": {
+    "message": "Ouverture automatique impossible. Allez manuellement sur chrome://extensions"
+  },
+  "popupCaptureFull": {
+    "message": "📄 Capture de la page complète"
+  },
+  "popupCaptureRegion": {
+    "message": "✂️ Sélectionner une zone"
+  },
+  "popupCaptureVisible": {
+    "message": "🖥️ Zone visible"
+  },
+  "popupChecking": {
+    "message": "Vérification…"
+  },
+  "popupCheckoutFailed": {
+    "message": "Impossible d'ouvrir la caisse"
+  },
+  "popupCheckoutTitle": {
+    "message": "Accédez à la caisse sécurisée Waffo pour finaliser le paiement"
+  },
+  "popupClear": {
+    "message": "Vider"
+  },
+  "popupClearConfirm": {
+    "message": "Vider tout l'historique ?"
+  },
+  "popupCommunicationFailed": {
+    "message": "Échec de la communication : $ERROR$",
+    "placeholders": {
+      "error": {
+        "content": "$1",
+        "example": "Échec de connexion"
+      }
+    }
+  },
+  "popupCompleteWarnings": {
+    "message": "Terminé, avec une remarque : $WARNINGS$",
+    "placeholders": {
+      "warnings": {
+        "content": "$1",
+        "example": "L'image a été compressée"
+      }
+    }
+  },
+  "popupDelete": {
+    "message": "Supprimer"
+  },
+  "popupEmptyHistory": {
+    "message": "Aucune capture pour l'instant"
+  },
+  "popupFeedback": {
+    "message": "💬 Envoyer un avis"
+  },
+  "popupFeedbackUnavailable": {
+    "message": "Impossible d'ouvrir la page d'avis pour le moment — écrivez-nous à l'adresse d'assistance."
+  },
+  "popupFileGuide": {
+    "message": "La capture de fichiers locaux nécessite une autorisation : activez « Autoriser l'accès aux URL de fichiers » sur la page de gestion des extensions, puis réessayez."
+  },
+  "popupFreeLocked": {
+    "message": "Gratuit (Pro verrouillé)"
+  },
+  "popupHistory": {
+    "message": "Historique"
+  },
+  "popupImageDecodeFailed": {
+    "message": "Échec du décodage de l'image"
+  },
+  "popupKindElement": {
+    "message": "Élément"
+  },
+  "popupKindFullpage": {
+    "message": "Page complète"
+  },
+  "popupKindRegion": {
+    "message": "Zone sélectionnée"
+  },
+  "popupKindVisible": {
+    "message": "Zone visible"
+  },
+  "popupLanguage": {
+    "message": "Langue"
+  },
+  "popupLanguageAuto": {
+    "message": "Suivre Chrome"
+  },
+  "popupLanguageTitle": {
+    "message": "Langue de l'interface (suit par défaut celle de Chrome)"
+  },
+  "popupMergeNoOriginals": {
+    "message": "Les originaux des captures sélectionnées ont été nettoyés et ne peuvent pas être exportés"
+  },
+  "popupMergePdf": {
+    "message": "Fusionner en PDF"
+  },
+  "popupMergePdfTitle": {
+    "message": "Sélectionnez plusieurs éléments pour les exporter en PDF (Pro)"
+  },
+  "popupMergeProRequired": {
+    "message": "« Fusionner et exporter en PDF » est une fonction Pro"
+  },
+  "popupMergeSelectRequired": {
+    "message": "Cochez d'abord les captures à fusionner"
+  },
+  "popupMergeSelectTitle": {
+    "message": "Sélectionner pour fusionner en PDF"
+  },
+  "popupMergingPdf": {
+    "message": "Création du PDF…"
+  },
+  "popupOpen": {
+    "message": "Ouvrir"
+  },
+  "popupOpenExtensions": {
+    "message": "Ouvrir la page des extensions"
+  },
+  "popupOpenHistoryFailed": {
+    "message": "L'original a été nettoyé ; seule la miniature subsiste"
+  },
+  "popupPaidPro": {
+    "message": "Pro débloqué (payant)"
+  },
+  "popupPaidProNotUnlocked": {
+    "message": "Gratuit (Pro verrouillé)"
+  },
+  "popupPaymentUnconfigured": {
+    "message": "Les paiements ne sont pas configurés. Renseignez les informations marchandes Waffo et les liens de paiement dans utils/payment-config.ts pour afficher les formules ici."
+  },
+  "popupPreparing": {
+    "message": "Préparation…"
+  },
+  "popupRemaining": {
+    "message": "Captures restantes aujourd'hui : $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "12"
+      }
+    }
+  },
+  "popupRestore": {
+    "message": "Restaurer l'achat"
+  },
+  "popupRestoreEmail": {
+    "message": "Adresse e-mail de paiement"
+  },
+  "popupRestoreEmailRequired": {
+    "message": "Saisissez l'adresse e-mail utilisée lors du paiement"
+  },
+  "popupRestoreFailed": {
+    "message": "La requête a échoué. Réessayez plus tard"
+  },
+  "popupRestoreHint": {
+    "message": "Vous avez acheté Pro sur un autre ordinateur ou réinstallé l'extension ? Saisissez l'e-mail utilisé pour le paiement et cliquez sur « Restaurer l'achat » pour retrouver Pro sur cette machine, sans repayer."
+  },
+  "popupRestoreNotFound": {
+    "message": "Aucun achat trouvé pour cette adresse e-mail. Vérifiez qu'elle correspond à celle du paiement ; si vous venez de payer, attendez quelques secondes et réessayez."
+  },
+  "popupReviewAsk": {
+    "message": "Si l’extension vous est utile, un court avis sur le Chrome Web Store aidera d’autres personnes à la trouver."
+  },
+  "popupReviewGo": {
+    "message": "Écrire un avis"
+  },
+  "popupReviewLater": {
+    "message": "Plus tard"
+  },
+  "popupReviewOpenFailed": {
+    "message": "Impossible d’ouvrir la page du Chrome Web Store. Recherchez l’extension directement dans la boutique."
+  },
+  "popupSelectAll": {
+    "message": "Tout sélectionner"
+  },
+  "popupSettings": {
+    "message": "⚙ Paramètres"
+  },
+  "popupSettingsTitle": {
+    "message": "Format par défaut, modèle de nom de fichier, sous-dossier, etc."
+  },
+  "popupStart": {
+    "message": "Démarrage…"
+  },
+  "popupSupport": {
+    "message": "Assistance"
+  },
+  "popupSupportEmail": {
+    "message": "✉ Écrire"
+  },
+  "popupTestPro": {
+    "message": "Pro débloqué (test)"
+  },
+  "popupTitle": {
+    "message": "Page Screenshot Pro"
+  },
+  "popupUnknownError": {
+    "message": "Erreur inconnue"
+  },
+  "popupUnlimited": {
+    "message": "Illimité"
+  },
+  "popupUpgradeTitle": {
+    "message": "Passez à Pro et débloquez toutes les fonctions"
+  },
+  "priceLifetime": {
+    "message": "$AMOUNT$ paiement unique",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$39.9"
+      }
+    }
+  },
+  "priceMonthly": {
+    "message": "$AMOUNT$/mois",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$4.99"
+      }
+    }
+  },
+  "priceYearly": {
+    "message": "$AMOUNT$/an",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$19.9"
+      }
+    }
+  },
+  "restoreSaveEmail": {
+    "message": "Conservez bien cet e-mail de paiement : c'est le seul moyen de récupérer votre licence sur un autre ordinateur."
+  },
+  "stitchBottomMissing": {
+    "message": "L'image assemblée peut perdre environ $PIXELS$px en bas",
+    "placeholders": {
+      "pixels": {
+        "content": "$1",
+        "example": "120"
+      }
+    }
+  },
+  "stitchCellSkipped": {
+    "message": "La ligne $ROW$, colonne $COL$, n'avait aucune zone visible et a été ignorée",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "3"
+      },
+      "col": {
+        "content": "$2",
+        "example": "2"
+      }
+    }
+  },
+  "stitchClipboardUnsupported": {
+    "message": "Ce navigateur ne peut pas écrire d'image dans le presse-papiers"
+  },
+  "stitchDataTooLarge": {
+    "message": "Les données de capture sont trop volumineuses : elles dépassent la limite de 64 Mo par message du navigateur. La page est peut-être très longue ou encore en cours de chargement. Essayez une page plus courte ou capturez-la en plusieurs fois."
+  },
+  "stitchEncodeFailed": {
+    "message": "Impossible d'encoder l'image"
+  },
+  "stitchMissingSessionId": {
+    "message": "L'ID de session d'assemblage est manquant"
+  },
+  "stitchRightUncaptured": {
+    "message": "La page est plus large que la fenêtre : environ $PIXELS$px à droite n'ont pas été capturés",
+    "placeholders": {
+      "pixels": {
+        "content": "$1",
+        "example": "1000"
+      }
+    }
+  },
+  "stitchRowSkipped": {
+    "message": "La ligne $ROW$ dépasse le bas de la page et a été ignorée",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "stitchSeamFixed": {
+    "message": "une jointure rompue a été détectée et corrigée en décalant de $PIXELS$ px",
+    "placeholders": {
+      "pixels": {
+        "content": "$1",
+        "example": "8"
+      }
+    }
+  },
+  "stitchSeamUnfixed": {
+    "message": "la frontière diffère trop ($DIFF$) ; la correction automatique a échoué. Vérifiez la page d'origine.",
+    "placeholders": {
+      "diff": {
+        "content": "$1",
+        "example": "96"
+      }
+    }
+  },
+  "stitchSessionExpired": {
+    "message": "La session d'assemblage n'existe pas ou a expiré"
+  },
+  "stitchTile": {
+    "message": "Dans le fragment $ROW$,",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "stitchTileRowCol": {
+    "message": "Dans la ligne $ROW$, colonne $COL$,",
+    "placeholders": {
+      "row": {
+        "content": "$1",
+        "example": "2"
+      },
+      "col": {
+        "content": "$2",
+        "example": "3"
+      }
+    }
+  },
+  "stitchTooTall": {
+    "message": "La page est trop haute ($HEIGHT$px) : elle a été réduite à $OUT$px, au prix d'une légère perte de qualité",
+    "placeholders": {
+      "height": {
+        "content": "$1",
+        "example": "30000"
+      },
+      "out": {
+        "content": "$2",
+        "example": "16000"
+      }
+    }
+  },
+  "stitchTooWide": {
+    "message": "La page est trop large ($WIDTH$px) : elle dépasse la limite de $LIMIT$px par côté d'un seul bitmap, elle a donc été réduite à $OUT$px, au prix d'une légère perte de qualité",
+    "placeholders": {
+      "width": {
+        "content": "$1",
+        "example": "20000"
+      },
+      "limit": {
+        "content": "$2",
+        "example": "16000"
+      },
+      "out": {
+        "content": "$3",
+        "example": "16000"
+      }
+    }
+  },
+  "subActionFailed": {
+    "message": "Échec : $REASON$",
+    "placeholders": {
+      "reason": {
+        "content": "$1",
+        "example": "network error"
+      }
+    }
+  },
+  "subBack": {
+    "message": "Retour"
+  },
+  "subCancel": {
+    "message": "Annuler le renouvellement"
+  },
+  "subCancelConfirm": {
+    "message": "Oui, annuler le renouvellement"
+  },
+  "subCancelContinue": {
+    "message": "Continuer l'annulation"
+  },
+  "subCancelDone": {
+    "message": "Renouvellement annulé. Pro reste actif jusqu'à la fin de cette période."
+  },
+  "subCancelFinal": {
+    "message": "Dernière vérification : annuler le renouvellement de $PLAN$ ?",
+    "placeholders": {
+      "plan": {
+        "content": "$1",
+        "example": "Pro yearly"
+      }
+    }
+  },
+  "subCancelFinalWithDate": {
+    "message": "Dernière vérification : annuler le renouvellement ? Pro fonctionne jusqu'au $DATE$ ; ensuite il faudra se réabonner.",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "2027-03-04"
+      }
+    }
+  },
+  "subCancelKeep": {
+    "message": "Garder l'abonnement"
+  },
+  "subCancelStep1": {
+    "message": "Après annulation, Pro s'arrêtera le $DATE$ : la capture d'éléments, l'export PDF, la fusion en PDF, l'accès MCP et l'OCR cesseront de fonctionner.",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "2027-03-04"
+      }
+    }
+  },
+  "subCancelStep1NoDate": {
+    "message": "Après annulation, Pro s'arrêtera à la fin de cette période de facturation : la capture d'éléments, l'export PDF, la fusion en PDF, l'accès MCP et l'OCR cesseront de fonctionner."
+  },
+  "subCancelStep2Monthly": {
+    "message": "Pro coûte $AMOUNT$ par mois. Vous pourrez le racheter au même prix plus tard, mais les jours écoulés sont perdus.",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$4.99"
+      }
+    }
+  },
+  "subCancelStep2Yearly": {
+    "message": "La formule annuelle coûte $AMOUNT$ par an, soit un tiers du coût mensuel sur la même période. Annuler revient à renoncer à ce prix.",
+    "placeholders": {
+      "amount": {
+        "content": "$1",
+        "example": "$19.9"
+      }
+    }
+  },
+  "subCarryNote": {
+    "message": "Le temps qui reste n'est pas perdu : si vous vous réabonnez plus tard à n'importe quelle formule, il s'ajoute à la date d'expiration du nouvel abonnement."
+  },
+  "subCheckoutOpened": {
+    "message": "Le paiement s'est ouvert dans un nouvel onglet. La licence se met à jour automatiquement une fois le paiement effectué."
+  },
+  "subCurrentTitle": {
+    "message": "Abonnement actuel"
+  },
+  "subExpiresLabel": {
+    "message": "Expire le"
+  },
+  "subFeedbackEmpty": {
+    "message": "Écrivez d'abord votre message."
+  },
+  "subFeedbackFailed": {
+    "message": "L'envoi a échoué. Réessayez plus tard."
+  },
+  "subFeedbackTooMany": {
+    "message": "Trop de messages envoyés dans la dernière heure. Réessayez plus tard."
+  },
+  "subFeedbackUnavailable": {
+    "message": "Le service de retours est indisponible pour le moment ; écrivez-nous plutôt à l'adresse de support."
+  },
+  "subFreeDetailNote": {
+    "message": "Vous n'avez pas encore d'abonnement actif. Choisissez l'une des formules ci-dessous pour vous abonner."
+  },
+  "subFreeNote": {
+    "message": "Vous n'avez pas encore d'abonnement actif. Ouvrez le statut ci-dessus pour choisir une formule."
+  },
+  "subFreePlan": {
+    "message": "Gratuit"
+  },
+  "subFreeStatus": {
+    "message": "Sans abonnement"
+  },
+  "subLeftoverDetailNote": {
+    "message": "Vous avez la licence à vie, mais cet abonnement $PLAN$ se renouvelle encore. Utilisez « $CANCEL$ » ci-dessous pour l'arrêter : vous en profitez jusqu'à la fin de la période.",
+    "placeholders": {
+      "plan": {
+        "content": "$1",
+        "example": "Pro mensuel"
+      },
+      "cancel": {
+        "content": "$2",
+        "example": "Annuler le renouvellement"
+      }
+    }
+  },
+  "subLeftoverNote": {
+    "message": "Vous avez la licence à vie, mais un abonnement $PLAN$ se renouvelle encore. Ouvrez l'état ci-dessus pour l'annuler.",
+    "placeholders": {
+      "plan": {
+        "content": "$1",
+        "example": "Pro mensuel"
+      }
+    }
+  },
+  "subLifetimeNote": {
+    "message": "Vous avez une licence à vie : il n'y a aucun abonnement à renouveler."
+  },
+  "subManageTitle": {
+    "message": "Abonnement"
+  },
+  "subNextLifetime": {
+    "message": "Achat unique, valable à vie, aucun renouvellement."
+  },
+  "subNextNone": {
+    "message": "Pas de renouvellement. Pro s'arrête à la fin de cette période ; il faudra se réabonner pour le retrouver."
+  },
+  "subNextRenews": {
+    "message": "Renouvellement automatique à partir du $DATE$ (une période par renouvellement)",
+    "placeholders": {
+      "date": {
+        "content": "$1",
+        "example": "2027-03-04"
+      }
+    }
+  },
+  "subNextRenewsNoDate": {
+    "message": "Renouvellement automatique à l'échéance (une période par renouvellement)"
+  },
+  "subNextTitle": {
+    "message": "Prochaine période"
+  },
+  "subNoActionNote": {
+    "message": "Le renouvellement de cet abonnement est déjà annulé ; aucune action n'est disponible pour le moment. Un rafraîchissement ultérieur vérifiera à nouveau."
+  },
+  "subReactivate": {
+    "message": "Reprendre l'abonnement"
+  },
+  "subReactivateDone": {
+    "message": "Abonnement repris. Aucun montant n'a été prélevé."
+  },
+  "subResumeNow": {
+    "message": "↻ Reprendre l'abonnement"
+  },
+  "subResumeNowNote": {
+    "message": "Renouvellement annulé — un clic le rétablit, sans frais."
+  },
+  "subStatusActive": {
+    "message": "Actif"
+  },
+  "subStatusCanceled": {
+    "message": "Annulé"
+  },
+  "subStatusCanceling": {
+    "message": "Renouvellement annulé — utilisable jusqu'à la date de fin"
+  },
+  "subStatusEnded": {
+    "message": "Terminé"
+  },
+  "subStatusPastDue": {
+    "message": "Paiement échoué — suspendu"
+  },
+  "subStatusRefunded": {
+    "message": "Remboursé"
+  },
+  "subViewTitle": {
+    "message": "Détails de l'abonnement"
+  },
+  "subWorking": {
+    "message": "Traitement…"
+  },
+  "welcomeFeatures": {
+    "message": "Ses points forts"
+  },
+  "welcomeFileHint": {
+    "message": "La première capture d'un fichier local (file://) demande une autorisation : dans chrome://extensions, activez « Autoriser l'accès aux URL de fichiers » pour cette extension."
+  },
+  "welcomeFooter": {
+    "message": "Les captures et les annotations restent sur votre appareil et ne sont jamais envoyées à un serveur."
+  },
+  "welcomeHeaderBody": {
+    "message": "La navigation reste sur le premier écran, puis les éléments fixes sont masqués sur les suivants."
+  },
+  "welcomeHeaderTitle": {
+    "message": "L'en-tête n'apparaît qu'une fois"
+  },
+  "welcomeInfiniteBody": {
+    "message": "Charge tout le contenu avant de capturer, au lieu de s'arrêter au premier écran."
+  },
+  "welcomeInfiniteTitle": {
+    "message": "Pages à défilement infini"
+  },
+  "welcomeLanguage": {
+    "message": "Langue de l'interface"
+  },
+  "welcomeLazyBody": {
+    "message": "Attend img.decode() : chaque bitmap est réellement prêt, sans temps d'attente deviné."
+  },
+  "welcomeLazyTitle": {
+    "message": "Images en chargement différé"
+  },
+  "welcomeLocalBody": {
+    "message": "Captures, annotations et OCR restent dans votre navigateur ; les images ne sont jamais téléversées."
+  },
+  "welcomeLocalTitle": {
+    "message": "Traité sur votre appareil"
+  },
+  "welcomeOpenPopupFailed": {
+    "message": "Cliquez sur l'icône de l'extension dans la barre d'outils pour voir les formules."
+  },
+  "welcomePlans": {
+    "message": "Voir les formules"
+  },
+  "welcomePricingBody": {
+    "message": "La capture de page complète, le défilement infini, le chargement différé et tout l'éditeur d'annotations — mosaïque, recadrage, formes, texte — sont gratuits, à raison de 20 captures par jour. Pro ajoute l'export PDF, la fusion en PDF, l'OCR, l'accès MCP et la capture d'élément, avec des captures illimitées."
+  },
+  "welcomePricingTitle": {
+    "message": "Gratuit et Pro"
+  },
+  "welcomePrivacy": {
+    "message": "Politique de confidentialité"
+  },
+  "welcomeQuerying": {
+    "message": "Recherche en cours…"
+  },
+  "welcomeRestoreEmail": {
+    "message": "Adresse e-mail de paiement"
+  },
+  "welcomeRestoreHint": {
+    "message": "Vous avez changé d'ordinateur ou réinstallé ? Restaurez Pro avec l'adresse e-mail utilisée lors du paiement."
+  },
+  "welcomeRestoreSuccess": {
+    "message": "Restauré. Pro est débloqué. Merci pour votre soutien !"
+  },
+  "welcomeSeamBody": {
+    "message": "La continuité entre écrans voisins est vérifiée et alignée à ±16 px près."
+  },
+  "welcomeSeamTitle": {
+    "message": "Correction automatique des jointures"
+  },
+  "welcomeServerNote": {
+    "message": "(Le statut de l'abonnement est vérifié auprès du serveur de licences de l'extension, qui ne conserve qu'un identifiant d'installation et le statut de la formule.)"
+  },
+  "welcomeSettings": {
+    "message": "Ouvrir les paramètres"
+  },
+  "welcomeStepCapture": {
+    "message": "Cliquez sur l'icône de la barre d'outils ou appuyez sur Alt+Maj+D"
+  },
+  "welcomeStepCaptureBody": {
+    "message": "Alt+Maj+V ne capture que la zone visible."
+  },
+  "welcomeStepDownload": {
+    "message": "Retrouvez le fichier dans Téléchargements"
+  },
+  "welcomeStepDownloadBody": {
+    "message": "Le format du nom se modifie dans les paramètres (par défaut : Titre de la page - date heure.png)."
+  },
+  "welcomeStepPage": {
+    "message": "Ouvrez une page longue"
+  },
+  "welcomeStepPageBody": {
+    "message": "Articles, flux et notes de version conviennent : plus c'est long, plus la différence se voit."
+  },
+  "welcomeTagline": {
+    "message": "Des captures de page complète en une seule fois. Le défilement, les flux infinis et les images différées sont gérés automatiquement."
+  },
+  "welcomeTitle": {
+    "message": "Bienvenue - Page Screenshot Pro"
+  },
+  "welcomeTry": {
+    "message": "Essayez"
+  },
+  "welcomeWideBody": {
+    "message": "Les tableaux larges, les tableaux de bord et les diagrammes sont capturés en grille, sans perdre le bord droit."
+  },
+  "welcomeWideTitle": {
+    "message": "Pages plus larges que la fenêtre"
+  }
+}

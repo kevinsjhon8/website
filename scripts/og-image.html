@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- og-image 的**源文件**。渲染成 public/og-image.png（1200×630）：
+       ~/.local/bin/chrome-for-testing --headless --disable-gpu \
+         --window-size=1200,630 --screenshot=public/og-image.png \
+         file://$PWD/scripts/og-image.html
+     这台机器没有 PIL / ImageMagick，所以只能用浏览器渲染，这也就成了唯一
+     可复现的生成方式。改文案或配色后重跑上面那条命令。
+     （sharp 在这台机器上**有**，但它只是 miniflare 的传递依赖、没写进任何
+     package.json，见 scripts/gen-site-images.mjs 的说明；而且这张图里有大段
+     文案与字体渲染，走 SVG 光栅化要么依赖系统里装了对应字体，要么就得把
+     文字转成路径，比直接让浏览器排版脆弱得多。三张示意图不含文字，所以
+     它们走 sharp；这一张继续走浏览器。）
+     **不要**把这个文件放进 public/：它会被一起部署，成为一个没人链接的页面。 -->
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 0 88px;
+    background-color: #050a14;
+    background-image:
+      radial-gradient(900px 520px at 42% -14%, rgba(59,130,246,.30), transparent 70%),
+      radial-gradient(760px 440px at 92% 10%, rgba(168,85,247,.22), transparent 68%);
+    color: #f8fafc;
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", sans-serif;
+  }
+  .brand { display: flex; align-items: center; gap: 16px; margin-bottom: 34px; }
+  .brand img { width: 56px; height: 56px; border-radius: 14px; }
+  .brand span { font-size: 25px; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; color: #cbd5e1; }
+  h1 { font-size: 76px; line-height: 1.04; font-weight: 900; letter-spacing: -.03em; max-width: 15em; }
+  .g { background: linear-gradient(135deg, #60a5fa, #a855f7); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  p { margin-top: 28px; font-size: 27px; color: #94a3b8; max-width: 21em; line-height: 1.45; }
+  .row { display: flex; gap: 12px; margin-top: 38px; }
+  .pill { padding: 11px 22px; border-radius: 999px; font-size: 20px; color: #cbd5e1;
+          background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); }
+  .pill b { color: #34d399; font-weight: 600; }
+</style>
+</head>
+<body>
+  <div class="brand">
+    <img src="../public/icons/icon128.png" alt="">
+    <span>Page Screenshot Pro</span>
+  </div>
+  <h1>Long screenshots <span class="g">that actually line up</span></h1>
+  <p>Full page, one image. Scrolling feeds, lazy images and sticky headers handled — entirely on your device.</p>
+  <div class="row">
+    <span class="pill"><b>100% local</b></span>
+    <span class="pill">Free tier</span>
+    <span class="pill">PDF &amp; OCR</span>
+  </div>
+</body>
+</html>
